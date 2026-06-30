@@ -1,4 +1,4 @@
-/* Estilos para lista y desplegables */
+/* Estilos para recetas desplegables */
 .tarjeta-receta {
     background: #ffffff;
     border-radius: 10px;
@@ -17,6 +17,7 @@
     cursor: pointer;
     border-left: 4px solid #2e9b36;
     transition: all 0.2s ease;
+    user-select: none;
 }
 
 .titulo-receta:hover {
@@ -24,11 +25,13 @@
     color: #24802a;
 }
 
+/* ✅ REGLA CLAVE: Empieza oculto */
 .detalles-receta {
-    display: none; /* Empieza oculto */
+    display: none !important;
     padding: 1.5rem;
-    line-height: 1.8; /* Espaciado entre líneas */
+    line-height: 1.8;
     color: #333;
+    border-top: 1px solid #eee;
 }
 
 .info-nutricional {
