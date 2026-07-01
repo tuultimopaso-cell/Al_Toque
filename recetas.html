@@ -3,59 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recetas AI_Toque</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Biblioteca de Recetas Saludables</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+            color: #333;
+        }
+
+        /* Cabecera principal */
+        .cabecera {
+            max-width: 950px;
+            margin: 0 auto 2.5rem auto;
+            text-align: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .cabecera h1 {
+            color: #2e9b36;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cabecera p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Botón de volver */
+        .boton-volver {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #2e9b36;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .boton-volver:hover {
+            color: #247a2b;
+            text-decoration: underline;
+        }
+
+        /* Contenedor principal */
+        .contenedor {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .contenedor h2 {
+            text-align: center;
+            color: #2e9b36;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Tarjetas por nivel */
+        .tarjeta-nivel {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 1.8rem;
+            padding: 1.5rem;
+            border-left: 5px solid;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .tarjeta-nivel:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        /* Colores según nivel */
+        .facil {
+            border-color: #2e9b36;
+        }
+
+        .intermedio {
+            border-color: #f39c12;
+        }
+
+        .avanzado {
+            border-color: #e74c3c;
+        }
+
+        .tarjeta-nivel h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .facil h3 {
+            color: #2e9b36;
+        }
+
+        .intermedio h3 {
+            color: #f39c12;
+        }
+
+        .avanzado h3 {
+            color: #e74c3c;
+        }
+
+        .tarjeta-nivel p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .tarjeta-nivel ul {
+            margin-left: 1.8rem;
+            margin-bottom: 1.2rem;
+            color: #444;
+        }
+
+        /* Botón ingresar */
+        .boton-ingresar {
+            display: inline-block;
+            padding: 0.6rem 1.3rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        .facil .boton-ingresar {
+            background-color: #2e9b36;
+        }
+
+        .facil .boton-ingresar:hover {
+            background-color: #247a2b;
+        }
+
+        .intermedio .boton-ingresar {
+            background-color: #f39c12;
+        }
+
+        .intermedio .boton-ingresar:hover {
+            background-color: #d68910;
+        }
+
+        .avanzado .boton-ingresar {
+            background-color: #e74c3c;
+        }
+
+        .avanzado .boton-ingresar:hover {
+            background-color: #c0392b;
+        }
+    </style>
 </head>
 <body>
-    <header class="cabecera-verde">
-        <h1>📖 Recetas Saludables AI_Toque</h1>
+
+    <a href="index.html" class="boton-volver">← Volver al inicio</a>
+
+    <div class="cabecera">
+        <h1>📚 Recetas Saludables AI_Toque</h1>
         <p>Recetas organizadas por nivel de experiencia culinaria</p>
-        <a href="index.html" class="boton-blanco">← Volver al inicio</a>
-    </header>
+    </div>
 
-    <div class="contenedor-principal">
-        <h2>📚 Biblioteca de Recetas</h2>
-        <p class="texto-intro">
-            Selecciona el nivel que mejor se adapte a tus conocimientos culinarios. Cada sección contiene recetas saludables con ingredientes, calorías, vitaminas, beneficios nutricionales y preparación paso a paso.
-        </p>
+    <div class="contenedor">
+        <h2>Biblioteca de Recetas</h2>
+        <p style="text-align:center; margin-bottom:2rem; color:#555;">Selecciona el nivel que mejor se adapte a tus conocimientos culinarios. Cada sección contiene recetas saludables con ingredientes, calorías, vitaminas, beneficios nutricionales y preparación paso a paso.</p>
 
-        <div class="niveles">
-            <!-- Nivel Fácil -->
-            <div class="tarjeta nivel-facil">
-                <h3>🟢 Nivel Fácil</h3>
-                <p>Ideal para principiantes. Recetas rápidas, económicas y fáciles de preparar.</p>
-                <ul>
-                    <li>✓ 10 recetas saludables</li>
-                    <li>✓ Preparación sencilla</li>
-                    <li>✓ Ideal para estudiantes</li>
-                </ul>
-                <a href="facil.html" class="boton-nivel verde">Ingresar</a>
-            </div>
+        <!-- Nivel Fácil -->
+        <div class="tarjeta-nivel facil">
+            <h3>🟢 Nivel Fácil</h3>
+            <p>Ideal para principiantes. Recetas rápidas, económicas y fáciles de preparar.</p>
+            <ul>
+                <li>✅ 10 recetas saludables</li>
+                <li>✅ Preparación sencilla</li>
+                <li>✅ Ideal para estudiantes</li>
+            </ul>
+            <a href="facil.html" class="boton-ingresar">Ingresar</a>
+        </div>
 
-            <!-- Nivel Intermedio -->
-            <div class="tarjeta nivel-intermedio">
-                <h3>🟡 Nivel Intermedio</h3>
-                <p>Pensado para personas con conocimientos básicos de cocina.</p>
-                <ul>
-                    <li>✓ 10 recetas completas</li>
-                    <li>✓ Más variedad nutricional</li>
-                    <li>✓ Técnicas intermedias</li>
-                </ul>
-                <a href="intermedio.html" class="boton-nivel amarillo">Ingresar</a>
-            </div>
+        <!-- Nivel Intermedio -->
+        <div class="tarjeta-nivel intermedio">
+            <h3>🟡 Nivel Intermedio</h3>
+            <p>Pensado para personas con conocimientos básicos de cocina.</p>
+            <ul>
+                <li>✅ 10 recetas completas</li>
+                <li>✅ Más variedad nutricional</li>
+                <li>✅ Técnicas intermedias</li>
+            </ul>
+            <a href="intermedio.html" class="boton-ingresar">Ingresar</a>
+        </div>
 
-            <!-- Nivel Avanzado -->
-            <div class="tarjeta nivel-avanzado">
-                <h3>🔴 Nivel Avanzado</h3>
-                <p>Recetas elaboradas con mayor complejidad y valor nutricional.</p>
-                <ul>
-                    <li>✓ 10 recetas premium</li>
-                    <li>✓ Preparaciones completas</li>
-                    <li>✓ Técnicas avanzadas</li>
-                </ul>
-                <a href="avanzado.html" class="boton-nivel rojo">Ingresar</a>
-            </div>
+        <!-- Nivel Avanzado -->
+        <div class="tarjeta-nivel avanzado">
+            <h3>🔴 Nivel Avanzado</h3>
+            <p>Recetas elaboradas con mayor complejidad y valor nutricional.</p>
+            <ul>
+                <li>✅ Preparaciones más elaboradas</li>
+                <li>✅ Ingredientes variados</li>
+                <li>✅ Mayor equilibrio nutricional</li>
+            </ul>
+            <a href="avanzado.html" class="boton-ingresar">Ingresar</a>
         </div>
     </div>
+
 </body>
 </html>
