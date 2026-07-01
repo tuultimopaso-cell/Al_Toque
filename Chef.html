@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel Chef / Platino</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            line-height: 1.8;
+            padding: 2rem 1.5rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: #b4975a;
+            margin-bottom: 2rem;
+            font-size: 1.9rem;
+        }
+
+        .categoria {
+            max-width: 1000px;
+            margin: 2.5rem auto 1rem auto;
+            font-size: 1.35rem;
+            font-weight: bold;
+            color: #9a7f48;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0e8d5;
+        }
+
+        .acordeon {
+            max-width: 1000px;
+            margin: 0 auto 1rem auto;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-left: 4px solid #b4975a;
+        }
+
+        .cabecera-receta {
+            background-color: #fcf9f2;
+            color: #b4975a;
+            padding: 1.2rem 1.8rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.15rem;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .cabecera-receta:hover {
+            background-color: #f8f2e6;
+        }
+
+        .flecha {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .cuerpo-receta {
+            display: none;
+            padding: 1.8rem;
+            color: #333;
+            border-top: 1px solid #eee;
+            background: #ffffff;
+        }
+
+        .info-nutricional, .tecnica {
+            background: #fdfbf7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #e2c997;
+        }
+
+        .emplatado {
+            background: #f8f5ed;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            border-left: 3px solid #b4975a;
+        }
+
+        .cuerpo-receta h4 {
+            margin: 1.5rem 0 0.7rem;
+            color: #444;
+            font-size: 1.15rem;
+            border-bottom: 1px dashed #e0d4b8;
+            padding-bottom: 0.4rem;
+        }
+
+        .cuerpo-receta ul,
+        .cuerpo-receta ol {
+            margin-left: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .boton-volver {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #b4975a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton-volver:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="recetas.html" class="boton-volver">← Volver al menú principal</a>
+
+    <h2>🏆 Nivel Chef / Platino</h2>
+
+    <!-- CATEGORÍA: PLATOS PRINCIPALES -->
+    <div class="categoria">🍽️ Platos principales</div>
+
+    <!-- Receta 1 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Salmón en costra de hierbas con puré de coliflor y reducción de cítricos
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <div class="info-nutricional">
+                <strong>Información nutricional (por porción):</strong> ~380 kcal | 12g carbohidratos | 35g proteína | 22g grasa<br>
+                <strong>Tiempo estimado:</strong> 45 minutos | <strong>Dificultad:</strong> Media-Alta
+            </div>
+
+            <div class="tecnica">
+                <strong>Técnica clave:</strong> Sellado a la plancha + cocción suave en horno; preparación de reducción de salsas; puré sin grumos.
+            </div>
+
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 filete de salmón fresco (180-200 g), sin espinas</li>
+                <li>2 cucharadas de pan rallado integral</li>
+                <li>1 cucharada de perejil fresco picado</li>
+                <li>1 cucharadita de eneldo seco</li>
+                <li>1 diente de ajo rallado</li>
+                <li>1 cucharadita de aceite de oliva virgen extra</li>
+                <li>Sal y pimienta negra recién molida</li>
+                <li>Para el puré: 300 g de coliflor, 50 ml de leche desnatada o vegetal, nuez moscada</li>
+                <li>Para la reducción: 100 ml de jugo de naranja natural, 50 ml de jugo de limón, 1 cucharadita de miel, pizca de jengibre</li>
+            </ul>
+
+            <h4>Preparación paso a paso</h4>
+            <ol>
+                <li><strong>Preparar la reducción:</strong> En una cacerola pequeña, calienta los jugos con la miel y el jengibre a fuego medio. Deja hervir y reduce el fuego al mínimo. Cocina hasta que espese y quede con textura de jarabe ligero (aprox. 10-12 min). Reserva fuera del fuego.</li>
+                <li><strong>El puré:</strong> Corta la coliflor en flores, hiérvela en agua con sal hasta que esté muy tierna (12-15 min). Escurre muy bien para que no quede agua. Tritura con la leche, sal, pimienta y nuez moscada hasta obtener una crema lisa y sin grumos. Mantén caliente.</li>
+                <li><strong>La costra:</strong> Mezcla en un bol el pan rallado, las hierbas, el ajo, aceite, sal y pimienta. Seca bien el salmón con papel absorbente, úntalo ligeramente con aceite y cubre solo la parte superior con la mezcla, presionando suavemente.</li>
+                <li><strong>Cocción:</strong> Calienta una sartén antiadherente a fuego medio-alto. Coloca el salmón con la piel hacia abajo y sella 2 minutos sin moverlo. Luego, pasa la sartén al horno precalentado a 180 °C y cocina 8-10 minutos más hasta que esté en su punto.</li>
+            </ol>
+
+            <div class="emplatado">
+                <h4>🎨 Instrucciones de emplatado</h4>
+                <ol>
+                    <li>Coloca una cucharada generosa de puré en el centro del plato llano. Con la parte trasera de una cuchara, haz un movimiento circular suave para extenderlo en forma de círculo irregular.</li>
+                    <li>Apoya el filete de salmón sobre el puré, con la parte de la costra hacia arriba.</li>
+                    <li>Con una cuchara pequeña, traza líneas finas de la reducción de cítricos alrededor del pescado, sin cubrirlo completamente.</li>
+                    <li>Decora con unas hojas de eneldo fresco y una rodaja fina de limón o naranja para dar color.</li>
+                    <li>Finaliza con unas gotas de aceite de oliva virgen extra en crudo sobre el puré.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Receta 2 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Pechuga de pollo en sous-vide casero con verduras asadas y emulsión de mostaza
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <div class="info-nutricional">
+                <strong>Información nutricional (por porción):</strong> ~320 kcal | 8g carbohidratos | 42g proteína | 14g grasa<br>
+                <strong>Tiempo estimado:</strong> 60 minutos | <strong>Dificultad:</strong> Alta
+            </div>
+
+            <div class="tecnica">
+                <strong>Técnica clave:</strong> Cocción a baja temperatura para conservar jugosidad; emulsión de salsas; asado de verduras con punto exacto.
+            </div>
+
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 pechuga de pollo entera (aprox. 220 g)</li>
+                <li>1 ramita de tomillo fresco, 1 de romero, 1 hoja de laurel</li>
+                <li>1 diente de ajo aplastado</li>
+                <li>1 cucharadita de aceite de oliva</li>
+                <li>Sal, pimienta y pimentón dulce</li>
+                <li>Verduras: ½ calabacín, ½ pimiento rojo, 1 zanahoria, ¼ de cebolla morada</li>
+                <li>Para la emulsión: 1 cucharada de mostaza Dijon, 2 cucharadas de aceite de oliva, 1 cucharada de agua, jugo de ¼ de limón</li>
+            </ul>
+
+            <h4>Preparación paso a paso</h4>
+            <ol>
+                <li><strong>Preparar el pollo:</strong> Seca bien la pechuga, sazona con sal, pimienta y pimentón. Colócala en una bolsa de cierre hermético junto con las hierbas, el ajo y el aceite. Saca todo el aire posible y cierra bien.</li>
+                <li><strong>Cocción a baja temperatura:</strong> Calienta una olla grande con agua hasta alcanzar los 62-63 °C (usa un termómetro de cocina). Introduce la bolsa y mantén esa temperatura constante durante 40-45 minutos. Si no tienes termómetro, usa fuego muy bajo sin que hierva nunca.</li>
+                <li><strong>Verduras:</strong> Corta todas las verduras en trozos regulares y del mismo tamaño. Mezcla con un poco de aceite, sal y hierbas. Asa en horno a 200 °C durante 20-25 minutos
