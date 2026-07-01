@@ -3,27 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI_Toque</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>AI_Toque - Recetas Saludables</title>
+    <style>
+        /* Estilos generales iguales al resto del sitio */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+            color: #333;
+        }
+
+        /* Contenedor central */
+        .contenedor {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-top: 5px solid #2e9b36;
+        }
+
+        /* Cabecera con logo */
+        .cabecera {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .logo {
+            max-width: 220px;
+            margin-bottom: 1rem;
+        }
+
+        .cabecera h1 {
+            color: #2e9b36;
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Descripción del proyecto */
+        .descripcion {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+
+        /* Sección fundadores */
+        .fundadores h2 {
+            color: #2e9b36;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .fundadores ul {
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+            color: #444;
+            font-size: 1.05rem;
+        }
+
+        /* Botón principal */
+        .boton-principal {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background-color: #2e9b36;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .boton-principal:hover {
+            background-color: #247a2b;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 600px) {
+            .contenedor {
+                padding: 1.5rem;
+            }
+            .cabecera h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="contenedor-inicio">
-        <img src="logo-ucv.png" alt="Logo UCV" class="logo-ucv">
-        <h1 class="titulo-principal">AI_Toque</h1>
-        <p class="descripcion">
-            Proyecto universitario enfocado en promover una alimentación saludable, económica y nutritiva para estudiantes universitarios mediante videos, recetas y recomendaciones prácticas.
-        </p>
 
-        <h2 class="subtitulo">Fundadores:</h2>
-        <ul class="lista-fundadores">
-            <li>Mallma Espinoza Adrian Arturo</li>
-            <li>Ramirez Dominguez Sharon Dayana</li>
-            <li>Valderrama Rojas Carlos Angel</li>
-            <li>Picon Escobal Jeyson Erick</li>
-            <li>Vega Asencios Anais</li>
-        </ul>
+    <div class="contenedor">
+        <!-- Cabecera con logo -->
+        <div class="cabecera">
+            <img src="logo-ucv.png" alt="Universidad César Vallejo" class="logo">
+            <h1>AI_Toque</h1>
+        </div>
 
-        <a href="recetas.html" class="boton-verde">📖 Ver Recetas Completas</a>
+        <!-- Descripción del proyecto -->
+        <div class="descripcion">
+            <p>Proyecto universitario enfocado en promover una alimentación saludable, económica y nutritiva para estudiantes universitarios mediante videos, recetas y recomendaciones prácticas.</p>
+        </div>
+
+        <!-- Lista de fundadores -->
+        <div class="fundadores">
+            <h2>👥 Fundadores</h2>
+            <ul>
+                <li>Mallma Espinoza Adrian Arturo</li>
+                <li>Ramírez Domínguez Sharon Dayana</li>
+                <li>Valderrama Rojas Carlos Ángel</li>
+                <li>Picon Escobal Jayson Erick</li>
+                <li>Vega Asencios Anais</li>
+            </ul>
+        </div>
+
+        <!-- Botón de acceso -->
+        <a href="recetas.html" class="boton-principal">📖 Ver Recetas Completas</a>
     </div>
+
 </body>
 </html>
