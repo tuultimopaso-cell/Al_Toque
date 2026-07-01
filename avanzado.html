@@ -3,30 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nivel Avanzado - AI_Toque</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Nivel Avanzado - Recetas Saludables</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: #e74c3c;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        /* Estilo del acordeón */
+        .acordeon {
+            max-width: 1000px;
+            margin: 0 auto 0.8rem auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .cabecera-receta {
+            background-color: #fef6f6;
+            color: #e74c3c;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .cabecera-receta:hover {
+            background-color: #fde9e9;
+        }
+
+        .flecha {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* Empieza OCULTO por defecto */
+        .cuerpo-receta {
+            display: none;
+            padding: 1.5rem;
+            color: #333;
+            border-top: 1px solid #eee;
+            background: #ffffff;
+        }
+
+        .info-nutricional {
+            background: #f9f9f9;
+            padding: 0.8rem;
+            border-radius: 6px;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        .cuerpo-receta h4 {
+            margin: 1.2rem 0 0.6rem;
+            color: #444;
+            font-size: 1.1rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 0.3rem;
+        }
+
+        .cuerpo-receta ul,
+        .cuerpo-receta ol {
+            margin-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .boton-volver {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton-volver:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header class="cabecera-roja">
-        <h1>🔴 Nivel Avanzado</h1>
-        <p>Técnicas culinarias profesionales con ingredientes accesibles en Perú</p>
-        <a href="recetas.html" class="boton-blanco">← Volver</a>
-    </header>
 
-    <div class="contenedor-principal">
-        <h2>10 Recetas Avanzadas Saludables</h2>
-        <ol class="lista-recetas">
-            <li>🍗 Pollo al Horno con Hierbas Andinas</li>
-            <li>🥘 Guiso de Lentejas Peruano Nutritivo</li>
-            <li>🍚 Arroz Integral con Pollo Salteado al Estilo Casero</li>
-            <li>🥞 Tortilla de Verduras Proteica</li>
-            <li>🍝 Tallarines Integrales con Pollo</li>
-            <li>🥗 Ensalada de Atún Completa</li>
-            <li>🍠 Camote con Pollo Dorado</li>
-            <li>🌯 Wrap de Pollo Casero</li>
-            <li>🍳 Huevos con Verduras Salteadas</li>
-            <li>🍲 Sopa Nutritiva Casera</li>
-        </ol>
+    <a href="recetas.html" class="boton-volver">← Volver a Recetas</a>
+
+    <h2>📋 10 Recetas Saludables Nivel Avanzado</h2>
+
+    <!-- RECETA 1 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🥩 Lomo de Res con Salsa de Frutos Rojos y Quinoa
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~420 kcal | Carbohidratos: 35g | Proteínas: 42g | Grasas: 14g | Hierro, Zinc, Ácido fólico, Antioxidantes</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>150g de lomo de res magro</li>
+                <li>½ taza de quinoa real</li>
+                <li>½ taza de frutos rojos (arándanos, frambuesas)</li>
+                <li>1 cucharada de vinagre de manzana</li>
+                <li>1 cucharadita de miel</li>
+                <li>1 diente de ajo y 1 chalota picada</li>
+                <li>1 taza de caldo de verduras</li>
+                <li>Aceite de oliva, romero, tomillo, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Lava la quinoa y cocínala en el caldo durante 18-20 minutos, deja reposar tapada 5 minutos.</li>
+                <li>Sazona la carne con sal, pimienta, romero y tomillo. Sella en sartén caliente con unas gotas de aceite por 2-3 minutos por lado, retira y reserva en lugar tibio.</li>
+                <li>En la misma sartén, sofríe chalota y ajo hasta dorar, agrega el vinagre, miel y frutos rojos, cocina reduciendo a fuego bajo 5 minutos hasta formar una salsa espesa.</li>
+                <li>Sirve la carne cortada en medallones, baña con la salsa y acompaña con la quinoa.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Coloca la quinoa en el centro, la carne a un lado y decora con hojas frescas de tomillo y frutos rojos enteros.</p>
+        </div>
     </div>
+
+    <!-- RECETA 2 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🐟 Salmón al Horno con Costra de Hierbas y Puré de Coliflor
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~410 kcal | Carbohidratos: 18g | Proteínas: 38g | Grasas: 22g | Omega-3, Vitamina D, Potasio, Calcio</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>180g de filete de salmón fresco</li>
+                <li>300g de coliflor</li>
+                <li>2 cucharadas de pan rallado integral</li>
+                <li>Perejil, eneldo, cebollino y albahaca picados</li>
+                <li>1 diente de ajo rallado</li>
+                <li>2 cucharadas de leche descremada</li>
+                <li>Jugo de limón, aceite de oliva, nuez moscada, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Precalienta el horno a 190 °C. Lava y corta la coliflor en ramitos, cocina en agua con sal 15 minutos hasta que esté muy tierna.</li>
+                <li>Mezcla el pan rallado con las hierbas, ajo, un chorrito de aceite, sal y pimienta. Cubre la parte superior del salmón con esta mezcla.</li>
+                <li>Hornea el salmón 12-15 minutos hasta que la costra esté dorada.</li>
+                <li>Procesa la coliflor escurrida con la leche, nuez moscada, sal y pimienta hasta obtener un puré cremoso.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve el puré de coliflor de base, coloca el salmón encima y decora con rodajas de limón y ramitas de eneldo.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 3 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🍲 Guiso de Lentejas Negras con Verduras Asadas y Especias
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~360 kcal | Carbohidratos: 48g | Proteínas: 21g | Grasas: 9g | Hierro, Magnesio, Ácido fólico, Fibra</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>1 taza de lentejas negras</li>
+                <li>1 zanahoria, 1 calabacín, ½ pimentón rojo y ½ cebolla morada</li>
+                <li>1 tomate maduro triturado</li>
+                <li>1 cucharadita de comino, cúrcuma, jengibre en polvo y pimentón ahumado</li>
+                <li>1 hoja de laurel</li>
+                <li>500ml de caldo de verduras casero</li>
+                <li>Aceite de oliva, sal y pimienta negra</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Deja las lentejas en remojo 1 hora antes de cocinar, luego escurre y reserva.</li>
+                <li>Corta las verduras en trozos grandes, colócalas en bandeja, rocía con aceite y sal, hornea a 180 °C por 20 minutos.</li>
+                <li>En olla profunda, sofríe especias unos segundos, agrega tomate, caldo y lentejas. Cocina a fuego bajo 35-40 minutos.</li>
+                <li>Incorpora las verduras asadas 5 minutos antes de terminar la cocción.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve caliente, decora con semillas de sésamo y perejil fresco, acompaña con una rodaja de pan integral.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 4 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🥗 Ensalada Completa de Quinua, Camarones y Vinagreta de Mostaza
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~390 kcal | Carbohidratos: 32g | Proteínas: 34g | Grasas: 13g | Omega-3, Yodo, Zinc, Vitaminas A y C</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>½ taza de quinua cocida y enfriada</li>
+                <li>120g de camarones pelados y limpios</li>
+                <li>½ aguacate, ½ pepino, 1 tomate y ¼ cebolla morada</li>
+                <li>Un puñado de rúcula fresca</li>
+                <li>1 cucharadita de mostaza Dijon</li>
+                <li>1 cucharada de vinagre de vino blanco</li>
+                <li>2 cucharadas de aceite de oliva virgen extra</li>
+                <li>Jugo de limón, sal, pimienta y orégano</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Cocina la quinua con una pizca de sal, deja enfriar completamente antes de usar.</li>
+                <li>Sazona los camarones, sella en sartén caliente con un poco de aceite 2 minutos por lado, retira y deja enfriar.</li>
+                <li>Prepara la vinagreta mezclando mostaza, vinagre, aceite, limón, orégano, sal y pimienta hasta emulsionar.</li>
+                <li>Mezcla en un bol rúcula, quinua, verduras cortadas, camarones y aguacate, añade la vinagreta justo antes de servir.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Arma la ensalada en capas en plato hondo, decora con semillas de calabaza y unas gotas de aceite de oliva.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 5 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🍛 Curry de Garbanzos y Espinacas con Arroz Basmati Integral
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~380 kcal | Carbohidratos: 58g | Proteínas: 16g | Grasas: 11g | Fibra, Hierro, Calcio, Potasio</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>1 taza de garbanzos cocidos</li>
+                <li>1 taza de espinacas frescas</li>
+                <li>½ taza de arroz basmati integral</li>
+                <li>1 cebolla, 2 dientes de ajo y 1 trozo de jengibre fresco</li>
+                <li>1 cucharadita de curry, cúrcuma, comino y cilantro molido</li>
+                <li>200ml de leche de coco ligera</li>
+                <li>1 tomate triturado</li>
+                <li>Aceite de oliva, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Cocina el arroz en agua con sal 35-40 minutos, deja reposar tapado 10 minutos.</li>
+                <li>Sofríe cebolla, ajo y jengibre rallado hasta transparente, agrega especias y cocina 1 minuto sin dejar de mover.</li>
+                <li>Añade tomate, leche de coco y garbanzos, cocina a fuego bajo 15 minutos.</li>
+                <li>Incorpora las espinacas y cocina 2 minutos más hasta que se ablanden.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve el arroz en un lado y el curry en el otro, decora con hojas de cilantro fresco y unas semillas de sésamo.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 6 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🥟 Empanadas Integrales de Espinaca y Queso Fresco
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~320 kcal por unidad | Carbohidratos: 38g | Proteínas: 14g | Grasas: 12g | Fibra, Calcio, Vitamina A</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>1 taza de harina integral</li>
+                <li>½ taza de agua tibia</li>
+                <li>1 cucharada de aceite de oliva</li>
+                <li>300g de espinacas cocidas y bien escurridas</li>
+                <li>100g de queso fresco bajo en grasa</li>
+                <li>½ cebolla picada y 1 diente de ajo</li>
+                <li>Nuez moscada, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Prepara la masa mezclando harina, agua, aceite y sal, amasa hasta obtener una masa homogénea, deja reposar 20 minutos cubierta.</li>
+                <li>Sofríe cebolla y ajo, agrega espinaca picada, condimenta y deja enfriar. Mezcla con el queso desmenuzado.</li>
+                <li>Estira la masa, corta círculos, rellena, cierra presionando los bordes y haz pliegues.</li>
+                <li>Precalienta horno a 180 °C, hornea 20-25 minutos hasta que estén doradas.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve calientes, acompaña con una ensalada fresca o una salsa de yogur y hierbas.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 7 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🍲 Risotto Integral de Champiñones y Espárragos
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~370 kcal | Carbohidratos: 52g | Proteínas: 13g | Grasas: 11g | Fibra, Potasio, Vitaminas del grupo B</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>1 taza de arroz integral corto</li>
+                <li>150g de champiñones variados</li>
+                <li>100g de espárragos verdes</li>
+                <li>½ cebolla picada fina</li>
+                <li>1 diente de ajo</li>
+                <li>600ml de caldo de verduras caliente</li>
+                <li>2 cucharadas de queso parmesano rallado bajo en grasa</li>
+                <li>1 cucharada de aceite de oliva, vino blanco seco, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Sofríe cebolla y ajo hasta transparente, agrega el arroz y tuesta 2 minutos.</li>
+                <li>Añade un chorrito de vino y deja evaporar, luego agrega el caldo poco a poco, mezclando constantemente.</li>
+                <li>Cocina 35-40 minutos, añade champiñones y espárragos cortados a los 20 minutos.</li>
+                <li>Apaga el fuego, incorpora el queso, tapa y deja reposar 3 minutos antes de servir.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve en plato hondo, decora con espárragos enteros y un poco más de queso rallado.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 8 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🐔 Pechuga de Pollo Rellena con Espinaca y Queso de Cabra
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~365 kcal | Carbohidratos: 8g | Proteínas: 45g | Grasas: 17g | Hierro, Calcio, Vitamina B6</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>150g de pechuga de pollo entera</li>
+                <li>50g de espinaca cocida y escurrida</li>
+                <li>30g de queso de cabra bajo en grasa</li>
+                <li>1 diente de ajo rallado</li>
+                <li>1 cucharadita de mostaza</li>
+                <li>Jugo de limón, aceite de oliva, tomillo, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Abre la pechuga como un libro sin cortar del todo, aplana ligeramente.</li>
+                <li>Mezcla espinaca, queso, ajo, mostaza, sal y pimienta, coloca en el centro de la carne.</li>
+                <li>Cierra la pechuga, sujeta con palillos de madera y sazona por fuera con limón, tomillo, sal y pimienta.</li>
+                <li>Sella en sartén 3 minutos por lado, luego termina de cocinar en horno a 180 °C por 15 minutos.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Corta en rodajas, sirve acompañado de una ensalada de tomate y rúcula, decora con hierbas frescas.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 9 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🍲 Crema de Calabaza, Coco y Especias con Semillas Tostadas
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~275 kcal | Carbohidratos: 32g | Proteínas: 5g | Grasas: 14g | Vitamina A, Potasio, Antioxidantes</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>600g de calabaza pelada y cortada</li>
+                <li>1 cebolla y 1 diente de ajo</li>
+                <li>1 trozo de jengibre fresco</li>
+                <li>200ml de leche de coco ligera</li>
+                <li>300ml de caldo de verduras</li>
+                <li>Canela, nuez moscada, comino y pimienta negra</li>
+                <li>1 cucharada de semillas mixtas (calabaza, girasol, sésamo)</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Sofríe cebolla, ajo y jengibre, agrega calabaza y cocina 5 minutos.</li>
+                <li>Añade caldo y especias, cocina 25 minutos hasta que la calabaza esté muy blanda.</li>
+                <li>Procesa hasta obtener una crema fina, agrega leche de coco y cocina 3 minutos más.</li>
+                <li>Tuesta las semillas en sartén seca unos minutos hasta que suelten aroma.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve caliente, espolvorea las semillas tostadas encima y decora con una ramita de canela.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 10 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🥗 Ensalada de Quinua Negra, Atún Ahumado y Aderezo de Aguacate
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~395 kcal | Carbohidratos: 34g | Proteínas: 32g | Grasas: 16g | Omega-3, Ácido fólico, Potasio, Vitamina E</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>½ taza de quinua negra</li>
+                <li>100g de atún ahumado bajo en sodio</li>
+                <li>½ aguacate maduro</li>
+                <li>½ pepino, ½ pimentón amarillo y ¼ cebolla morada</li>
+                <li>Un puñado de hojas de rúcula y canónigos</li>
+                <li>Jugo de limón, agua, cilantro fresco, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Cocina la quinua negra en el doble de agua con sal durante 25-30 minutos, deja enfriar completamente.</li>
+                <li>Prepara el aderezo procesando aguacate, limón, un chorrito de agua, cilantro, sal y pimienta hasta que quede cremoso.</li>
+                <li>Corta las verduras en juliana fina, desmenuza el atún.</li>
+                <li>Mezcla todos los ingredientes en un bol amplio, añade el aderezo y mezcla suavemente.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Presenta en plato hondo, decora con semillas de chía y rodajas finas de limón.</p>
+        </div>
+    </div>
+
+    <!-- FUNCIÓN DE FUNCIONAMIENTO -->
+    <script>
+        function mostrarOcultar(titulo) {
+            const contenido = titulo.nextElementSibling;
+            const flecha = titulo.querySelector('.flecha');
+            if (contenido.style.display === "block") {
+                contenido.style.display = "none";
+                flecha.textContent = "▼";
+            } else {
+                contenido.style.display = "block";
+                flecha.textContent = "▲";
+            }
+        }
+    </script>
+
 </body>
 </html>
