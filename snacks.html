@@ -53,4 +53,785 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 1.1
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .cabecera-receta:hover {
+            background-color: #e8f4fc;
+        }
+
+        .flecha {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .cuerpo-receta {
+            display: none;
+            padding: 1.5rem;
+            color: #333;
+            border-top: 1px solid #eee;
+            background: #ffffff;
+        }
+
+        .info-nutricional {
+            background: #f9f9f9;
+            padding: 0.8rem;
+            border-radius: 6px;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        .cuerpo-receta h4 {
+            margin: 1.2rem 0 0.6rem;
+            color: #444;
+            font-size: 1.1rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 0.3rem;
+        }
+
+        .cuerpo-receta ul,
+        .cuerpo-receta ol {
+            margin-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .boton-volver {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton-volver:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="recetas.html" class="boton-volver">← Volver al menú principal</a>
+
+    <h2>🥜 Snacks Saludables</h2>
+
+    <!-- ====================== CATEGORÍA 1: DULCES SALUDABLES ====================== -->
+    <div class="categoria">🍯 Dulces saludables</div>
+
+    <!-- 1 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Bolitas de avena y dátiles
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por unidad):</strong> ~70 kcal | 10g carbohidratos | 1.5g proteína | 2.8g grasa | Energía natural sin azúcar refinada</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 taza de avena en hojuelas</li>
+                <li>8 dátiles sin hueso</li>
+                <li>2 cucharadas de cacao puro en polvo</li>
+                <li>1 cucharada de aceite de coco</li>
+                <li>1 pizca de canela</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Remoja los dátiles en agua tibia 10 minutos y escurre.</li>
+                <li>Licúa o tritura todos los ingredientes hasta formar una masa pegajosa.</li>
+                <li>Forma bolitas con las manos y deja enfriar 30 min en la nevera.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Manzanas asadas con canela
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por unidad):</strong> ~85 kcal | 22g carbohidratos | 0.4g proteína | 0.2g grasa | Fibra y dulzor natural</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>2 manzanas medianas</li>
+                <li>1 cucharadita de canela en polvo</li>
+                <li>1 cucharadita de miel o jarabe de agave</li>
+                <li>Un chorrito de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Corta las manzanas en rodajas o en cuartos.</li>
+                <li>Colócalas en un recipiente apto para horno, agrega el agua y espolvorea canela y miel.</li>
+                <li>Hornea a 180 °C durante 15-20 minutos hasta que estén tiernas.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Yogur con frutas y semillas
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~160 kcal | 21g carbohidratos | 9g proteína | 4g grasa | Completo y saciante</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>150 g de yogur natural sin azúcar</li>
+                <li>½ taza de frutas picadas (fresas, plátano, arándanos)</li>
+                <li>1 cucharadita de semillas de chía o lino</li>
+                <li>1 cucharadita de miel (opcional)</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Coloca el yogur en un vaso o tazón.</li>
+                <li>Agrega las frutas, las semillas y endulza si lo deseas.</li>
+                <li>Mezcla suavemente y sirve al momento.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Chips de plátano al horno
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~95 kcal | 23g carbohidratos | 1.1g proteína | 0.3g grasa | Sin aceites añadidos</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>2 plátanos maduros pero firmes</li>
+                <li>1 pizca de canela</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Corta los plátanos en rodajas muy finas.</li>
+                <li>Colócalas en una bandeja con papel vegetal sin que se toquen.</li>
+                <li>Espolvorea canela y hornea a 120 °C por 40-50 minutos hasta que estén doradas y crujientes.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Mousse de aguacate y cacao
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~180 kcal | 12g carbohidratos | 2.5g proteína | 14g grasa | Grasas saludables y antioxidantes</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>½ aguacate maduro</li>
+                <li>1 cucharada de cacao puro</li>
+                <li>1 cucharadita de miel o dátil triturado</li>
+                <li>2 cucharadas de leche vegetal</li>
+                <li>1 pizca de vainilla</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa o tritura todo hasta obtener una crema muy lisa.</li>
+                <li>Deja reposar en la nevera 20 minutos antes de servir.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Barritas de arroz inflado y frutos secos
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por unidad):</strong> ~110 kcal | 18g carbohidratos | 2.2g proteína | 3.5g grasa | Fáciles de transportar</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 taza de arroz inflado sin azúcar</li>
+                <li>½ taza de nueces picadas</li>
+                <li>3 cucharadas de miel o jarabe de arroz</li>
+                <li>1 cucharada de aceite de coco</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Calienta la miel y el aceite hasta que se integren.</li>
+                <li>Mezcla con el arroz y las nueces en un recipiente.</li>
+                <li>Extiende en una bandeja, presiona bien y enfría 1 hora. Corta en barritas.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Fresas con crema de almendras
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~125 kcal | 14g carbohidratos | 3g proteína | 6g grasa | Dulce y muy ligero</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 taza de fresas frescas</li>
+                <li>2 cucharadas de crema de almendras casera o natural</li>
+                <li>Unas gotas de jugo de limón</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Lava y corta las fresas en mitades.</li>
+                <li>Mezcla la crema de almendras con un poco de limón y sirve encima.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Gelatina natural de frutas
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~60 kcal | 13g carbohidratos | 1.2g proteína | 0.1g grasa | Muy baja en calorías</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>250 ml de jugo de fruta natural sin azúcar</li>
+                <li>1 cucharada de gelatina sin sabor</li>
+                <li>½ taza de trozos de fruta</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Disuelve la gelatina en un poco de agua fría y luego mezcla con el jugo tibio.</li>
+                <li>Agrega los trozos de fruta y vierte en moldes.</li>
+                <li>Refrigera al menos 2 horas hasta que cuaje.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Bolitas de coco y plátano
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por unidad):</strong> ~65 kcal | 9g carbohidratos | 0.8g proteína | 2.7g grasa | Sin azúcar añadida</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 plátano maduro</li>
+                <li>½ taza de coco rallado sin azúcar</li>
+                <li>1 cucharadita de semillas de sésamo</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Tritura el plátano hasta hacerlo puré.</li>
+                <li>Mezcla con la mitad del coco y las semillas.</li>
+                <li>Forma bolitas y pásalas por el resto del coco rallado. Enfría 30 min.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Crema de queso con miel y nueces
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~150 kcal | 10g carbohidratos | 6g proteína | 9g grasa | Equilibrio entre dulce y proteínas</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>80 g de queso crema bajo en grasa o queso fresco batido</li>
+                <li>1 cucharadita de miel</li>
+                <li>5 nueces picadas</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla el queso con la miel hasta integrar.</li>
+                <li>Espolvorea las nueces por encima al servir.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- ====================== CATEGORÍA 2: SALADOS SALUDABLES ====================== -->
+    <div class="categoria">🧂 Salados saludables</div>
+
+    <!-- 1 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Garbanzos tostados con especias
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~130 kcal | 20g carbohidratos | 6g proteína | 2.5g grasa | Fibra y proteína vegetal</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 taza de garbanzos cocidos y bien secos</li>
+                <li>1 cucharadita de aceite de oliva</li>
+                <li>Sal, pimentón, comino y pimienta al gusto</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Seca muy bien los garbanzos con papel de cocina.</li>
+                <li>Mezcla con el aceite y las especias.</li>
+                <li>Hornea a 180 °C durante 25-30 minutos hasta que estén crujientes.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Bastones de zanahoria y pepino con hummus
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~110 kcal | 15g carbohidratos | 4g proteína | 4g grasa | Mucha fibra y saciedad</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 zanahoria grande</li>
+                <li>½ pepino mediano</li>
+                <li>3 cucharadas de hummus casero</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Pela y corta las verduras en tiras largas y finas.</li>
+                <li>Sirve junto con el hummus para untar.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Chips de calabacín al horno
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~75 kcal | 6g carbohidratos | 2g proteína | 4g grasa | Alternativa baja en calorías a las papas fritas</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 calabacín mediano</li>
+                <li>1 cucharadita de aceite de oliva</li>
+                <li>Sal, orégano y ajo en polvo</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Corta el calabacín en rodajas muy finas.</li>
+                <li>Seca bien con papel, mezcla con aceite y especias.</li>
+                <li>Hornea a 160 °C durante 20-25 minutos hasta que estén crujientes.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Queso fresco con tomate y orégano
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~120 kcal | 4g carbohidratos | 12g proteína | 6g grasa | Alto contenido proteico</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>100 g de queso fresco o requesón</li>
+                <li>1 tomate maduro</li>
+                <li>1 cucharadita de aceite de oliva</li>
+                <li>Orégano y sal al gusto</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Corta el queso y el tomate en cubos.</li>
+                <li>Mezcla en un plato, agrega el aceite y las especias.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Palomitas de maíz caseras
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~90 kcal | 18g carbohidratos | 2.5g proteína | 1g grasa | Mucho volumen con pocas calorías</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>30 g de maíz para palomitas</li>
+                <li>½ cucharadita de aceite de oliva</li>
+                <li>Sal, pimentón o levadura nutricional</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Calienta el aceite en una olla tapada a fuego medio.</li>
+                <li>Agrega el maíz y espera a que empiecen a explotar.</li>
+                <li>Retira cuando paren y condimenta al gusto.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Tostadas integrales con aguacate
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~160 kcal | 18g carbohidratos | 4g proteína | 8g grasa | Grasas saludables y fibra</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>2 rebanadas de pan integral</li>
+                <li>½ aguacate maduro</li>
+                <li>Jugo de limón, sal y pimienta</li>
+                <li>Unas rodajas de tomate (opcional)</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Tuesta ligeramente el pan.</li>
+                <li>Tritura el aguacate con limón, sal y pimienta.</li>
+                <li>Unta sobre el pan y decora con tomate.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Ensalada de atún ligera
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~140 kcal | 3g carbohidratos | 22g proteína | 5g grasa | Ideal para recuperación muscular</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 lata de atún al natural (escurrido)</li>
+                <li>2 cucharadas de maíz dulce</li>
+                <li>½ tomate picado</li>
+                <li>1 cucharadita de aceite de oliva y limón</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla todos los ingredientes en un bol.</li>
+                <li>Condimenta y sirve solo o con una rebanada de pan.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Semillas de calabaza tostadas
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~150 kcal | 6g carbohidratos | 7g proteína | 12g grasa | Ricas en magnesio y zinc</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>½ taza de semillas de calabaza</li>
+                <li>½ cucharadita de aceite de oliva</li>
+                <li>Sal y especias al gusto</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Lava y seca bien las semillas.</li>
+                <li>Mezcla con aceite y sal.</li>
+                <li>Hornea a 160 °C durante 12-15 minutos hasta que estén doradas.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Rollitos de lechuga con pavo
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~95 kcal | 3g carbohidratos | 14g proteína | 3g grasa | Muy bajos en calorías</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>4 hojas grandes de lechuga</li>
+                <li>80 g de pechuga de pavo en lonchas</li>
+                <li>1 cucharada de queso crema ligero</li>
+                <li>Unas tiras de pimiento</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Extiende las hojas de lechuga y unta un poco de queso.</li>
+                <li>Coloca el pavo y el pimiento, enrolla y cierra con un palillo.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Crema de berenjena con pan integral
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~125 kcal | 16g carbohidratos | 3g proteína | 5g grasa | Alternativa al paté industrial</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 berenjena mediana</li>
+                <li>1 diente de ajo</li>
+                <li>1 cucharadita de aceite de oliva</li>
+                <li>Jugo de limón, sal y comino</li>
+                <li>2 rebanadas de pan integral</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Asa la berenjena entera hasta que esté tierna, saca la pulpa.</li>
+                <li>Tritura con el resto de ingredientes hasta obtener una crema.</li>
+                <li>Unta sobre el pan tostado.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- ====================== CATEGORÍA 3: MIXTOS SALUDABLES ====================== -->
+    <div class="categoria">🔄 Mixtos saludables</div>
+
+    <!-- 1 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Mix de frutos secos y fruta deshidratada
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~180 kcal | 12g carbohidratos | 5g proteína | 13g grasa | Energía y nutrientes variados</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>10 almendras</li>
+                <li>6 nueces</li>
+                <li>4 orejones de albaricoque</li>
+                <li>2 ciruelas pasas sin hueso</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla todos los ingredientes en un recipiente pequeño.</li>
+                <li>Guárdalo en un lugar fresco para llevarlo contigo.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Ensalada de frutas con yogur y nueces
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~175 kcal | 22g carbohidratos | 7g proteína | 6g grasa | Equilibrio entre dulce y saciedad</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 taza de frutas variadas picadas</li>
+                <li>100 g de yogur natural</li>
+                <li>4 nueces picadas</li>
+                <li>1 cucharadita de semillas de lino</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Coloca las frutas en un bol.</li>
+                <li>Añade el yogur, las nueces y las semillas por encima.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Tostadas con queso, plátano y canela
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~155 kcal | 23g carbohidratos | 6g proteína | 4g grasa | Ideal para media mañana</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 rebanada de pan integral</li>
+                <li>30 g de queso fresco</li>
+                <li>½ plátano en rodajas</li>
+                <li>Canela en polvo</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Tuesta el pan y unta el queso.</li>
+                <li>Coloca las rodajas de plátano y espolvorea canela.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Rollitos de jamón, queso y manzana
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~130 kcal | 8g carbohidratos | 11g proteína | 5g grasa | Combinación dulce-salada muy sabrosa</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>3 lonchas de jamón de pavo o pollo</li>
+                <li>3 lonchas de queso bajo en grasa</li>
+                <li>½ manzana en tiras finas</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Coloca una loncha de jamón, encima una de queso y tiras de manzana.</li>
+                <li>Enrolla y cierra con un palillo.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Ensalada de queso, uvas y nueces
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~165 kcal | 12g carbohidratos | 9g proteína | 9g grasa | Fácil y muy equilibrada</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>80 g de queso fresco en cubos</li>
+                <li>½ taza de uvas partidas por la mitad</li>
+                <li>4 nueces troceadas</li>
+                <li>Unas gotas de aceite de oliva y vinagre de manzana</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla el queso, las uvas y las nueces en un plato.</li>
+                <li>Aliña con el aceite y el vinagre.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Tostadas con aguacate y fresas
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~145 kcal | 16g carbohidratos | 3g proteína | 8g grasa | Original y refrescante</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 rebanada de pan integral</li>
+                <li>¼ de aguacate</li>
+                <li>3 o 4 fresas en rodajas</li>
+                <li>Unas gotas de limón y una pizca de sal</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Tuesta el pan y aplasta el aguacate con limón y sal.</li>
+                <li>Unta sobre el pan y coloca las fresas encima.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Yogur con semillas y arándanos
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~150 kcal | 18g carbohidratos | 9g proteína | 4.5g grasa | Alto valor nutricional</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>120 g de yogur natural</li>
+                <li>1 cucharadita de semillas de girasol</li>
+                <li>1 cucharadita de semillas de calabaza</li>
+                <li>¼ taza de arándanos frescos</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Vierte el yogur en un bol.</li>
+                <li>Distribuye las semillas y los arándanos por encima.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Ensalada de pollo y manzana
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~170 kcal | 10g carbohidratos | 22g proteína | 5g grasa | Saciante y completa</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>80 g de pechuga de pollo cocida en tiras</li>
+                <li>½ manzana en cubos</li>
+                <li>1 cucharada de apio picado</li>
+                <li>1 cucharadita de yogur natural para aliñar</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla el pollo, la manzana y el apio.</li>
+                <li>Aliña con el yogur y un poco de sal y pimienta.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Queso con uvas y almendras
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~160 kcal | 11g carbohidratos | 8g proteína | 9g grasa | Rápido de preparar</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>70 g de queso fresco o tierno</li>
+                <li>½ taza de uvas</li>
+                <li>5 almendras enteras</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Sirve el queso en un plato.</li>
+                <li>Acompaña con las uvas y las almendras para comer al mismo tiempo.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Crema de cacao con plátano y semillas
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores (por porción):</strong> ~185 kcal | 24g carbohidratos | 4g proteína | 8g grasa | Sabor dulce con nutrientes</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>½ plátano maduro</li>
+                <li>1 cucharadita de cacao puro</li>
+                <li>1 cucharada de queso crema ligero</li>
+                <li>1 cucharadita de semillas de sésamo</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla el queso con el cacao hasta formar una crema.</li>
+                <li>Unta sobre el plátano en rodajas y espolvorea las semillas.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function mostrarOcultar(elemento) {
+            const contenido = elemento.nextElementSibling;
+            const flecha = elemento.querySelector('.flecha');
+            if (contenido.style.display === "block") {
+                contenido.style.display = "none";
+                flecha.textContent = "▼";
+            } else {
+                contenido.style.display = "block";
+                flecha.textContent = "▲";
+            }
+        }
+    </script>
+
+</body>
+</html>
