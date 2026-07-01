@@ -14,7 +14,7 @@ body {
 }
 
 /* --------------------------
-   CABECERAS
+   CABECERA
 --------------------------- */
 .cabecera-verde {
     background-color: #2e9b36;
@@ -51,7 +51,7 @@ body {
 }
 
 /* --------------------------
-   ESTILO ACORDEÓN FUNCIONAL
+   ACORDEÓN FUNCIONAL 100%
 --------------------------- */
 .acordeon {
     background: #ffffff;
@@ -80,24 +80,16 @@ body {
 }
 
 .flecha {
-    font-size: 0.9rem;
     font-weight: bold;
+    font-size: 1rem;
 }
 
-/* ✅ REGLA CLAVE: EMPIEZA OCULTO */
+/* ✅ REGLA DEFINITIVA: EMPIEZA OCULTO */
 .acordeon-contenido {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 1.5rem;
-    opacity: 0;
-    transition: all 0.3s ease;
-    color: #333;
-}
-
-.acordeon-contenido.activo {
-    max-height: 2000px;
+    display: none;
     padding: 1.5rem;
-    opacity: 1;
+    line-height: 1.8;
+    color: #333;
     border-top: 1px solid #eee;
 }
 

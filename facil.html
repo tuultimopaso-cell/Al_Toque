@@ -318,13 +318,12 @@
         function toggleAcordeon(elemento) {
             const contenido = elemento.nextElementSibling;
             const flecha = elemento.querySelector('.flecha');
-
-            if (contenido.classList.contains('activo')) {
-                contenido.classList.remove('activo');
-                flecha.textContent = '▼';
+            if (contenido.style.display === "block") {
+                contenido.style.display = "none";
+                flecha.textContent = "▼";
             } else {
-                contenido.classList.add('activo');
-                flecha.textContent = '▲';
+                contenido.style.display = "block";
+                flecha.textContent = "▲";
             }
         }
     </script>
