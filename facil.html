@@ -9,185 +9,246 @@
 <body>
     <header class="cabecera-verde">
         <h1>🟢 Nivel Fácil</h1>
-        <p>Recetas saludables, rápidas y económicas para principiantes</p>
+        <p>Recetas saludables para principiantes</p>
         <a href="recetas.html" class="boton-blanco">← Volver a Recetas</a>
     </header>
 
     <div class="contenedor-principal">
-        <h2>📋 Lista de Recetas</h2>
+        <h2>📋 10 Recetas Saludables Nivel Fácil</h2>
 
         <!-- Receta 1 -->
-        <div class="tarjeta-receta">
-            <h3 class="titulo-receta" onclick="mostrarOcultar(this)">🥤 Batido Energético de Avena ▼</h3>
-            <div class="detalles-receta">
-                <p class="info-nutricional"><strong>Calorías:</strong> ~220 kcal | <strong>Vitaminas:</strong> B1, B2, E | <strong>Beneficio:</strong> Energía sostenida, mejora la digestión</p>
-                
-                <h4>Ingredientes:</h4>
+        <div class="acordeon-item">
+            <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+                🥤 Batido Energético de Avena
+                <span class="acordeon-flecha">▼</span>
+            </div>
+            <div class="acordeon-contenido">
+                <div class="info-nutricional">
+                    <strong>Valor nutricional (por porción):</strong> ~220 kcal | Carbohidratos: 38g | Proteínas: 7g | Grasas: 5g | Vitaminas: B1, B2, E, Potasio
+                </div>
+
+                <h4>🥣 Ingredientes:</h4>
                 <ul>
                     <li>3 cucharadas de avena en hojuelas</li>
-                    <li>1 vaso de leche descremada o bebida vegetal</li>
-                    <li>1 plátano maduro</li>
+                    <li>1 vaso (200ml) de leche descremada o bebida vegetal</li>
+                    <li>1 plátano maduro mediano</li>
                     <li>1 cucharadita de miel o azúcar moreno</li>
-                    <li>1 pizca de canela</li>
+                    <li>1 pizca de canela en polvo</li>
                 </ul>
 
-                <h4>Preparación:</h4>
+                <h4>👩‍🍳 Preparación paso a paso:</h4>
                 <ol>
                     <li>Coloca todos los ingredientes en la licuadora.</li>
-                    <li>Procesa durante 1 o 2 minutos hasta obtener una mezcla homogénea.</li>
-                    <li>Sirve inmediatamente y disfruta.</li>
+                    <li>Procesa durante 1 o 2 minutos hasta obtener una mezcla homogénea y sin grumos.</li>
+                    <li>Prueba y ajusta el dulzor si es necesario.</li>
                 </ol>
+
+                <h4>🍽️ Sugerencia de emplatado:</h4>
+                <p>Sirve en un vaso alto, decora con una pizca de canela y unas rodajas finas de plátano en el borde. Ideal para el desayuno o merienda.</p>
             </div>
         </div>
 
         <!-- Receta 2 -->
-        <div class="tarjeta-receta">
-            <h3 class="titulo-receta" onclick="mostrarOcultar(this)">🥑 Tostadas con Palta ▼</h3>
-            <div class="detalles-receta">
-                <p class="info-nutricional"><strong>Calorías:</strong> ~260 kcal | <strong>Vitaminas:</strong> A, C, E, K | <strong>Beneficio:</strong> Grasas saludables, protege el corazón y da saciedad</p>
-                
-                <h4>Ingredientes:</h4>
+        <div class="acordeon-item">
+            <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+                🥑 Tostadas con Palta
+                <span class="acordeon-flecha">▼</span>
+            </div>
+            <div class="acordeon-contenido">
+                <div class="info-nutricional">
+                    <strong>Valor nutricional (por porción):</strong> ~260 kcal | Carbohidratos: 22g | Proteínas: 6g | Grasas: 16g | Vitaminas: A, C, E, K, Ácido Fólico
+                </div>
+
+                <h4>🥣 Ingredientes:</h4>
                 <ul>
                     <li>2 rebanadas de pan integral</li>
                     <li>½ palta madura</li>
                     <li>Jugo de medio limón</li>
-                    <li>Sal y pimienta al gusto</li>
-                    <li>Opcional: Rodajas de tomate</li>
+                    <li>Sal y pimienta negra al gusto</li>
+                    <li>Opcional: Rodajas de tomate o queso fresco</li>
                 </ul>
 
-                <h4>Preparación:</h4>
+                <h4>👩‍🍳 Preparación paso a paso:</h4>
                 <ol>
-                    <li>Tuesta el pan hasta que quede crujiente.</li>
-                    <li>Aplasta la palta en un plato, agrega el limón, sal y pimienta.</li>
-                    <li>Unta la mezcla sobre las tostadas y decora a tu gusto.</li>
+                    <li>Tuesta las rebanadas de pan en una sartén o tostadora hasta que estén crujientes.</li>
+                    <li>En un plato, aplasta la palta con un tenedor, agrega el jugo de limón, sal y pimienta; mezcla bien.</li>
+                    <li>Unta la preparación sobre las tostadas.</li>
                 </ol>
+
+                <h4>🍽️ Sugerencia de emplatado:</h4>
+                <p>Coloca las tostadas en un plato plano, agrega encima rodajas de tomate y espolvorea un poco de pimentón. Acompaña con una ensalada pequeña.</p>
             </div>
         </div>
 
         <!-- Receta 3 -->
-        <div class="tarjeta-receta">
-            <h3 class="titulo-receta" onclick="mostrarOcultar(this)">🍓 Yogurt con Frutas y Semillas ▼</h3>
-            <div class="detalles-receta">
-                <p class="info-nutricional"><strong>Calorías:</strong> ~190 kcal | <strong>Vitaminas:</strong> C, D, Calcio | <strong>Beneficio:</strong> Mejora la flora intestinal y fortalece huesos</p>
-                
-                <h4>Ingredientes:</h4>
+        <div class="acordeon-item">
+            <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+                🍓 Yogurt con Frutas y Semillas
+                <span class="acordeon-flecha">▼</span>
+            </div>
+            <div class="acordeon-contenido">
+                <div class="info-nutricional">
+                    <strong>Valor nutricional (por porción):</strong> ~190 kcal | Carbohidratos: 28g | Proteínas: 10g | Grasas: 5g | Vitaminas: C, D, Calcio, Fósforo
+                </div>
+
+                <h4>🥣 Ingredientes:</h4>
                 <ul>
-                    <li>1 taza de yogurt natural sin azúcar</li>
-                    <li>½ taza de fresas o frutas de temporada</li>
+                    <li>1 taza (150g) de yogurt natural sin azúcar</li>
+                    <li>½ taza de frutas frescas de temporada (fresas, manzana, plátano)</li>
                     <li>1 cucharadita de semillas de chía o linaza</li>
                     <li>1 cucharadita de miel</li>
                 </ul>
 
-                <h4>Preparación:</h4>
+                <h4>👩‍🍳 Preparación paso a paso:</h4>
                 <ol>
-                    <li>Coloca el yogurt en un recipiente amplio.</li>
-                    <li>Corta las frutas en trozos pequeños y agrégalas.</li>
-                    <li>Añade las semillas y la miel, mezcla suavemente.</li>
+                    <li>Coloca el yogurt en un recipiente hondo.</li>
+                    <li>Lava y corta las frutas en trozos pequeños, agrégalas al yogurt.</li>
+                    <li>Añade las semillas y la miel, mezcla suavemente sin romper la textura de las frutas.</li>
                 </ol>
+
+                <h4>🍽️ Sugerencia de emplatado:</h4>
+                <p>Sirve en un tazón de vidrio, decora con unas hojas de menta fresca y unas semillas extra por encima.</p>
             </div>
         </div>
 
         <!-- Receta 4 -->
-        <div class="tarjeta-receta">
-            <h3 class="titulo-receta" onclick="mostrarOcultar(this)">🥞 Panqueques de Avena ▼</h3>
-            <div class="detalles-receta">
-                <p class="info-nutricional"><strong>Calorías:</strong> ~230 kcal | <strong>Vitaminas:</strong> Complejo B, Hierro | <strong>Beneficio:</strong> Aporta saciedad por más tiempo</p>
-                
-                <h4>Ingredientes:</h4>
+        <div class="acordeon-item">
+            <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+                🥞 Panqueques de Avena
+                <span class="acordeon-flecha">▼</span>
+            </div>
+            <div class="acordeon-contenido">
+                <div class="info-nutricional">
+                    <strong>Valor nutricional (por porción):</strong> ~230 kcal | Carbohidratos: 32g | Proteínas: 9g | Grasas: 7g | Vitaminas: Complejo B, Hierro, Magnesio
+                </div>
+
+                <h4>🥣 Ingredientes:</h4>
                 <ul>
                     <li>4 cucharadas de avena molida</li>
-                    <li>1 huevo</li>
+                    <li>1 huevo mediano</li>
                     <li>½ taza de leche descremada</li>
                     <li>1 pizca de canela</li>
                     <li>1 cucharadita de aceite vegetal</li>
                 </ul>
 
-                <h4>Preparación:</h4>
+                <h4>👩‍🍳 Preparación paso a paso:</h4>
                 <ol>
-                    <li>Mezcla la avena, huevo, leche y canela hasta formar una masa homogénea.</li>
-                    <li>Calienta una sartén con muy poco aceite.</li>
-                    <li>Vierte porciones pequeñas y cocina 2 minutos por cada lado.</li>
+                    <li>En un bol, mezcla la avena, el huevo, la leche y la canela hasta obtener una masa homogénea.</li>
+                    <li>Deja reposar la mezcla 5 minutos para que la avena absorba el líquido.</li>
+                    <li>Calienta una sartén con una gota de aceite, vierte porciones pequeñas y cocina 2 minutos por cada lado.</li>
                 </ol>
+
+                <h4>🍽️ Sugerencia de emplatado:</h4>
+                <p>Apila los panqueques en un plato, acompaña con trozos de fruta fresca y un chorrito de miel.</p>
             </div>
         </div>
 
         <!-- Receta 5 -->
-        <div class="tarjeta-receta">
-            <h3 class="titulo-receta" onclick="mostrarOcultar(this)">🥗 Ensalada Fresca Básica ▼</h3>
-            <div class="detalles-receta">
-                <p class="info-nutricional"><strong>Calorías:</strong> ~150 kcal | <strong>Vitaminas:</strong> A, C, K, Ácido Fólico | <strong>Beneficio:</strong> Baja en calorías, alta en fibra</p>
-                
-                <h4>Ingredientes:</h4>
+        <div class="acordeon-item">
+            <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+                🥗 Ensalada Fresca Básica
+                <span class="acordeon-flecha">▼</span>
+            </div>
+            <div class="acordeon-contenido">
+                <div class="info-nutricional">
+                    <strong>Valor nutricional (por porción):</strong> ~150 kcal | Carbohidratos: 12g | Proteínas: 2g | Grasas: 10g | Vitaminas: A, C, K, Ácido Fólico
+                </div>
+
+                <h4>🥣 Ingredientes:</h4>
                 <ul>
                     <li>1 taza de lechuga picada</li>
-                    <li>½ tomate mediano picado</li>
+                    <li>½ tomate mediano en cubos</li>
                     <li>¼ de cebolla morada en rodajas finas</li>
                     <li>½ pepino en rodajas</li>
                     <li>1 cucharada de aceite de oliva y jugo de limón</li>
                 </ul>
 
-                <h4>Preparación:</h4>
+                <h4>👩‍🍳 Preparación paso a paso:</h4>
                 <ol>
-                    <li>Lava muy bien todas las verduras.</li>
-                    <li>Corta y mezcla en un bol amplio.</li>
-                    <li>Aliña con aceite, limón, sal y pimienta al gusto.</li>
+                    <li>Lava muy bien todas las verduras bajo agua corriente.</li>
+                    <li>Corta y mezcla todos los ingredientes en un bol amplio.</li>
+                    <li>Aliña con el aceite, limón, sal y pimienta al gusto justo antes de servir.</li>
                 </ol>
+
+                <h4>🍽️ Sugerencia de emplatado:</h4>
+                <p>Sirve en un plato hondo o bol de ensalada, puedes decorar con semillas de girasol para darle más textura.</p>
             </div>
         </div>
 
         <!-- Receta 6 -->
-        <div class="tarjeta-receta">
-            <h3 class="titulo-receta" onclick="mostrarOcultar(this)">🍎 Manzana con Mantequilla de Maní ▼</h3>
-            <div class="detalles-receta">
-                <p class="info-nutricional"><strong>Calorías:</strong> ~210 kcal | <strong>Vitaminas:</strong> E, B6, Potasio | <strong>Beneficio:</strong> Combina fibra y proteína vegetal</p>
-                
-                <h4>Ingredientes:</h4>
+        <div class="acordeon-item">
+            <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+                🍎 Manzana con Mantequilla de Maní
+                <span class="acordeon-flecha">▼</span>
+            </div>
+            <div class="acordeon-contenido">
+                <div class="info-nutricional">
+                    <strong>Valor nutricional (por porción):</strong> ~210 kcal | Carbohidratos: 25g | Proteínas: 5g | Grasas: 11g | Vitaminas: E, B6, Potasio
+                </div>
+
+                <h4>🥣 Ingredientes:</h4>
                 <ul>
                     <li>1 manzana mediana</li>
-                    <li>1 cucharada de mantequilla de maní natural</li>
+                    <li>1 cucharada de mantequilla de maní natural sin azúcar</li>
                     <li>Semillas de girasol o chía (opcional)</li>
                 </ul>
 
-                <h4>Preparación:</h4>
+                <h4>👩‍🍳 Preparación paso a paso:</h4>
                 <ol>
-                    <li>Lava y corta la manzana en gajos o rodajas.</li>
+                    <li>Lava y desinfecta bien la manzana.</li>
+                    <li>Corta en gajos o rodajas gruesas.</li>
                     <li>Unta la mantequilla de maní sobre cada trozo.</li>
-                    <li>Espolvorea semillas si deseas mayor textura.</li>
                 </ol>
+
+                <h4>🍽️ Sugerencia de emplatado:</h4>
+                <p>Coloca los gajos en forma de abanico en un plato, espolvorea las semillas por encima y sirve de inmediato para que no se oxide la fruta.</p>
             </div>
         </div>
 
         <!-- Receta 7 -->
-        <div class="tarjeta-receta">
-            <h3 class="titulo-receta" onclick="mostrarOcultar(this)">🥪 Sándwich Integral de Pollo ▼</h3>
-            <div class="detalles-receta">
-                <p class="info-nutricional"><strong>Calorías:</strong> ~280 kcal | <strong>Vitaminas:</strong> B3, B6, Hierro | <strong>Beneficio:</strong> Proteína de calidad para el cuerpo</p>
-                
-                <h4>Ingredientes:</h4>
+        <div class="acordeon-item">
+            <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+                🥪 Sándwich Integral de Pollo
+                <span class="acordeon-flecha">▼</span>
+            </div>
+            <div class="acordeon-contenido">
+                <div class="info-nutricional">
+                    <strong>Valor nutricional (por porción):</strong> ~280 kcal | Carbohidratos: 26g | Proteínas: 22g | Grasas: 9g | Vitaminas: B3, B6, Hierro
+                </div>
+
+                <h4>🥣 Ingredientes:</h4>
                 <ul>
                     <li>2 rebanadas de pan integral</li>
-                    <li>80 g de pechuga de pollo cocida y desmenuzada</li>
+                    <li>80g de pechuga de pollo cocida y desmenuzada</li>
                     <li>1 hoja de lechuga fresca</li>
                     <li>2 rodajas de tomate</li>
                     <li>1 cucharadita de mayonesa baja en grasa</li>
                 </ul>
 
-                <h4>Preparación:</h4>
+                <h4>👩‍🍳 Preparación paso a paso:</h4>
                 <ol>
                     <li>Unta la mayonesa en las dos rebanadas de pan.</li>
-                    <li>Coloca la lechuga, el tomate y el pollo.</li>
-                    <li>Cierra el sándwich y corta por la mitad.</li>
+                    <li>Coloca la lechuga, el tomate y encima el pollo desmenuzado.</li>
+                    <li>Cierra el sándwich y corta por la mitad en diagonal.</li>
                 </ol>
+
+                <h4>🍽️ Sugerencia de emplatado:</h4>
+                <p>Sirve en un plato, acompaña con una porción de ensalada o zanahorias ralladas para equilibrar el plato.</p>
             </div>
         </div>
 
         <!-- Receta 8 -->
-        <div class="tarjeta-receta">
-            <h3 class="titulo-receta" onclick="mostrarOcultar(this)">🥤 Smoothie Verde ▼</h3>
-            <div class="detalles-receta">
-                <p class="info-nutricional"><strong>Calorías:</strong> ~180 kcal | <strong>Vitaminas:</strong> A, C, K, Hierro | <strong>Beneficio:</strong> Desintoxica y aporta energía rápida</p>
-                
-                <h4>Ingredientes:</h4>
+        <div class="acordeon-item">
+            <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+                🥤 Smoothie Verde
+                <span class="acordeon-flecha">▼</span>
+            </div>
+            <div class="acordeon-contenido">
+                <div class="info-nutricional">
+                    <strong>Valor nutricional (por porción):</strong> ~180 kcal | Carbohidratos: 35g | Proteínas: 4g | Grasas: 2g | Vitaminas: A, C, K, Hierro
+                </div>
+
+                <h4>🥣 Ingredientes:</h4>
                 <ul>
                     <li>1 puñado de espinacas frescas</li>
                     <li>1 plátano maduro</li>
@@ -195,22 +256,30 @@
                     <li>1 vaso de agua o leche vegetal</li>
                 </ul>
 
-                <h4>Preparación:</h4>
+                <h4>👩‍🍳 Preparación paso a paso:</h4>
                 <ol>
-                    <li>Lava muy bien las espinacas.</li>
+                    <li>Lava muy bien las espinacas y la fruta.</li>
                     <li>Coloca todos los ingredientes en la licuadora.</li>
                     <li>Procesa hasta obtener una mezcla suave y homogénea.</li>
                 </ol>
+
+                <h4>🍽️ Sugerencia de emplatado:</h4>
+                <p>Sirve en un vaso alto, decora con una rodaja de piña en el borde y una pajita reutilizable.</p>
             </div>
         </div>
 
         <!-- Receta 9 -->
-        <div class="tarjeta-receta">
-            <h3 class="titulo-receta" onclick="mostrarOcultar(this)">🍲 Sopa de Verduras Rápida ▼</h3>
-            <div class="detalles-receta">
-                <p class="info-nutricional"><strong>Calorías:</strong> ~160 kcal | <strong>Vitaminas:</strong> A, C, Complejo B | <strong>Beneficio:</strong> Hidratante y fácil de digerir</p>
-                
-                <h4>Ingredientes:</h4>
+        <div class="acordeon-item">
+            <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+                🍲 Sopa de Verduras Rápida
+                <span class="acordeon-flecha">▼</span>
+            </div>
+            <div class="acordeon-contenido">
+                <div class="info-nutricional">
+                    <strong>Valor nutricional (por porción):</strong> ~160 kcal | Carbohidratos: 24g | Proteínas: 3g | Grasas: 4g | Vitaminas: A, C, Complejo B
+                </div>
+
+                <h4>🥣 Ingredientes:</h4>
                 <ul>
                     <li>1 zanahoria pequeña en cubos</li>
                     <li>1 papa mediana en cubos</li>
@@ -219,50 +288,63 @@
                     <li>Sal, orégano y ajo en polvo al gusto</li>
                 </ul>
 
-                <h4>Preparación:</h4>
+                <h4>👩‍🍳 Preparación paso a paso:</h4>
                 <ol>
-                    <li>Lava y corta todas las verduras en cubos pequeños y parejos.</li>
+                    <li>Lava, pela y corta todas las verduras en cubos del mismo tamaño.</li>
                     <li>Pon a hervir el agua con los condimentos durante 5 minutos.</li>
-                    <li>Agrega las verduras y cocina por 15-20 minutos hasta que estén suaves.</li>
+                    <li>Agrega las verduras y cocina a fuego medio durante 15-20 minutos hasta que estén suaves.</li>
                 </ol>
+
+                <h4>🍽️ Sugerencia de emplatado:</h4>
+                <p>Sirve en un plato hondo, espolvorea un poco de perejil fresco picado y acompaña con un trozo pequeño de pan integral.</p>
             </div>
         </div>
 
         <!-- Receta 10 -->
-        <div class="tarjeta-receta">
-            <h3 class="titulo-receta" onclick="mostrarOcultar(this)">🍳 Huevos Revueltos con Verduras ▼</h3>
-            <div class="detalles-receta">
-                <p class="info-nutricional"><strong>Calorías:</strong> ~240 kcal | <strong>Vitaminas:</strong> A, D, B12, Hierro | <strong>Beneficio:</strong> Muy proteico y económico</p>
-                
-                <h4>Ingredientes:</h4>
+        <div class="acordeon-item">
+            <div class="acordeon-titulo" onclick="toggleAcordeon(this)">
+                🍳 Huevos Revueltos con Verduras
+                <span class="acordeon-flecha">▼</span>
+            </div>
+            <div class="acordeon-contenido">
+                <div class="info-nutricional">
+                    <strong>Valor nutricional (por porción):</strong> ~240 kcal | Carbohidratos: 5g | Proteínas: 16g | Grasas: 18g | Vitaminas: A, D, B12, Hierro
+                </div>
+
+                <h4>🥣 Ingredientes:</h4>
                 <ul>
                     <li>2 huevos</li>
                     <li>¼ de cebolla picada fina</li>
-                    <li>½ tomate picado</li>
+                    <li>½ tomate picado en cubos</li>
                     <li>1 cucharadita de aceite vegetal</li>
                     <li>Sal y pimienta al gusto</li>
                 </ul>
 
-                <h4>Preparación:</h4>
+                <h4>👩‍🍳 Preparación paso a paso:</h4>
                 <ol>
-                    <li>Bate los huevos en un plato con sal y pimienta.</li>
-                    <li>Sofríe la cebolla y el tomate en la sartén por 2 minutos.</li>
-                    <li>Agrega los huevos y cocina revolviendo suavemente hasta que cuajen.</li>
+                    <li>Bate los huevos en un plato con sal y pimienta hasta que se mezclen bien.</li>
+                    <li>Calienta el aceite en una sartén, sofríe la cebolla y el tomate durante 2 minutos.</li>
+                    <li>Vierte los huevos y cocina revolviendo suavemente hasta que cuajen a tu gusto.</li>
                 </ol>
+
+                <h4>🍽️ Sugerencia de emplatado:</h4>
+                <p>Sirve en un plato llano, acompaña con una porción de arroz integral o pan tostado para completar la comida.</p>
             </div>
         </div>
 
     </div>
 
     <script>
-        function mostrarOcultar(elemento) {
+        function toggleAcordeon(elemento) {
             const contenido = elemento.nextElementSibling;
-            if (contenido.style.display === "block") {
-                contenido.style.display = "none";
-                elemento.innerHTML = elemento.innerHTML.replace("▲", "▼");
+            const flecha = elemento.querySelector('.acordeon-flecha');
+            
+            if (contenido.classList.contains('activo')) {
+                contenido.classList.remove('activo');
+                flecha.textContent = '▼';
             } else {
-                contenido.style.display = "block";
-                elemento.innerHTML = elemento.innerHTML.replace("▼", "▲");
+                contenido.classList.add('activo');
+                flecha.textContent = '▲';
             }
         }
     </script>
