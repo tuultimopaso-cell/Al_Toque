@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas Saludables</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: #9b59b6;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .categoria {
+            max-width: 1000px;
+            margin: 2.5rem auto 1rem auto;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #8e44ad;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #e8dff2;
+        }
+
+        .acordeon {
+            max-width: 1000px;
+            margin: 0 auto 0.8rem auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-left: 4px solid #9b59b6;
+        }
+
+        .cabecera-receta {
+            background-color: #f9f4fc;
+            color: #9b59b6;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .cabecera-receta:hover {
+            background-color: #f3e9fa;
+        }
+
+        .flecha {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .cuerpo-receta {
+            display: none;
+            padding: 1.5rem;
+            color: #333;
+            border-top: 1px solid #eee;
+            background: #ffffff;
+        }
+
+        .info-nutricional {
+            background: #f9f9f9;
+            padding: 0.8rem;
+            border-radius: 6px;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        .cuerpo-receta h4 {
+            margin: 1.2rem 0 0.6rem;
+            color: #444;
+            font-size: 1.1rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 0.3rem;
+        }
+
+        .cuerpo-receta ul,
+        .cuerpo-receta ol {
+            margin-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .boton-volver {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #9b59b6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton-volver:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="recetas.html" class="boton-volver">← Volver al menú principal</a>
+
+    <h2>🧃 Bebidas Saludables</h2>
+
+    <!-- ====================== CATEGORÍA 1: PARA DEPORTISTAS ====================== -->
+    <div class="categoria">🏋️ Para deportistas</div>
+
+    <!-- 1 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Bebida hidratante de agua de coco y limón
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~55 kcal | 12g carbohidratos | 0.6g proteína | 0.2g grasa | Repone electrolitos y evita calambres</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>200 ml de agua de coco natural</li>
+                <li>Jugo de medio limón</li>
+                <li>1 pizca de sal marina</li>
+                <li>Hielo al gusto</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla todos los ingredientes en un vaso.</li>
+                <li>Agrega hielo y sirve de inmediato.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Batido de recuperación plátano y avena
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~210 kcal | 38g carbohidratos | 7g proteína | 4g grasa | Ayuda a reparar músculos</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 plátano maduro</li>
+                <li>2 cucharadas de avena en hojuelas</li>
+                <li>200 ml de leche descremada o vegetal</li>
+                <li>Media cucharadita de canela</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todo hasta obtener una mezcla cremosa.</li>
+                <li>Sirve fresco en los 30 min posteriores al ejercicio.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Jugo de remolacha y naranja
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~135 kcal | 30g carbohidratos | 2.2g proteína | 0.4g grasa | Mejora resistencia y circulación</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>½ remolacha pequeña</li>
+                <li>Jugo de 2 naranjas</li>
+                <li>100 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Pela y corta la remolacha en trozos.</li>
+                <li>Licúa con el jugo y el agua, cuela y sirve.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Batido de yogur y frutos rojos
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~180 kcal | 22g carbohidratos | 15g proteína | 3.5g grasa | Recuperación muscular rápida</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>150 g de yogur natural sin azúcar</li>
+                <li>½ taza de frutos rojos</li>
+                <li>1 cucharadita de semillas de chía</li>
+                <li>100 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todos los ingredientes hasta integrar.</li>
+                <li>Sirve al momento.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Bebida de electrolitos casera
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~80 kcal | 19g carbohidratos | 0g proteína | 0g grasa | Equilibra minerales después del esfuerzo</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>500 ml de agua</li>
+                <li>Jugo de 1 limón</li>
+                <li>1 cucharadita de miel</li>
+                <li>½ cucharadita de sal marina</li>
+                <li>½ cucharadita de bicarbonato</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla todo hasta disolver bien.</li>
+                <li>Guarda en la nevera y consume durante el día.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Jugo de piña y apio
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~95 kcal | 22g carbohidratos | 1g proteína | 0.3g grasa | Reduce inflamación muscular</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>2 rodajas de piña</li>
+                <li>1 tallo de apio</li>
+                <li>150 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Lava y corta en trozos, licúa todo.</li>
+                <li>Cuela si prefieres más ligero.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Batido de almendras y cacao
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~200 kcal | 16g carbohidratos | 8g proteína | 11g grasa | Energía sostenida y antioxidantes</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>200 ml de leche de almendras</li>
+                <li>1 cucharada de cacao puro en polvo</li>
+                <li>1 cucharadita de miel</li>
+                <li>1 pizca de canela</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla todo en licuadora o batidor.</li>
+                <li>Sirve tibio o frío.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Agua de coco y frambuesas
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~70 kcal | 16g carbohidratos | 0.8g proteína | 0.3g grasa | Hidratación con antioxidantes</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>200 ml de agua de coco</li>
+                <li>½ taza de frambuesas</li>
+                <li>Hielo al gusto</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa suavemente las frambuesas con el agua de coco.</li>
+                <li>Sirve con hielo.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Jugo de zanahoria y naranja
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~120 kcal | 28g carbohidratos | 1.8g proteína | 0.4g grasa | Mejora visión y resistencia</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 zanahoria mediana</li>
+                <li>Jugo de 2 naranjas</li>
+                <li>100 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Corta y licúa todo junto.</li>
+                <li>Cuela y sirve fresco.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Batido de proteína vegetal
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~220 kcal | 24g carbohidratos | 20g proteína | 6g grasa | Recuperación muscular completa</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>200 ml de leche de soja</li>
+                <li>1 cucharada de semillas de girasol</li>
+                <li>½ plátano</li>
+                <li>1 cucharadita de cacao puro</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todo hasta obtener una mezcla homogénea.</li>
+                <li>Consumir inmediatamente.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- ====================== CATEGORÍA 2: PARA BAJAR DE PESO ====================== -->
+    <div class="categoria">⚖️ Para bajar de peso</div>
+
+    <!-- 1 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Agua de limón y jengibre
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~30 kcal | 7g carbohidratos | 0.2g proteína | 0g grasa | Acelera metabolismo y quema grasas</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>Jugo de 2 limones</li>
+                <li>5 g de jengibre fresco rallado</li>
+                <li>1 litro de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla todo y deja reposar 10 min.</li>
+                <li>Beber durante todo el día.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Jugo verde desintoxicante
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~110 kcal | 24g carbohidratos | 2g proteína | 0.5g grasa | Limpia el organismo y sacia</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 puñado de espinacas</li>
+                <li>1 manzana verde</li>
+                <li>1 tallo de apio</li>
+                <li>Jugo de medio limón</li>
+                <li>150 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Lava bien y licúa todo.</li>
+                <li>Sirve sin colar para aprovechar la fibra.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Agua de avena
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~150 kcal | 27g carbohidratos | 5g proteína | 3g grasa | Reduce el apetito y regula glucosa</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>3 cucharadas de avena</li>
+                <li>1 litro de agua</li>
+                <li>1 pizca de canela</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Deja reposar la avena en media taza de agua 1 hora.</li>
+                <li>Licúa, agrega el resto del agua y canela.</li>
+                <li>Cuela y bebe antes de las comidas.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Infusión de té verde y menta
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~15 kcal | 3g carbohidratos | 0.1g proteína | 0g grasa | Quemagrasas natural y digestivo</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 cucharadita de té verde</li>
+                <li>3 hojas de menta fresca</li>
+                <li>250 ml de agua hirviendo</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Infusiona 5 minutos, tapa y cuela.</li>
+                <li>Tomar hasta 2 tazas al día.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Jugo de piña y pepino
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~90 kcal | 21g carbohidratos | 0.9g proteína | 0.2g grasa | Diurético y reduce hinchazón</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>2 rodajas de piña</li>
+                <li>½ pepino con cáscara</li>
+                <li>Jugo de medio limón</li>
+                <li>150 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todo, cuela o no según gusto.</li>
+                <li>Sirve en ayunas.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Agua de canela y manzana
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~40 kcal | 9g carbohidratos | 0.2g proteína | 0.1g grasa | Controla ansiedad por dulces</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 manzana en rodajas</li>
+                <li>1 rama de canela</li>
+                <li>500 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Hervir 5 minutos, apagar y reposar 10 min.</li>
+                <li>Cuela y bebe caliente o frío.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Jugo de sandía y limón
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~75 kcal | 18g carbohidratos | 0.6g proteína | 0.2g grasa | Baja calorías y sacia rápido</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>200 g de sandía sin semillas</li>
+                <li>Jugo de 1 limón</li>
+                <li>100 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todo, sirve con hielo.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Infusión de jengibre y canela
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~20 kcal | 4.5g carbohidratos | 0.1g proteína | 0g grasa | Aumenta gasto calórico en reposo</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>5 g de jengibre en rodajas</li>
+                <li>1 rama de canela</li>
+                <li>300 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Hervir 8 minutos, reposar 5 y colar.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Jugo de tomate y apio
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~60 kcal | 12g carbohidratos | 2g proteína | 0.3g grasa | Bajo en calorías y muy saciante</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>2 tomates maduros</li>
+                <li>1 tallo de apio</li>
+                <li>Jugo de medio limón</li>
+                <li>100 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todo, condimenta con pizca de sal y pimienta.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Agua de pepino y hierbabuena
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~25 kcal | 5.5g carbohidratos | 0.4g proteína | 0.1g grasa | Hidratante y reduce retención de líquidos</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>½ pepino en rodajas finas</li>
+                <li>4 hojas de hierbabuena</li>
+                <li>Jugo de 1 limón</li>
+                <li>1 litro de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla todo en una jarra, deja enfriar 1 hora antes de beber.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- ====================== CATEGORÍA 3: ENERGÉTICAS NATURALES ====================== -->
+    <div class="categoria">⚡ Energéticas naturales</div>
+
+    <!-- 1 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Batido de plátano y miel
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~190 kcal | 42g carbohidratos | 2.5g proteína | 1.2g grasa | Energía rápida y sostenida</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 plátano maduro</li>
+                <li>1 cucharadita de miel</li>
+                <li>200 ml de agua o leche vegetal</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todo hasta que quede cremoso.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Café con cacao y canela
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~85 kcal | 10g carbohidratos | 2g proteína | 2.5g grasa | Mejora concentración y energía</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>200 ml de café negro suave</li>
+                <li>1 cucharadita de cacao puro</li>
+                <li>1 pizca de canela</li>
+                <li>1 cucharadita de miel</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Mezcla bien todos los ingredientes.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Jugo de uva y manzana
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~160 kcal | 38g carbohidratos | 1.2g proteína | 0.3g grasa | Energía inmediata y antioxidantes</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 taza de uvas sin semillas</li>
+                <li>1 manzana mediana</li>
+                <li>100 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todo, cuela si prefieres.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Batido de chía y frutas
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~210 kcal | 35g carbohidratos | 4g proteína | 7g grasa | Energía que dura varias horas</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 cucharada de semillas de chía</li>
+                <li>½ taza de fresas</li>
+                <li>½ plátano</li>
+                <li>200 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Deja reposar la chía en agua 20 min, luego licúa con el resto.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Infusión de guaraná y menta
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~35 kcal | 8g carbohidratos | 0.3g proteína | 0g grasa | Estimula sin causar nerviosismo</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 cucharadita de polvo de guaraná</li>
+                <li>3 hojas de menta</li>
+                <li>250 ml de agua hirviendo</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Infusiona 5 minutos, cuela y sirve.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Jugo de mango y naranja
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~155 kcal | 36g carbohidratos | 1.5g proteína | 0.4g grasa | Aporte rápido de energía natural</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>½ taza de pulpa de mango</li>
+                <li>Jugo de 2 naranjas</li>
+                <li>50 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todo bien y sirve con hielo.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Batido de avena y frutos secos
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~230 kcal | 32g carbohidratos | 6g proteína | 9g grasa | Energía sostenida para todo el día</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>2 cucharadas de avena</li>
+                <li>4 almendras</li>
+                <li>1 dátil sin hueso</li>
+                <li>200 ml de agua o leche vegetal</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todos los ingredientes hasta obtener una mezcla homogénea.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Infusión de romero y limón
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~20 kcal | 4.5g carbohidratos | 0.2g proteína | 0g grasa | Mejora concentración y energía mental</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 ramita de romero fresco</li>
+                <li>Jugo de medio limón</li>
+                <li>250 ml de agua hirviendo</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Deja reposar 5 minutos, cuela y sirve.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Jugo de manzana y zanahoria
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~140 kcal | 33g carbohidratos | 1.3g proteína | 0.3g grasa | Energía más vitaminas para el sistema inmune</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>1 manzana</li>
+                <li>1 zanahoria pequeña</li>
+                <li>100 ml de agua</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Corta en trozos y licúa todo junto.</li>
+                <li>Cuela si deseas una textura más fina.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            Batido de cacao y dátiles
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valores:</strong> ~220 kcal | 38g carbohidratos | 4g proteína | 7g grasa | Energía potente y antioxidantes</p>
+            <h4>Ingredientes</h4>
+            <ul>
+                <li>2 dátiles sin hueso</li>
+                <li>1 cucharada de cacao puro</li>
+                <li>200 ml de leche de almendras</li>
+                <li>1 pizca de canela</li>
+            </ul>
+            <h4>Preparación</h4>
+            <ol>
+                <li>Licúa todo hasta que quede muy cremoso.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function mostrarOcultar(elemento) {
+            const contenido = elemento.nextElementSibling;
+            const flecha = elemento.querySelector('.flecha');
+            if (contenido.style.display === "block") {
+                contenido.style.display = "none";
+                flecha.textContent = "▼";
+            } else {
+                contenido.style.display = "block";
+                flecha.textContent = "▲";
+            }
+        }
+    </script>
+
+</body>
+</html>

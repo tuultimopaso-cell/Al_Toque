@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca de Recetas Saludables</title>
+    <title>Recetas Saludables</title>
     <style>
-        /* Estilos generales */
         * {
             margin: 0;
             padding: 0;
@@ -15,204 +14,197 @@
 
         body {
             background-color: #f8f9fa;
-            line-height: 1.7;
             padding: 2rem 1.5rem;
-            color: #333;
         }
 
-        /* Cabecera principal */
-        .cabecera {
-            max-width: 950px;
-            margin: 0 auto 2.5rem auto;
+        h1 {
             text-align: center;
-            padding-bottom: 1.5rem;
-            border-bottom: 2px solid #e9ecef;
-        }
-
-        .cabecera h1 {
-            color: #2e9b36;
+            color: #2d3436;
+            margin-bottom: 3rem;
             font-size: 2.2rem;
-            margin-bottom: 0.5rem;
         }
 
-        .cabecera p {
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        /* Botón de volver */
-        .boton-volver {
-            display: inline-block;
-            margin-bottom: 2rem;
-            color: #2e9b36;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.2s;
-        }
-
-        .boton-volver:hover {
-            color: #247a2b;
-            text-decoration: underline;
-        }
-
-        /* Contenedor principal */
-        .contenedor {
-            max-width: 950px;
+        .contenedor-tarjetas {
+            max-width: 1100px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
         }
 
-        .contenedor h2 {
-            text-align: center;
-            color: #2e9b36;
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Tarjetas por nivel */
         .tarjeta-nivel {
             background: #ffffff;
+            padding: 1.8rem;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            margin-bottom: 1.8rem;
-            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             border-left: 5px solid;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
         .tarjeta-nivel:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
         }
 
-        /* Colores según nivel */
-        .facil {
-            border-color: #2e9b36;
+        .tarjeta-nivel h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tarjeta-nivel p {
+            color: #555;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .tarjeta-nivel ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .boton-ingresar {
+            display: inline-block;
+            padding: 0.7rem 1.4rem;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s ease;
+        }
+
+        /* Estilos por cada sección */
+        .basico {
+            border-color: #27ae60;
+        }
+        .basico h3 {
+            color: #27ae60;
+        }
+        .basico .boton-ingresar {
+            background-color: #27ae60;
+        }
+        .basico .boton-ingresar:hover {
+            background-color: #219651;
         }
 
         .intermedio {
             border-color: #f39c12;
         }
+        .intermedio h3 {
+            color: #f39c12;
+        }
+        .intermedio .boton-ingresar {
+            background-color: #f39c12;
+        }
+        .intermedio .boton-ingresar:hover {
+            background-color: #e68900;
+        }
 
         .avanzado {
             border-color: #e74c3c;
         }
-
-        .tarjeta-nivel h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .facil h3 {
-            color: #2e9b36;
-        }
-
-        .intermedio h3 {
-            color: #f39c12;
-        }
-
         .avanzado h3 {
             color: #e74c3c;
         }
-
-        .tarjeta-nivel p {
-            margin-bottom: 1rem;
-            color: #555;
-        }
-
-        .tarjeta-nivel ul {
-            margin-left: 1.8rem;
-            margin-bottom: 1.2rem;
-            color: #444;
-        }
-
-        /* Botón ingresar */
-        .boton-ingresar {
-            display: inline-block;
-            padding: 0.6rem 1.3rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            color: white;
-            transition: background 0.2s;
-        }
-
-        .facil .boton-ingresar {
-            background-color: #2e9b36;
-        }
-
-        .facil .boton-ingresar:hover {
-            background-color: #247a2b;
-        }
-
-        .intermedio .boton-ingresar {
-            background-color: #f39c12;
-        }
-
-        .intermedio .boton-ingresar:hover {
-            background-color: #d68910;
-        }
-
         .avanzado .boton-ingresar {
             background-color: #e74c3c;
         }
-
         .avanzado .boton-ingresar:hover {
             background-color: #c0392b;
+        }
+
+        .bebidas {
+            border-color: #9b59b6;
+        }
+        .bebidas h3 {
+            color: #9b59b6;
+        }
+        .bebidas .boton-ingresar {
+            background-color: #9b59b6;
+        }
+        .bebidas .boton-ingresar:hover {
+            background-color: #8e44ad;
+        }
+
+        .snacks {
+            border-color: #3498db;
+        }
+        .snacks h3 {
+            color: #3498db;
+        }
+        .snacks .boton-ingresar {
+            background-color: #3498db;
+        }
+        .snacks .boton-ingresar:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 <body>
 
-    <a href="index.html" class="boton-volver">← Volver al inicio</a>
+    <h1>🥗 Recetas Saludables</h1>
 
-    <div class="cabecera">
-        <h1>📚 Recetas Saludables AI_Toque</h1>
-        <p>Recetas organizadas por nivel de experiencia culinaria</p>
-    </div>
+    <div class="contenedor-tarjetas">
 
-    <div class="contenedor">
-        <h2>Biblioteca de Recetas</h2>
-        <p style="text-align:center; margin-bottom:2rem; color:#555;">Selecciona el nivel que mejor se adapte a tus conocimientos culinarios. Cada sección contiene recetas saludables con ingredientes, calorías, vitaminas, beneficios nutricionales y preparación paso a paso.</p>
-
-        <!-- Nivel Fácil -->
-        <div class="tarjeta-nivel facil">
-            <h3>🟢 Nivel Fácil</h3>
-            <p>Ideal para principiantes. Recetas rápidas, económicas y fáciles de preparar.</p>
+        <!-- Nivel Básico -->
+        <div class="tarjeta-nivel basico">
+            <h3>🟢 Nivel Básico</h3>
+            <p>Recetas sencillas, rápidas y con pocos ingredientes, ideales para empezar.</p>
             <ul>
-                <li>✅ 10 recetas saludables</li>
-                <li>✅ Preparación sencilla</li>
-                <li>✅ Ideal para estudiantes</li>
+                <li>✅ Listas en menos de 20 minutos</li>
+                <li>✅ Ingredientes fáciles de conseguir</li>
+                <li>✅ Equilibradas y ligeras</li>
             </ul>
-            <a href="facil.html" class="boton-ingresar">Ingresar</a>
+            <a href="basico.html" class="boton-ingresar">Ver Recetas</a>
         </div>
 
         <!-- Nivel Intermedio -->
         <div class="tarjeta-nivel intermedio">
             <h3>🟡 Nivel Intermedio</h3>
-            <p>Pensado para personas con conocimientos básicos de cocina.</p>
+            <p>Platos con mayor variedad nutricional, ideales para una alimentación completa.</p>
             <ul>
-                <li>✅ 10 recetas completas</li>
-                <li>✅ Más variedad nutricional</li>
-                <li>✅ Técnicas intermedias</li>
+                <li>✅ Más sabores y combinaciones</li>
+                <li>✅ Aproximadamente 30 minutos de preparación</li>
+                <li>✅ Adecuadas para el día a día</li>
             </ul>
-            <a href="intermedio.html" class="boton-ingresar">Ingresar</a>
+            <a href="intermedio.html" class="boton-ingresar">Ver Recetas</a>
         </div>
 
         <!-- Nivel Avanzado -->
         <div class="tarjeta-nivel avanzado">
             <h3>🔴 Nivel Avanzado</h3>
-            <p>Recetas elaboradas con mayor complejidad y valor nutricional.</p>
+            <p>Preparaciones más elaboradas, pensadas para deportistas y objetivos específicos.</p>
             <ul>
-                <li>✅ Preparaciones más elaboradas</li>
-                <li>✅ Ingredientes variados</li>
-                <li>✅ Mayor equilibrio nutricional</li>
+                <li>✅ Alto valor nutricional</li>
+                <li>✅ Porciones controladas</li>
+                <li>✅ Enfocadas en rendimiento y salud</li>
             </ul>
-            <a href="avanzado.html" class="boton-ingresar">Ingresar</a>
+            <a href="avanzado.html" class="boton-ingresar">Ver Recetas</a>
         </div>
+
+        <!-- Bebidas Saludables -->
+        <div class="tarjeta-nivel bebidas">
+            <h3>🟣 Bebidas Saludables</h3>
+            <p>Clasificadas por objetivo: para deportistas, para bajar de peso y energéticas naturales.</p>
+            <ul>
+                <li>✅ Sin azúcares añadidos</li>
+                <li>✅ Propiedades específicas</li>
+                <li>✅ Fáciles y rápidas de preparar</li>
+            </ul>
+            <a href="bebidas.html" class="boton-ingresar">Ver Bebidas</a>
+        </div>
+
+        <!-- Snacks Saludables -->
+        <div class="tarjeta-nivel snacks">
+            <h3>🔵 Snacks Saludables</h3>
+            <p>Organizados en dulces, salados y mixtos, perfectos para comer entre horas.</p>
+            <ul>
+                <li>✅ Bajos en calorías</li>
+                <li>✅ Alto valor nutricional</li>
+                <li>✅ Fáciles de transportar</li>
+            </ul>
+            <a href="snacks.html" class="boton-ingresar">Ver Snacks</a>
+        </div>
+
     </div>
 
 </body>
