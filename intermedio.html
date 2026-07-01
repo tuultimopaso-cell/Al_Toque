@@ -3,30 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nivel Intermedio - AI_Toque</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Nivel Intermedio - Recetas Saludables</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: #f39c12;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        /* Estilo del acordeón */
+        .acordeon {
+            max-width: 1000px;
+            margin: 0 auto 0.8rem auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-left: 4px solid #f39c12;
+        }
+
+        .cabecera-receta {
+            background-color: #fffbf2;
+            color: #f39c12;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .cabecera-receta:hover {
+            background-color: #fff5e0;
+        }
+
+        .flecha {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* Empieza OCULTO por defecto */
+        .cuerpo-receta {
+            display: none;
+            padding: 1.5rem;
+            color: #333;
+            border-top: 1px solid #eee;
+            background: #ffffff;
+        }
+
+        .info-nutricional {
+            background: #f9f9f9;
+            padding: 0.8rem;
+            border-radius: 6px;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        .cuerpo-receta h4 {
+            margin: 1.2rem 0 0.6rem;
+            color: #444;
+            font-size: 1.1rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 0.3rem;
+        }
+
+        .cuerpo-receta ul,
+        .cuerpo-receta ol {
+            margin-left: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .boton-volver {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton-volver:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header class="cabecera-amarilla">
-        <h1>🟡 Nivel Intermedio</h1>
-        <p>Recetas para ampliar tus conocimientos culinarios</p>
-        <a href="recetas.html" class="boton-blanco">← Volver a Recetas</a>
-    </header>
 
-    <div class="contenedor-principal">
-        <h2>10 Recetas Nivel Intermedio</h2>
-        <ol class="lista-recetas">
-            <li>🥘 Lentejas con Verduras</li>
-            <li>🍛 Arroz Integral con Pollo</li>
-            <li>🥗 Ensalada de Quinua</li>
-            <li>🥟 Empanadas Integrales</li>
-            <li>🍲 Sopa de Verduras y Legumbres</li>
-            <li>🐟 Pescado al Vapor con Verduras</li>
-            <li>🌮 Tacos Integrales de Carne</li>
-            <li>🍝 Tallarines Integrales con Verduras</li>
-            <li>🥣 Crema de Zapallo</li>
-            <li>🍳 Tortilla de Espinaca</li>
-        </ol>
+    <a href="recetas.html" class="boton-volver">← Volver a Recetas</a>
+
+    <h2>📋 10 Recetas Saludables Nivel Intermedio</h2>
+
+    <!-- RECETA 1 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🥣 Quinua con Verduras y Pollo
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~350 kcal | Carbohidratos: 45g | Proteínas: 28g | Grasas: 8g | Hierro, Magnesio, Complejo B</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>1 taza de quinua lavada</li>
+                <li>150g de pechuga de pollo cortada en cubos</li>
+                <li>½ pimentón rojo picado</li>
+                <li>½ zanahoria rallada</li>
+                <li>½ calabacín en cubos</li>
+                <li>1 diente de ajo picado</li>
+                <li>2 tazas de agua o caldo de verduras</li>
+                <li>Aceite de oliva, sal, comino y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Tuesta la quinua en una olla seca durante 2 minutos para resaltar su sabor.</li>
+                <li>Agrega el agua o caldo, cocina a fuego medio hasta que hierva, baja el fuego y tapa por 15 minutos.</li>
+                <li>Aparte, sofríe el ajo, pimentón, zanahoria y calabacín por 5 minutos.</li>
+                <li>Añade el pollo, condimenta y cocina hasta que esté dorado.</li>
+                <li>Mezcla todo con la quinua ya cocida y deja reposar 3 minutos.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve caliente, decora con perejil fresco picado y unas gotas de limón.</p>
+        </div>
     </div>
+
+    <!-- RECETA 2 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🐟 Filete de Pescado al Horno con Verduras
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~320 kcal | Carbohidratos: 18g | Proteínas: 35g | Grasas: 12g | Omega-3, Vitamina D, Yodo</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>200g de filete de pescado blanco (merluza o lenguado)</li>
+                <li>1 papa mediana en rodajas finas</li>
+                <li>1 cebolla en aros</li>
+                <li>½ tomate en rodajas</li>
+                <li>Jugo de 1 limón</li>
+                <li>Aceite de oliva, sal, orégano y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Precalienta el horno a 180 °C.</li>
+                <li>En una bandeja para horno, coloca las papas, cebolla y tomate, rocía con un poco de aceite y condimenta.</li>
+                <li>Coloca el pescado encima, baña con jugo de limón y añade orégano.</li>
+                <li>Cubre con papel aluminio y hornea 20 minutos, retira el papel y deja 5 minutos más para dorar.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve en plato hondo, acompaña con una ensalada fresca de lechuga.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 3 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🥗 Ensalada de Lentejas con Atún
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~380 kcal | Carbohidratos: 42g | Proteínas: 26g | Grasas: 11g | Hierro, Zinc, Vitamina B9</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>1 taza de lentejas cocidas y frías</li>
+                <li>1 lata de atún al agua escurrido</li>
+                <li>½ pepino en cubos</li>
+                <li>½ pimentón amarillo picado</li>
+                <li>¼ cebolla morada picada fina</li>
+                <li>Jugo de limón, aceite de oliva, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Si las lentejas están cocidas calientes, déjalas enfriar completamente.</li>
+                <li>Mezcla en un bol amplio las lentejas, el atún desmenuzado, el pepino, pimentón y cebolla.</li>
+                <li>Prepara el aderezo aparte con limón, aceite, sal y pimienta, mezcla bien.</li>
+                <li>Agrega el aderezo a la ensalada y mezcla suavemente.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve en bol individual, decora con unas hojas de rúcula fresca.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 4 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🍛 Arroz Integral con Verduras y Huevos
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~340 kcal | Carbohidratos: 52g | Proteínas: 14g | Grasas: 9g | Fibra, Vitamina A, Calcio</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>1 taza de arroz integral</li>
+                <li>2 tazas de agua o caldo</li>
+                <li>2 huevos</li>
+                <li>½ zanahoria en cubos pequeños</li>
+                <li>½ ejote picado</li>
+                <li>½ taza de maíz dulce</li>
+                <li>1 diente de ajo y cebolla picada</li>
+                <li>Aceite, sal, cúrcuma y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Lava bien el arroz integral y cocínalo con el agua y sal durante 30-35 minutos hasta que esté suave.</li>
+                <li>En otra sartén, sofríe cebolla, ajo, zanahoria y ejotes por 5 minutos.</li>
+                <li>Agrega el maíz, la cúrcuma y un poco de agua, cocina 3 minutos más.</li>
+                <li>Añade el arroz cocido y mezcla. Aparte, cocina los huevos revueltos y agrégalos al final.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve en plato hondo, puedes añadir semillas de sésamo para dar textura.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 5 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🥣 Crema de Calabaza y Jengibre
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~210 kcal | Carbohidratos: 29g | Proteínas: 4g | Grasas: 8g | Vitamina A, Potasio, Antioxidantes</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>500g de calabaza pelada y cortada en cubos</li>
+                <li>1 cebolla mediana</li>
+                <li>1 trocito de jengibre fresco (aprox 2cm)</li>
+                <li>500ml de caldo de verduras</li>
+                <li>1 cucharada de aceite de oliva</li>
+                <li>Sal, pimienta y nuez moscada al gusto</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Sofríe la cebolla picada en el aceite hasta que esté transparente.</li>
+                <li>Agrega la calabaza y el jengibre rallado, cocina 3 minutos.</li>
+                <li>Vierte el caldo, lleva a ebullición y cocina a fuego bajo por 20 minutos hasta que la calabaza esté muy blanda.</li>
+                <li>Deja enfriar un poco y procesa en la licuadora hasta obtener una crema homogénea.</li>
+                <li>Regresa a la olla, condimenta y calienta antes de servir.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve caliente, decora con un chorrito de aceite de oliva y semillas de calabaza.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 6 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🥪 Wrap Integral de Garbanzos
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~390 kcal | Carbohidratos: 55g | Proteínas: 18g | Grasas: 12g | Fibra, Hierro, Magnesio</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>1 tortilla integral grande</li>
+                <li>1 taza de garbanzos cocidos</li>
+                <li>½ pimentón en tiras</li>
+                <li>½ zanahoria rallada</li>
+                <li>Lechuga fresca</li>
+                <li>1 cucharada de yogurt natural sin azúcar</li>
+                <li>Comino, pimentón dulce, sal y limón</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Machaca los garbanzos en un bol, agrega el yogurt, limón, comino, pimentón dulce y sal, mezcla bien.</li>
+                <li>Calienta la tortilla unos segundos en sartén para que sea más flexible.</li>
+                <li>Unta la mezcla de garbanzos sobre la tortilla, añade la lechuga, pimentón y zanahoria.</li>
+                <li>Enrolla con cuidado y corta por la mitad.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve en plato, acompaña con una salsa de tomate casera ligera.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 7 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🍝 Pasta Integral con Salsa de Tomate y Verduras
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~360 kcal | Carbohidratos: 62g | Proteínas: 12g | Grasas: 7g | Fibra, Licopeno, Vitamina C</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>100g de pasta integral</li>
+                <li>3 tomates maduros</li>
+                <li>½ cebolla picada</li>
+                <li>1 diente de ajo</li>
+                <li>½ calabacín en cubos</li>
+                <li>1 zanahoria rallada</li>
+                <li>Aceite de oliva, albahaca, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Cocina la pasta en agua con sal según el tiempo indicado en el paquete, escurre y reserva.</li>
+                <li>En una sartén, sofríe cebolla y ajo hasta dorar.</li>
+                <li>Agrega los tomates picados, cocina 10 minutos hasta formar una salsa, añade el calabacín y zanahoria.</li>
+                <li>Condimenta, añade la albahaca y mezcla con la pasta cocida.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve caliente, puedes añadir un poco de queso fresco rallado si lo deseas.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 8 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🥩 Estofado de Lentejas con Tofu
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~330 kcal | Carbohidratos: 38g | Proteínas: 22g | Grasas: 9g | Hierro, Calcio, Ácidos grasos saludables</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>1 taza de lentejas</li>
+                <li>150g de tofu firme cortado en cubos</li>
+                <li>1 zanahoria en rodajas</li>
+                <li>1 papa en cubos</li>
+                <li>1 cebolla y 1 diente de ajo</li>
+                <li>400ml de caldo de verduras</li>
+                <li>Aceite, pimentón, comino, sal y laurel</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Lava las lentejas y déjalas en remojo 30 minutos antes de cocinar.</li>
+                <li>Sofríe cebolla, ajo, zanahoria y papa en una olla con un poco de aceite.</li>
+                <li>Agrega el tofu, dora ligeramente, añade las lentejas escurridas y el caldo.</li>
+                <li>Incorpora las especias y la hoja de laurel, cocina a fuego medio-bajo por 25-30 minutos.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve caliente en plato hondo, decora con cilantro fresco picado.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 9 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🥣 Ensalada de Quinua con Pollo y Aguacate
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~370 kcal | Carbohidratos: 32g | Proteínas: 27g | Grasas: 16g | Potasio, Ácido fólico, Vitamina E</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>½ taza de quinua cocida</li>
+                <li>120g de pechuga de pollo a la plancha</li>
+                <li>½ aguacate en cubos</li>
+                <li>½ tomate en cubos</li>
+                <li>Lechuga o rúcula al gusto</li>
+                <li>Jugo de limón, aceite de oliva, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Deja enfriar la quinua cocida antes de usarla.</li>
+                <li>Corta el pollo en tiras o cubos pequeños.</li>
+                <li>En un bol amplio coloca la lechuga, quinua, pollo, tomate y aguacate.</li>
+                <li>Prepara el aderezo con limón, aceite, sal y pimienta, vierte sobre la ensalada y mezcla suavemente.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve en plato llano, decora con semillas de girasol para dar más textura.</p>
+        </div>
+    </div>
+
+    <!-- RECETA 10 -->
+    <div class="acordeon">
+        <div class="cabecera-receta" onclick="mostrarOcultar(this)">
+            🍲 Sopa de Frijoles con Arroz
+            <span class="flecha">▼</span>
+        </div>
+        <div class="cuerpo-receta">
+            <p class="info-nutricional"><strong>Valor nutricional:</strong> ~340 kcal | Carbohidratos: 54g | Proteínas: 16g | Grasas: 6g | Fibra, Hierro, Magnesio</p>
+            <h4>🥣 Ingredientes</h4>
+            <ul>
+                <li>1 taza de frijoles cocidos</li>
+                <li>½ taza de arroz cocido</li>
+                <li>1 cebolla, 1 ajo y 1 tomate</li>
+                <li>½ zanahoria en cubos</li>
+                <li>400ml de agua o caldo</li>
+                <li>Aceite, comino, orégano, sal y pimienta</li>
+            </ul>
+            <h4>👩‍🍳 Preparación paso a paso</h4>
+            <ol>
+                <li>Sofríe cebolla, ajo y tomate picados hasta formar una salsa espesa.</li>
+                <li>Agrega la zanahoria y cocina 3 minutos más.</li>
+                <li>Añade los frijoles y el caldo, deja cocinar 10 minutos.</li>
+                <li>Incorpora el arroz cocido, condimenta y deja reposar 5 minutos antes de servir.</li>
+            </ol>
+            <h4>🍽️ Sugerencia de emplatado</h4>
+            <p>Sirve caliente, acompaña con unas rodajas de aguacate fresco.</p>
+        </div>
+    </div>
+
+    <!-- FUNCIÓN DE FUNCIONAMIENTO -->
+    <script>
+        function mostrarOcultar(titulo) {
+            const contenido = titulo.nextElementSibling;
+            const flecha = titulo.querySelector('.flecha');
+            if (contenido.style.display === "block") {
+                contenido.style.display = "none";
+                flecha.textContent = "▼";
+            } else {
+                contenido.style.display = "block";
+                flecha.textContent = "▲";
+            }
+        }
+    </script>
+
 </body>
 </html>
