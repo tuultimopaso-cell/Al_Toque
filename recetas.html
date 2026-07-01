@@ -107,7 +107,7 @@
         .chef .boton-ingresar { background-color: #b4975a; }
         .chef .boton-ingresar:hover { background-color: #9a7f48; }
 
-        /* --- ESTILOS NUEVOS: Buzón y formulario --- */
+        /* Estilos para el Buzón de mensajes */
         .seccion-buzon {
             max-width: 800px;
             margin: 0 auto 4rem auto;
@@ -271,13 +271,13 @@
 
     </div>
 
-    <!-- ✅ NUEVA SECCIÓN: Buzón de mensajes -->
+    <!-- Buzón de mensajes -->
     <div class="seccion-buzon">
         <h2>📩 Buzón de mensajes</h2>
         <p>¿Tienes alguna opinión, sugerencia, receta propia o recomendación? ¡Escríbelo aquí! También puedes enviarnos un mensaje directo a los creadores.</p>
 
-        <!-- Formulario que envía directamente a tu correo -->
-        <form class="formulario" action="https://formspree.io/f/tu-codigo-unico" method="POST" id="formularioContacto">
+        <!-- Formulario con tu enlace activo -->
+        <form class="formulario" action="https://formspree.io/f/mdarwoev" method="POST" id="formularioContacto">
             <label for="nombre">Tu nombre o apodo:</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Ej: María, Juan...">
 
@@ -299,7 +299,6 @@
     </div>
 
     <script>
-        // Mostrar aviso de éxito al enviar
         const form = document.getElementById('formularioContacto');
         const aviso = document.getElementById('avisoExito');
 
