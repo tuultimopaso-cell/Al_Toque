@@ -4,31 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nivel Fácil - Recetas Saludables</title>
-    <!-- RUTA CORRECTA Y EXACTA -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <!-- Cabecera -->
-    <header class="cabecera-verde">
+    <header class="cabecera">
         <h1>🟢 Nivel Fácil</h1>
         <p>Recetas saludables para principiantes</p>
-        <a href="recetas.html" class="boton-blanco">← Volver a Recetas</a>
+        <a href="recetas.html" class="boton-volver">← Volver a Recetas</a>
     </header>
 
-    <!-- Contenido principal -->
-    <main class="contenedor-principal">
+    <div class="contenedor">
         <h2>📋 10 Recetas Saludables Nivel Fácil</h2>
 
         <!-- RECETA 1 -->
-        <div class="receta">
-            <div class="titulo-receta" onclick="toggleReceta(this)">
+        <div class="acordeon">
+            <div class="cabecera-receta" onclick="mostrarOcultar(this)">
                 🥤 Batido Energético de Avena
-                <span class="flecha">▼</span>
+                <span>▼</span>
             </div>
-            <div class="contenido-receta">
-                <p class="info-nutricional"><strong>Valor nutricional (por porción):</strong> ~220 kcal | Carbohidratos: 38g | Proteínas: 7g | Grasas: 5g | Vitaminas: B1, B2, E, Potasio</p>
-
+            <div class="cuerpo-receta">
+                <p><strong>Valor nutricional:</strong> ~220 kcal | Carbohidratos: 38g | Proteínas: 7g | Grasas: 5g | Vitaminas: B1, B2, E, Potasio</p>
                 <h4>🥣 Ingredientes</h4>
                 <ul>
                     <li>3 cucharadas de avena en hojuelas</li>
@@ -37,295 +33,264 @@
                     <li>1 cucharadita de miel o azúcar moreno</li>
                     <li>1 pizca de canela en polvo</li>
                 </ul>
-
-                <h4>👩‍🍳 Preparación paso a paso</h4>
+                <h4>👩‍🍳 Preparación</h4>
                 <ol>
                     <li>Coloca todos los ingredientes en la licuadora.</li>
-                    <li>Procesa durante 1 o 2 minutos hasta obtener una mezcla homogénea.</li>
-                    <li>Sirve inmediatamente.</li>
+                    <li>Procesa 1 o 2 minutos hasta que quede homogéneo.</li>
+                    <li>Sirve de inmediato.</li>
                 </ol>
-
-                <h4>🍽️ Sugerencia de emplatado</h4>
-                <p>Sirve en un vaso alto, decora con una pizca de canela y rodajas de plátano.</p>
+                <h4>🍽️ Emplatado</h4>
+                <p>Decora con canela y rodajas de plátano. Ideal para desayuno o merienda.</p>
             </div>
         </div>
 
         <!-- RECETA 2 -->
-        <div class="receta">
-            <div class="titulo-receta" onclick="toggleReceta(this)">
+        <div class="acordeon">
+            <div class="cabecera-receta" onclick="mostrarOcultar(this)">
                 🥑 Tostadas con Palta
-                <span class="flecha">▼</span>
+                <span>▼</span>
             </div>
-            <div class="contenido-receta">
-                <p class="info-nutricional"><strong>Valor nutricional (por porción):</strong> ~260 kcal | Carbohidratos: 22g | Proteínas: 6g | Grasas: 16g | Vitaminas: A, C, E, K, Ácido Fólico</p>
-
+            <div class="cuerpo-receta">
+                <p><strong>Valor nutricional:</strong> ~260 kcal | Carbohidratos: 22g | Proteínas: 6g | Grasas: 16g | Vitaminas: A, C, E, K</p>
                 <h4>🥣 Ingredientes</h4>
                 <ul>
                     <li>2 rebanadas de pan integral</li>
                     <li>½ palta madura</li>
                     <li>Jugo de medio limón</li>
-                    <li>Sal y pimienta negra al gusto</li>
+                    <li>Sal y pimienta al gusto</li>
                 </ul>
-
-                <h4>👩‍🍳 Preparación paso a paso</h4>
+                <h4>👩‍🍳 Preparación</h4>
                 <ol>
                     <li>Tuesta el pan hasta que esté crujiente.</li>
                     <li>Aplasta la palta y mezcla con limón, sal y pimienta.</li>
-                    <li>Unta sobre las rebanadas de pan.</li>
+                    <li>Unta sobre el pan.</li>
                 </ol>
-
-                <h4>🍽️ Sugerencia de emplatado</h4>
-                <p>Coloca en un plato, decora con rodajas de tomate o pimentón.</p>
+                <h4>🍽️ Emplatado</h4>
+                <p>Acompaña con rodajas de tomate o pimentón.</p>
             </div>
         </div>
 
         <!-- RECETA 3 -->
-        <div class="receta">
-            <div class="titulo-receta" onclick="toggleReceta(this)">
+        <div class="acordeon">
+            <div class="cabecera-receta" onclick="mostrarOcultar(this)">
                 🍓 Yogurt con Frutas y Semillas
-                <span class="flecha">▼</span>
+                <span>▼</span>
             </div>
-            <div class="contenido-receta">
-                <p class="info-nutricional"><strong>Valor nutricional (por porción):</strong> ~190 kcal | Carbohidratos: 28g | Proteínas: 10g | Grasas: 5g | Vitaminas: C, D, Calcio</p>
-
+            <div class="cuerpo-receta">
+                <p><strong>Valor nutricional:</strong> ~190 kcal | Carbohidratos: 28g | Proteínas: 10g | Grasas: 5g | Calcio, Vitamina C</p>
                 <h4>🥣 Ingredientes</h4>
                 <ul>
                     <li>1 taza de yogurt natural sin azúcar</li>
-                    <li>½ taza de frutas frescas de temporada</li>
-                    <li>1 cucharadita de semillas de chía o linaza</li>
+                    <li>½ taza de frutas frescas</li>
+                    <li>1 cucharadita de semillas de chía</li>
                     <li>1 cucharadita de miel</li>
                 </ul>
-
-                <h4>👩‍🍳 Preparación paso a paso</h4>
+                <h4>👩‍🍳 Preparación</h4>
                 <ol>
-                    <li>Coloca el yogurt en un recipiente.</li>
-                    <li>Agrega las frutas cortadas en trozos pequeños.</li>
+                    <li>Coloca el yogurt en un bol.</li>
+                    <li>Agrega frutas cortadas en trozos.</li>
                     <li>Añade semillas y miel, mezcla suavemente.</li>
                 </ol>
-
-                <h4>🍽️ Sugerencia de emplatado</h4>
-                <p>Sirve en un tazón, decora con hojas de menta fresca.</p>
+                <h4>🍽️ Emplatado</h4>
+                <p>Decora con hojas de menta fresca.</p>
             </div>
         </div>
 
         <!-- RECETA 4 -->
-        <div class="receta">
-            <div class="titulo-receta" onclick="toggleReceta(this)">
+        <div class="acordeon">
+            <div class="cabecera-receta" onclick="mostrarOcultar(this)">
                 🥞 Panqueques de Avena
-                <span class="flecha">▼</span>
+                <span>▼</span>
             </div>
-            <div class="contenido-receta">
-                <p class="info-nutricional"><strong>Valor nutricional (por porción):</strong> ~230 kcal | Carbohidratos: 32g | Proteínas: 9g | Grasas: 7g | Complejo B, Hierro</p>
-
+            <div class="cuerpo-receta">
+                <p><strong>Valor nutricional:</strong> ~230 kcal | Carbohidratos: 32g | Proteínas: 9g | Grasas: 7g | Hierro, Magnesio</p>
                 <h4>🥣 Ingredientes</h4>
                 <ul>
                     <li>4 cucharadas de avena molida</li>
-                    <li>1 huevo mediano</li>
+                    <li>1 huevo</li>
                     <li>½ taza de leche descremada</li>
                     <li>1 pizca de canela</li>
                 </ul>
-
-                <h4>👩‍🍳 Preparación paso a paso</h4>
+                <h4>👩‍🍳 Preparación</h4>
                 <ol>
-                    <li>Mezcla todos los ingredientes hasta obtener una masa homogénea.</li>
+                    <li>Mezcla todo hasta formar una masa homogénea.</li>
                     <li>Deja reposar 5 minutos.</li>
-                    <li>Cocina porciones pequeñas en sartén caliente 2 minutos por lado.</li>
+                    <li>Cocina porciones pequeñas en sartén caliente.</li>
                 </ol>
-
-                <h4>🍽️ Sugerencia de emplatado</h4>
-                <p>Apila en un plato, acompaña con fruta fresca.</p>
+                <h4>🍽️ Emplatado</h4>
+                <p>Acompaña con fruta fresca o miel.</p>
             </div>
         </div>
 
         <!-- RECETA 5 -->
-        <div class="receta">
-            <div class="titulo-receta" onclick="toggleReceta(this)">
+        <div class="acordeon">
+            <div class="cabecera-receta" onclick="mostrarOcultar(this)">
                 🥗 Ensalada Fresca Básica
-                <span class="flecha">▼</span>
+                <span>▼</span>
             </div>
-            <div class="contenido-receta">
-                <p class="info-nutricional"><strong>Valor nutricional (por porción):</strong> ~150 kcal | Carbohidratos: 12g | Proteínas: 2g | Grasas: 10g | Vitaminas A, C, K</p>
-
+            <div class="cuerpo-receta">
+                <p><strong>Valor nutricional:</strong> ~150 kcal | Carbohidratos: 12g | Proteínas: 2g | Grasas: 10g | Vitaminas A, C, K</p>
                 <h4>🥣 Ingredientes</h4>
                 <ul>
                     <li>1 taza de lechuga picada</li>
-                    <li>½ tomate mediano</li>
+                    <li>½ tomate</li>
                     <li>¼ cebolla morada</li>
                     <li>½ pepino</li>
-                    <li>Aceite de oliva, jugo de limón, sal y pimienta</li>
+                    <li>Aceite de oliva, limón, sal y pimienta</li>
                 </ul>
-
-                <h4>👩‍🍳 Preparación paso a paso</h4>
+                <h4>👩‍🍳 Preparación</h4>
                 <ol>
-                    <li>Lava y desinfecta todas las verduras.</li>
-                    <li>Corta y mezcla en un bol amplio.</li>
+                    <li>Lava y corta todas las verduras.</li>
+                    <li>Mezcla en un bol amplio.</li>
                     <li>Aliña justo antes de servir.</li>
                 </ol>
-
-                <h4>🍽️ Sugerencia de emplatado</h4>
-                <p>Sirve en bol, decora con semillas si deseas.</p>
+                <h4>🍽️ Emplatado</h4>
+                <p>Puedes agregar semillas para dar más textura.</p>
             </div>
         </div>
 
         <!-- RECETA 6 -->
-        <div class="receta">
-            <div class="titulo-receta" onclick="toggleReceta(this)">
+        <div class="acordeon">
+            <div class="cabecera-receta" onclick="mostrarOcultar(this)">
                 🍎 Manzana con Mantequilla de Maní
-                <span class="flecha">▼</span>
+                <span>▼</span>
             </div>
-            <div class="contenido-receta">
-                <p class="info-nutricional"><strong>Valor nutricional (por porción):</strong> ~210 kcal | Carbohidratos: 25g | Proteínas: 5g | Grasas: 11g | Vitamina E, Potasio</p>
-
+            <div class="cuerpo-receta">
+                <p><strong>Valor nutricional:</strong> ~210 kcal | Carbohidratos: 25g | Proteínas: 5g | Grasas: 11g | Vitamina E, Potasio</p>
                 <h4>🥣 Ingredientes</h4>
                 <ul>
                     <li>1 manzana mediana</li>
-                    <li>1 cucharada de mantequilla de maní natural sin azúcar</li>
-                    <li>Semillas de girasol o chía (opcional)</li>
+                    <li>1 cucharada de mantequilla de maní natural</li>
+                    <li>Semillas al gusto</li>
                 </ul>
-
-                <h4>👩‍🍳 Preparación paso a paso</h4>
+                <h4>👩‍🍳 Preparación</h4>
                 <ol>
                     <li>Lava y corta la manzana en gajos.</li>
                     <li>Unta la mantequilla sobre cada trozo.</li>
                 </ol>
-
-                <h4>🍽️ Sugerencia de emplatado</h4>
-                <p>Coloca en forma de abanico en el plato, espolvorea semillas.</p>
+                <h4>🍽️ Emplatado</h4>
+                <p>Espolvorea semillas por encima.</p>
             </div>
         </div>
 
         <!-- RECETA 7 -->
-        <div class="receta">
-            <div class="titulo-receta" onclick="toggleReceta(this)">
+        <div class="acordeon">
+            <div class="cabecera-receta" onclick="mostrarOcultar(this)">
                 🥪 Sándwich Integral de Pollo
-                <span class="flecha">▼</span>
+                <span>▼</span>
             </div>
-            <div class="contenido-receta">
-                <p class="info-nutricional"><strong>Valor nutricional (por porción):</strong> ~280 kcal | Carbohidratos: 26g | Proteínas: 22g | Grasas: 9g | Hierro, Vitamina B6</p>
-
+            <div class="cuerpo-receta">
+                <p><strong>Valor nutricional:</strong> ~280 kcal | Carbohidratos: 26g | Proteínas: 22g | Grasas: 9g | Hierro, Vitamina B6</p>
                 <h4>🥣 Ingredientes</h4>
                 <ul>
                     <li>2 rebanadas de pan integral</li>
-                    <li>80g de pechuga de pollo cocida y desmenuzada</li>
+                    <li>80g de pechuga de pollo cocida</li>
                     <li>Lechuga y tomate</li>
                     <li>1 cucharadita de mayonesa baja en grasa</li>
                 </ul>
-
-                <h4>👩‍🍳 Preparación paso a paso</h4>
+                <h4>👩‍🍳 Preparación</h4>
                 <ol>
                     <li>Unta la mayonesa en el pan.</li>
-                    <li>Agrega lechuga, tomate y pollo.</li>
+                    <li>Agrega los ingredientes restantes.</li>
                     <li>Cierra y corta por la mitad.</li>
                 </ol>
-
-                <h4>🍽️ Sugerencia de emplatado</h4>
-                <p>Acompaña con una ensalada pequeña.</p>
+                <h4>🍽️ Emplatado</h4>
+                <p>Acompaña con ensalada fresca.</p>
             </div>
         </div>
 
         <!-- RECETA 8 -->
-        <div class="receta">
-            <div class="titulo-receta" onclick="toggleReceta(this)">
+        <div class="acordeon">
+            <div class="cabecera-receta" onclick="mostrarOcultar(this)">
                 🥤 Smoothie Verde
-                <span class="flecha">▼</span>
+                <span>▼</span>
             </div>
-            <div class="contenido-receta">
-                <p class="info-nutricional"><strong>Valor nutricional (por porción):</strong> ~180 kcal | Carbohidratos: 35g | Proteínas: 4g | Grasas: 2g | Hierro, Vitamina A</p>
-
+            <div class="cuerpo-receta">
+                <p><strong>Valor nutricional:</strong> ~180 kcal | Carbohidratos: 35g | Proteínas: 4g | Grasas: 2g | Hierro, Vitamina A</p>
                 <h4>🥣 Ingredientes</h4>
                 <ul>
                     <li>1 puñado de espinacas frescas</li>
-                    <li>1 plátano maduro</li>
-                    <li>½ taza de piña o papaya</li>
-                    <li>1 vaso de agua o leche vegetal</li>
+                    <li>1 plátano</li>
+                    <li>½ taza de piña</li>
+                    <li>1 vaso de agua o bebida vegetal</li>
                 </ul>
-
-                <h4>👩‍🍳 Preparación paso a paso</h4>
+                <h4>👩‍🍳 Preparación</h4>
                 <ol>
                     <li>Lava bien todos los ingredientes.</li>
                     <li>Lleva todo a la licuadora.</li>
-                    <li>Procesa hasta obtener una mezcla homogénea.</li>
+                    <li>Procesa hasta que quede homogéneo.</li>
                 </ol>
-
-                <h4>🍽️ Sugerencia de emplatado</h4>
-                <p>Sirve en vaso alto, decora con rodaja de fruta.</p>
+                <h4>🍽️ Emplatado</h4>
+                <p>Decora con una rodaja de fruta en el borde.</p>
             </div>
         </div>
 
         <!-- RECETA 9 -->
-        <div class="receta">
-            <div class="titulo-receta" onclick="toggleReceta(this)">
+        <div class="acordeon">
+            <div class="cabecera-receta" onclick="mostrarOcultar(this)">
                 🍲 Sopa de Verduras Rápida
-                <span class="flecha">▼</span>
+                <span>▼</span>
             </div>
-            <div class="contenido-receta">
-                <p class="info-nutricional"><strong>Valor nutricional (por porción):</strong> ~160 kcal | Carbohidratos: 24g | Proteínas: 3g | Grasas: 4g | Vitaminas A y C</p>
-
+            <div class="cuerpo-receta">
+                <p><strong>Valor nutricional:</strong> ~160 kcal | Carbohidratos: 24g | Proteínas: 3g | Grasas: 4g | Vitaminas A y C</p>
                 <h4>🥣 Ingredientes</h4>
                 <ul>
-                    <li>1 zanahoria pequeña</li>
-                    <li>1 papa mediana</li>
+                    <li>1 zanahoria</li>
+                    <li>1 papa</li>
                     <li>½ taza de calabaza</li>
-                    <li>2 tazas de agua o caldo de verduras</li>
-                    <li>Sal, orégano y ajo en polvo</li>
+                    <li>2 tazas de agua o caldo</li>
+                    <li>Condimentos al gusto</li>
                 </ul>
-
-                <h4>👩‍🍳 Preparación paso a paso</h4>
+                <h4>👩‍🍳 Preparación</h4>
                 <ol>
-                    <li>Pela y corta todas las verduras en cubos.</li>
-                    <li>Hervir el agua con condimentos 5 minutos.</li>
-                    <li>Agregar verduras y cocinar 15-20 minutos hasta que estén suaves.</li>
+                    <li>Pela y corta las verduras en cubos.</li>
+                    <li>Hierve el agua con condimentos 5 minutos.</li>
+                    <li>Agrega verduras y cocina 15-20 minutos.</li>
                 </ol>
-
-                <h4>🍽️ Sugerencia de emplatado</h4>
-                <p>Sirve caliente, decora con perejil picado.</p>
+                <h4>🍽️ Emplatado</h4>
+                <p>Decora con perejil picado.</p>
             </div>
         </div>
 
         <!-- RECETA 10 -->
-        <div class="receta">
-            <div class="titulo-receta" onclick="toggleReceta(this)">
+        <div class="acordeon">
+            <div class="cabecera-receta" onclick="mostrarOcultar(this)">
                 🍳 Huevos Revueltos con Verduras
-                <span class="flecha">▼</span>
+                <span>▼</span>
             </div>
-            <div class="contenido-receta">
-                <p class="info-nutricional"><strong>Valor nutricional (por porción):</strong> ~240 kcal | Carbohidratos: 5g | Proteínas: 16g | Grasas: 18g | Vitamina D, B12</p>
-
+            <div class="cuerpo-receta">
+                <p><strong>Valor nutricional:</strong> ~240 kcal | Carbohidratos: 5g | Proteínas: 16g | Grasas: 18g | Vitamina D, B12</p>
                 <h4>🥣 Ingredientes</h4>
                 <ul>
                     <li>2 huevos</li>
-                    <li>¼ cebolla picada fina</li>
+                    <li>¼ cebolla picada</li>
                     <li>½ tomate picado</li>
-                    <li>1 cucharadita de aceite vegetal</li>
-                    <li>Sal y pimienta al gusto</li>
+                    <li>1 cucharadita de aceite</li>
                 </ul>
-
-                <h4>👩‍🍳 Preparación paso a paso</h4>
+                <h4>👩‍🍳 Preparación</h4>
                 <ol>
                     <li>Bate los huevos con sal y pimienta.</li>
                     <li>Sofríe cebolla y tomate 2 minutos.</li>
-                    <li>Agrega huevos y cocina revolviendo suavemente.</li>
+                    <li>Agrega huevos y cocina revolviendo.</li>
                 </ol>
-
-                <h4>🍽️ Sugerencia de emplatado</h4>
-                <p>Sirve con pan integral o arroz integral.</p>
+                <h4>🍽️ Emplatado</h4>
+                <p>Acompaña con pan integral o arroz.</p>
             </div>
         </div>
 
-    </main>
+    </div>
 
-    <!-- JavaScript SIMPLE Y SEGURO -->
+    <!-- JavaScript MÍNIMO Y FUNCIONAL -->
     <script>
-        function toggleReceta(elemento) {
-            const contenido = elemento.nextElementSibling;
-            const flecha = elemento.querySelector('.flecha');
-
+        function mostrarOcultar(titulo) {
+            const contenido = titulo.nextElementSibling;
+            const icono = titulo.querySelector('span');
             if (contenido.style.display === "block") {
                 contenido.style.display = "none";
-                flecha.textContent = "▼";
+                icono.textContent = "▼";
             } else {
                 contenido.style.display = "block";
-                flecha.textContent = "▲";
+                icono.textContent = "▲";
             }
         }
     </script>

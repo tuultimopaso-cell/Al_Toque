@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* RESET GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -11,15 +11,15 @@ body {
     line-height: 1.7;
 }
 
-/* Cabecera */
-.cabecera-verde {
+/* CABECERA PRINCIPAL */
+.cabecera {
     background-color: #2e9b36;
     color: white;
     padding: 2rem;
     text-align: center;
 }
 
-.boton-blanco {
+.boton-volver {
     display: inline-block;
     margin-top: 1rem;
     background: white;
@@ -30,36 +30,28 @@ body {
     font-weight: bold;
 }
 
-.boton-blanco:hover {
-    background: #f1f1f1;
-}
-
-/* Contenedor principal */
-.contenedor-principal {
+/* CONTENEDOR */
+.contenedor {
     max-width: 950px;
     margin: 2rem auto;
     padding: 0 1.5rem;
 }
 
-.contenedor-principal h2 {
+.contenedor h2 {
     text-align: center;
     color: #2e9b36;
     margin-bottom: 2rem;
-    font-size: 1.7rem;
 }
 
-/* --------------------------
-   ACORDEÓN - REGLAS CLAVE
---------------------------- */
-.receta {
-    background: white;
+/* ✅ ACORDEÓN - REGLAS SIMPLES Y SEGURAS */
+.acordeon {
+    background: #ffffff;
     border-radius: 8px;
     margin: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-.titulo-receta {
+.cabecera-receta {
     background-color: #f8fdf8;
     color: #2e9b36;
     padding: 1rem 1.5rem;
@@ -67,47 +59,36 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-left: 4px solid #2e9b36;
     font-size: 1.15rem;
-    font-weight: 500;
+    border-left: 4px solid #2e9b36;
 }
 
-.titulo-receta:hover {
+.cabecera-receta:hover {
     background-color: #eef9ee;
 }
 
-.flecha {
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-/* 🔴 REGLA DEFINITIVA: EMPIEZA OCULTO */
-.contenido-receta {
+/* 🔴 REGLA CLAVE: EMPIEZA OCULTO */
+.cuerpo-receta {
     display: none;
     padding: 1.5rem;
     color: #333;
     border-top: 1px solid #eee;
 }
 
-.info-nutricional {
+.cuerpo-receta p {
+    margin-bottom: 1rem;
     background: #f9f9f9;
-    padding: 0.8rem;
+    padding: 0.7rem;
     border-radius: 6px;
-    margin-bottom: 1.2rem;
-    font-style: italic;
-    color: #555;
 }
 
-.contenido-receta h4 {
-    margin: 1.2rem 0 0.6rem;
+.cuerpo-receta h4 {
+    margin: 1.2rem 0 0.5rem;
     color: #444;
-    font-size: 1.05rem;
-    border-bottom: 1px dashed #eee;
-    padding-bottom: 0.3rem;
 }
 
-.contenido-receta ul,
-.contenido-receta ol {
+.cuerpo-receta ul,
+.cuerpo-receta ol {
     margin-left: 1.8rem;
     margin-bottom: 0.8rem;
 }
