@@ -21,7 +21,8 @@
             --color-fondo: #FFFFFF;
             --color-fondo-suave: #F9FBF8;
             --color-borde: #E8F0E8;
-            --color-acento: #81C784;
+            --color-acento: #FF9800;
+            --color-acento-suave: #FFE0B2;
         }
 
         body {
@@ -39,6 +40,8 @@
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            border-radius: 0 0 1rem 1rem;
         }
 
         .logo {
@@ -77,7 +80,7 @@
             border-radius: 2rem;
         }
 
-        /* --- Sección principal / Encabezado --- */
+        /* --- Sección principal / Carátula --- */
         .hero {
             max-width: 1200px;
             margin: 2rem auto;
@@ -89,11 +92,27 @@
             grid-template-columns: 1fr 1.2fr;
             gap: 2rem;
             align-items: center;
-            padding: 0;
+            position: relative;
+        }
+
+        /* ✨ Marcas de agua sutiles */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 24 24" fill="none" opacity="0.06"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z" fill="%232E7D32"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg width="70" height="70" viewBox="0 0 24 24" fill="none" opacity="0.05"><path d="M17.5 12c0 2.49-2.01 4.5-4.5 4.5S8.5 14.49 8.5 12s2.01-4.5 4.5-4.5 4.5 2.01 4.5 4.5zm-9 0c0-2.49 2.01-4.5 4.5-4.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5-4.5-2.01-4.5-4.5z" fill="%23FF9800"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg width="65" height="65" viewBox="0 0 24 24" fill="none" opacity="0.06"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z" fill="%234CAF50"/></svg>');
+            background-position: 10% 20%, 80% 70%, 20% 80%;
+            background-repeat: no-repeat;
+            z-index: 0;
         }
 
         .hero-texto {
             padding: 3rem 2.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .etiqueta {
@@ -119,18 +138,19 @@
         }
 
         .boton-principal {
-            background: var(--color-principal);
+            background: linear-gradient(135deg, var(--color-principal), var(--color-principal-claro));
             color: white;
             padding: 0.9rem 2rem;
             border-radius: 2rem;
             text-decoration: none;
             font-weight: 600;
             display: inline-block;
-            transition: background 0.2s;
+            transition: transform 0.2s ease;
+            box-shadow: 0 3px 8px rgba(46, 125, 50, 0.2);
         }
 
         .boton-principal:hover {
-            background: var(--color-principal-claro);
+            transform: translateY(-2px);
         }
 
         .hero-imagen {
@@ -138,19 +158,39 @@
             height: 100%;
             background: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center / cover no-repeat;
             min-height: 450px;
+            position: relative;
+            z-index: 1;
         }
 
-        /* --- Sección de niveles --- */
-        .contenedor-seccion {
+        /* --- Sección de Fundadores --- */
+        .seccion-fundadores {
             max-width: 1200px;
             margin: 4rem auto;
-            padding: 0 2rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(145deg, #FFFFFF, #F8FBF6);
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Marcas de agua en esta sección también */
+        .seccion-fundadores::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: 
+                url('data:image/svg+xml;utf8,<svg width="80" height="80" viewBox="0 0 24 24" fill="none" opacity="0.04"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z" fill="%2381C784"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg width="75" height="75" viewBox="0 0 24 24" fill="none" opacity="0.05"><path d="M16.5 6c-1.02 0-1.99.25-2.85.68L12 9l-1.65-2.32C9.49 6.25 8.52 6 7.5 6 4.46 6 2 8.46 2 11.5S4.46 17 7.5 17c1.02 0 1.99-.25 2.85-.68L12 14l1.65 2.32c.86.43 1.83.68 2.85.68 3.04 0 5.5-2.46 5.5-5.5S19.54 6 16.5 6z" fill="%23FFB74D"/></svg>');
+            background-position: 90% 10%, 5% 90%;
+            background-repeat: no-repeat;
         }
 
         .titulo-seccion {
             font-size: 2.2rem;
             margin-bottom: 0.8rem;
             color: var(--color-texto-oscuro);
+            text-align: center;
         }
 
         .subtitulo-seccion {
@@ -158,6 +198,51 @@
             font-size: 1.1rem;
             margin-bottom: 3rem;
             max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .contenedor-fundadores {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tarjeta-fundador {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.2rem;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+            border-top: 4px solid var(--color-principal);
+            transition: transform 0.2s ease;
+        }
+
+        .tarjeta-fundador:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta-fundador h3 {
+            font-size: 1.5rem;
+            color: var(--color-texto-oscuro);
+            margin-bottom: 0.5rem;
+        }
+
+        .tarjeta-fundador p {
+            color: var(--color-texto-medio);
+            font-style: italic;
+        }
+
+        /* --- Sección de Niveles / Recetas --- */
+        .contenedor-seccion {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
         }
 
         .contenedor-tarjetas {
@@ -166,18 +251,31 @@
             gap: 2rem;
         }
 
+        /* ✨ Mejoras en tarjetas de recetas: más color y animación */
         .tarjeta-nivel {
-            background: var(--color-fondo);
-            border-radius: 1rem;
+            background: linear-gradient(150deg, #FFFFFF, #FDFEFC);
+            border-radius: 1.2rem;
             padding: 2rem;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-            border: 1px solid var(--color-borde);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            border-left: 5px solid transparent;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .tarjeta-nivel::after {
+            content: "";
+            position: absolute;
+            top: 0; right: 0;
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            opacity: 0.08;
+            transition: all 0.3s ease;
         }
 
         .tarjeta-nivel:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transform: translateY(-7px);
+            box-shadow: 0 10px 22px rgba(0,0,0,0.1);
         }
 
         .tarjeta-nivel h3 {
@@ -199,6 +297,16 @@
             color: var(--color-texto-medio);
         }
 
+        .tarjeta-nivel li {
+            padding: 0.2rem 0;
+            transition: padding-left 0.2s ease;
+        }
+
+        .tarjeta-nivel li:hover {
+            padding-left: 5px;
+            color: var(--color-principal);
+        }
+
         .boton-ingresar {
             display: inline-block;
             padding: 0.75rem 1.5rem;
@@ -208,43 +316,56 @@
             font-weight: 600;
             border: none;
             cursor: pointer;
-            transition: background 0.2s ease;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
-        /* Colores por nivel */
+        /* Colores personalizados por nivel */
+        .basico { border-color: #2E7D32; }
+        .basico::after { background: #2E7D32; }
         .basico h3 { color: #2E7D32; }
-        .basico .boton-ingresar { background-color: #2E7D32; }
-        .basico .boton-ingresar:hover { background-color: #43A047; }
+        .basico .boton-ingresar { background: linear-gradient(135deg, #2E7D32, #43A047); }
+        .basico .boton-ingresar:hover { background: #276729; }
 
+        .intermedio { border-color: #F57C00; }
+        .intermedio::after { background: #F57C00; }
         .intermedio h3 { color: #F57C00; }
-        .intermedio .boton-ingresar { background-color: #F57C00; }
-        .intermedio .boton-ingresar:hover { background-color: #FB8C00; }
+        .intermedio .boton-ingresar { background: linear-gradient(135deg, #F57C00, #FB8C00); }
+        .intermedio .boton-ingresar:hover { background: #E67100; }
 
+        .avanzado { border-color: #D32F2F; }
+        .avanzado::after { background: #D32F2F; }
         .avanzado h3 { color: #D32F2F; }
-        .avanzado .boton-ingresar { background-color: #D32F2F; }
-        .avanzado .boton-ingresar:hover { background-color: #E53935; }
+        .avanzado .boton-ingresar { background: linear-gradient(135deg, #D32F2F, #E53935); }
+        .avanzado .boton-ingresar:hover { background: #B71C1C; }
 
+        .bebidas { border-color: #7B1FA2; }
+        .bebidas::after { background: #7B1FA2; }
         .bebidas h3 { color: #7B1FA2; }
-        .bebidas .boton-ingresar { background-color: #7B1FA2; }
-        .bebidas .boton-ingresar:hover { background-color: #8E24AA; }
+        .bebidas .boton-ingresar { background: linear-gradient(135deg, #7B1FA2, #8E24AA); }
+        .bebidas .boton-ingresar:hover { background: #6A1B9A; }
 
+        .snacks { border-color: #1976D2; }
+        .snacks::after { background: #1976D2; }
         .snacks h3 { color: #1976D2; }
-        .snacks .boton-ingresar { background-color: #1976D2; }
-        .snacks .boton-ingresar:hover { background-color: #1E88E5; }
+        .snacks .boton-ingresar { background: linear-gradient(135deg, #1976D2, #1E88E5); }
+        .snacks .boton-ingresar:hover { background: #1565C0; }
 
+        .chef { border-color: #8D6E63; }
+        .chef::after { background: #8D6E63; }
         .chef h3 { color: #8D6E63; }
-        .chef .boton-ingresar { background-color: #8D6E63; }
-        .chef .boton-ingresar:hover { background-color: #A1887F; }
+        .chef .boton-ingresar { background: linear-gradient(135deg, #8D6E63, #A1887F); }
+        .chef .boton-ingresar:hover { background: #6D4C41; }
 
         /* --- Buzón de mensajes --- */
         .seccion-buzon {
             max-width: 800px;
             margin: 0 auto 5rem auto;
-            background: var(--color-fondo);
+            background: linear-gradient(150deg, #FFFFFF, #FDFEFC);
             padding: 2.5rem;
-            border-radius: 1.2rem;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-            border: 1px solid var(--color-borde);
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--color-principal);
         }
 
         .seccion-buzon h2 {
@@ -275,10 +396,11 @@
         .formulario textarea {
             padding: 1rem;
             border: 1px solid var(--color-borde);
-            border-radius: 0.7rem;
+            border-radius: 0.8rem;
             font-size: 1rem;
             width: 100%;
             background: var(--color-fondo-suave);
+            transition: border-color 0.2s ease;
         }
 
         .formulario input:focus,
@@ -294,7 +416,7 @@
         }
 
         .boton-enviar {
-            background-color: var(--color-principal);
+            background: linear-gradient(135deg, var(--color-principal), var(--color-principal-claro));
             color: white;
             padding: 1rem;
             border: none;
@@ -302,11 +424,12 @@
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.2s ease;
+            transition: transform 0.2s ease;
+            box-shadow: 0 3px 8px rgba(46, 125, 50, 0.2);
         }
 
         .boton-enviar:hover {
-            background-color: var(--color-principal-claro);
+            transform: translateY(-2px);
         }
 
         .mensaje-exito {
@@ -315,7 +438,7 @@
             padding: 1rem;
             background-color: #E8F5E9;
             color: #1B5E20;
-            border-radius: 0.7rem;
+            border-radius: 0.8rem;
             text-align: center;
             font-weight: 500;
         }
@@ -352,8 +475,8 @@
         <a href="recetas.html" class="logo">Al_<span>toque</span></a>
         <ul class="menu">
             <li><a href="recetas.html">Inicio</a></li>
-            <li><a href="basico.html">Recetas</a></li>
-            <li><a href="#niveles">Niveles</a></li>
+            <li><a href="#niveles">Recetas</a></li>
+            <li><a href="#fundadores">Nosotros</a></li>
             <li><a href="#buzon">Contacto</a></li>
             <li><a href="#buzon" class="boton-menu">Enviar receta</a></li>
         </ul>
@@ -370,7 +493,23 @@
         <div class="hero-imagen"></div>
     </section>
 
-    <!-- Sección de niveles -->
+    <!-- ✅ Sección de Fundadores con mejoras -->
+    <section class="seccion-fundadores" id="fundadores">
+        <h2 class="titulo-seccion">Nuestros Fundadores</h2>
+        <p class="subtitulo-seccion">El equipo detrás de Al_toque, comprometido con acercar la alimentación saludable a todos los hogares.</p>
+        <div class="contenedor-fundadores">
+            <div class="tarjeta-fundador">
+                <h3>Adrian Mallma</h3>
+                <p>Creador & Desarrollador</p>
+            </div>
+            <div class="tarjeta-fundador">
+                <h3>Tu Nombre</h3>
+                <p>Especialista en Nutrición</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Sección de Niveles / Recetas renovada -->
     <section class="contenedor-seccion" id="niveles">
         <h2 class="titulo-seccion">Niveles de preparación</h2>
         <p class="subtitulo-seccion">Elige el nivel que mejor se adapte a tus conocimientos y necesidades, desde recetas rápidas hasta elaboraciones de chef.</p>
