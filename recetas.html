@@ -3,280 +3,458 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recetas Saludables</title>
+    <title>Al_toque - Recetas Saludables</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        :root {
+            --color-principal: #2E7D32;
+            --color-principal-claro: #43A047;
+            --color-texto-oscuro: #212121;
+            --color-texto-medio: #555555;
+            --color-texto-claro: #757575;
+            --color-fondo: #FFFFFF;
+            --color-fondo-suave: #F9FBF8;
+            --color-borde: #E8F0E8;
+            --color-acento: #81C784;
         }
 
         body {
-            background-color: #f8f9fa;
-            padding: 2rem 1.5rem;
+            background-color: var(--color-fondo-suave);
+            color: var(--color-texto-oscuro);
+            line-height: 1.7;
         }
 
-        h1 {
-            text-align: center;
-            color: #2d3436;
-            margin-bottom: 3rem;
-            font-size: 2.2rem;
-        }
-
-        .contenedor-tarjetas {
-            max-width: 1100px;
+        /* --- Barra de navegación --- */
+        nav {
+            background: var(--color-fondo);
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-texto-oscuro);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--color-principal);
+        }
+
+        .menu {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--color-texto-medio);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .menu a:hover {
+            color: var(--color-principal);
+        }
+
+        .boton-menu {
+            background: var(--color-principal);
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 2rem;
+        }
+
+        /* --- Sección principal / Encabezado --- */
+        .hero {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: var(--color-fondo);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: 1fr 1.2fr;
             gap: 2rem;
-            margin-bottom: 4rem;
+            align-items: center;
+            padding: 0;
         }
 
-        .tarjeta-nivel {
-            background: #ffffff;
-            padding: 1.8rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            border-left: 5px solid;
-            transition: transform 0.2s ease;
+        .hero-texto {
+            padding: 3rem 2.5rem;
         }
 
-        .tarjeta-nivel:hover {
-            transform: translateY(-5px);
-        }
-
-        .tarjeta-nivel h3 {
-            font-size: 1.5rem;
+        .etiqueta {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-principal);
+            font-weight: 600;
             margin-bottom: 1rem;
         }
 
+        .hero-texto h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--color-texto-oscuro);
+        }
+
+        .hero-texto p {
+            font-size: 1.1rem;
+            color: var(--color-texto-medio);
+            margin-bottom: 2rem;
+        }
+
+        .boton-principal {
+            background: var(--color-principal);
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+
+        .boton-principal:hover {
+            background: var(--color-principal-claro);
+        }
+
+        .hero-imagen {
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center / cover no-repeat;
+            min-height: 450px;
+        }
+
+        /* --- Sección de niveles --- */
+        .contenedor-seccion {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .titulo-seccion {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--color-texto-oscuro);
+        }
+
+        .subtitulo-seccion {
+            color: var(--color-texto-medio);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+        }
+
+        .contenedor-tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .tarjeta-nivel {
+            background: var(--color-fondo);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            border: 1px solid var(--color-borde);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .tarjeta-nivel:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .tarjeta-nivel h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
         .tarjeta-nivel p {
-            color: #555;
-            margin-bottom: 1.2rem;
-            line-height: 1.6;
+            color: var(--color-texto-medio);
+            margin-bottom: 1.5rem;
         }
 
         .tarjeta-nivel ul {
             margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: #444;
+            margin-bottom: 1.8rem;
+            color: var(--color-texto-medio);
         }
 
         .boton-ingresar {
             display: inline-block;
-            padding: 0.7rem 1.4rem;
-            border-radius: 6px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s ease;
+            font-weight: 600;
             border: none;
             cursor: pointer;
-            font-size: 1rem;
+            transition: background 0.2s ease;
         }
 
-        /* Estilos por cada sección */
-        .basico { border-color: #27ae60; }
-        .basico h3 { color: #27ae60; }
-        .basico .boton-ingresar { background-color: #27ae60; }
-        .basico .boton-ingresar:hover { background-color: #219651; }
+        /* Colores por nivel */
+        .basico h3 { color: #2E7D32; }
+        .basico .boton-ingresar { background-color: #2E7D32; }
+        .basico .boton-ingresar:hover { background-color: #43A047; }
 
-        .intermedio { border-color: #f39c12; }
-        .intermedio h3 { color: #f39c12; }
-        .intermedio .boton-ingresar { background-color: #f39c12; }
-        .intermedio .boton-ingresar:hover { background-color: #e68900; }
+        .intermedio h3 { color: #F57C00; }
+        .intermedio .boton-ingresar { background-color: #F57C00; }
+        .intermedio .boton-ingresar:hover { background-color: #FB8C00; }
 
-        .avanzado { border-color: #e74c3c; }
-        .avanzado h3 { color: #e74c3c; }
-        .avanzado .boton-ingresar { background-color: #e74c3c; }
-        .avanzado .boton-ingresar:hover { background-color: #c0392b; }
+        .avanzado h3 { color: #D32F2F; }
+        .avanzado .boton-ingresar { background-color: #D32F2F; }
+        .avanzado .boton-ingresar:hover { background-color: #E53935; }
 
-        .bebidas { border-color: #9b59b6; }
-        .bebidas h3 { color: #9b59b6; }
-        .bebidas .boton-ingresar { background-color: #9b59b6; }
-        .bebidas .boton-ingresar:hover { background-color: #8e44ad; }
+        .bebidas h3 { color: #7B1FA2; }
+        .bebidas .boton-ingresar { background-color: #7B1FA2; }
+        .bebidas .boton-ingresar:hover { background-color: #8E24AA; }
 
-        .snacks { border-color: #3498db; }
-        .snacks h3 { color: #3498db; }
-        .snacks .boton-ingresar { background-color: #3498db; }
-        .snacks .boton-ingresar:hover { background-color: #2980b9; }
+        .snacks h3 { color: #1976D2; }
+        .snacks .boton-ingresar { background-color: #1976D2; }
+        .snacks .boton-ingresar:hover { background-color: #1E88E5; }
 
-        .chef { border-color: #b4975a; }
-        .chef h3 { color: #b4975a; }
-        .chef .boton-ingresar { background-color: #b4975a; }
-        .chef .boton-ingresar:hover { background-color: #9a7f48; }
+        .chef h3 { color: #8D6E63; }
+        .chef .boton-ingresar { background-color: #8D6E63; }
+        .chef .boton-ingresar:hover { background-color: #A1887F; }
 
-        /* Estilos para el Buzón de mensajes */
+        /* --- Buzón de mensajes --- */
         .seccion-buzon {
             max-width: 800px;
-            margin: 0 auto 4rem auto;
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-top: 4px solid #6c757d;
+            margin: 0 auto 5rem auto;
+            background: var(--color-fondo);
+            padding: 2.5rem;
+            border-radius: 1.2rem;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--color-borde);
         }
 
         .seccion-buzon h2 {
             text-align: center;
-            color: #495057;
-            margin-bottom: 1.5rem;
-            font-size: 1.6rem;
+            color: var(--color-texto-oscuro);
+            margin-bottom: 1.2rem;
+            font-size: 1.7rem;
         }
 
         .seccion-buzon p {
             text-align: center;
-            color: #666;
+            color: var(--color-texto-medio);
             margin-bottom: 2rem;
-            line-height: 1.7;
         }
 
         .formulario {
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
+            gap: 1.3rem;
         }
 
         .formulario label {
             font-weight: 500;
-            color: #444;
+            color: var(--color-texto-oscuro);
         }
 
         .formulario input,
         .formulario textarea {
-            padding: 0.9rem;
-            border: 1px solid #ddd;
-            border-radius: 6px;
+            padding: 1rem;
+            border: 1px solid var(--color-borde);
+            border-radius: 0.7rem;
             font-size: 1rem;
             width: 100%;
+            background: var(--color-fondo-suave);
         }
 
         .formulario input:focus,
         .formulario textarea:focus {
             outline: none;
-            border-color: #3498db;
-            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+            border-color: var(--color-principal);
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
         }
 
         .formulario textarea {
             resize: vertical;
-            min-height: 140px;
+            min-height: 150px;
         }
 
         .boton-enviar {
-            background-color: #2c3e50;
+            background-color: var(--color-principal);
             color: white;
             padding: 1rem;
             border: none;
-            border-radius: 6px;
+            border-radius: 2rem;
             font-size: 1.1rem;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
             transition: background 0.2s ease;
         }
 
         .boton-enviar:hover {
-            background-color: #1a252f;
+            background-color: var(--color-principal-claro);
         }
 
         .mensaje-exito {
             display: none;
             margin-top: 1rem;
             padding: 1rem;
-            background-color: #d4edda;
-            color: #155724;
-            border-radius: 6px;
+            background-color: #E8F5E9;
+            color: #1B5E20;
+            border-radius: 0.7rem;
             text-align: center;
+            font-weight: 500;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .hero-imagen {
+                min-height: 300px;
+                order: 1;
+            }
+            .hero-texto {
+                order: 2;
+                padding: 2rem;
+            }
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .menu {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>🥗 Recetas Saludables</h1>
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="recetas.html" class="logo">Al_<span>toque</span></a>
+        <ul class="menu">
+            <li><a href="recetas.html">Inicio</a></li>
+            <li><a href="basico.html">Recetas</a></li>
+            <li><a href="#niveles">Niveles</a></li>
+            <li><a href="#buzon">Contacto</a></li>
+            <li><a href="#buzon" class="boton-menu">Enviar receta</a></li>
+        </ul>
+    </nav>
 
-    <div class="contenedor-tarjetas">
-
-        <!-- Nivel Básico -->
-        <div class="tarjeta-nivel basico">
-            <h3>🟢 Nivel Básico</h3>
-            <p>Recetas sencillas, rápidas y con pocos ingredientes, ideales para empezar.</p>
-            <ul>
-                <li>✅ Listas en menos de 20 minutos</li>
-                <li>✅ Ingredientes fáciles de conseguir</li>
-                <li>✅ Equilibradas y ligeras</li>
-            </ul>
-            <a href="basico.html" class="boton-ingresar">Ver Recetas</a>
+    <!-- Sección principal de bienvenida -->
+    <section class="hero">
+        <div class="hero-texto">
+            <p class="etiqueta">Bienvenido a Al_toque</p>
+            <h1>Recetas saludables con sabor y equilibrio</h1>
+            <p>De lo más sencillo a preparaciones de nivel profesional. Descubre platos nutritivos, explicados paso a paso y pensados para tu bienestar.</p>
+            <a href="#niveles" class="boton-principal">Explorar recetas</a>
         </div>
+        <div class="hero-imagen"></div>
+    </section>
 
-        <!-- Nivel Intermedio -->
-        <div class="tarjeta-nivel intermedio">
-            <h3>🟡 Nivel Intermedio</h3>
-            <p>Platos con mayor variedad nutricional, ideales para una alimentación completa.</p>
-            <ul>
-                <li>✅ Más sabores y combinaciones</li>
-                <li>✅ Aproximadamente 30 minutos de preparación</li>
-                <li>✅ Adecuadas para el día a día</li>
-            </ul>
-            <a href="intermedio.html" class="boton-ingresar">Ver Recetas</a>
+    <!-- Sección de niveles -->
+    <section class="contenedor-seccion" id="niveles">
+        <h2 class="titulo-seccion">Niveles de preparación</h2>
+        <p class="subtitulo-seccion">Elige el nivel que mejor se adapte a tus conocimientos y necesidades, desde recetas rápidas hasta elaboraciones de chef.</p>
+
+        <div class="contenedor-tarjetas">
+            <!-- Nivel Básico -->
+            <div class="tarjeta-nivel basico">
+                <h3>🟢 Nivel Básico</h3>
+                <p>Recetas sencillas, rápidas y con pocos ingredientes, ideales para empezar tu camino en Al_toque.</p>
+                <ul>
+                    <li>✅ Listas en menos de 20 minutos</li>
+                    <li>✅ Ingredientes fáciles de conseguir</li>
+                    <li>✅ Equilibradas y ligeras</li>
+                </ul>
+                <a href="basico.html" class="boton-ingresar">Ver Recetas</a>
+            </div>
+
+            <!-- Nivel Intermedio -->
+            <div class="tarjeta-nivel intermedio">
+                <h3>🟡 Nivel Intermedio</h3>
+                <p>Platos con mayor variedad nutricional, perfectos para disfrutar cada día con Al_toque.</p>
+                <ul>
+                    <li>✅ Más sabores y combinaciones</li>
+                    <li>✅ Aproximadamente 30 minutos de preparación</li>
+                    <li>✅ Adecuadas para el día a día</li>
+                </ul>
+                <a href="intermedio.html" class="boton-ingresar">Ver Recetas</a>
+            </div>
+
+            <!-- Nivel Avanzado -->
+            <div class="tarjeta-nivel avanzado">
+                <h3>🔴 Nivel Avanzado</h3>
+                <p>Preparaciones más elaboradas, pensadas para quienes buscan superarse en Al_toque.</p>
+                <ul>
+                    <li>✅ Alto valor nutricional</li>
+                    <li>✅ Porciones controladas</li>
+                    <li>✅ Enfocadas en rendimiento y salud</li>
+                </ul>
+                <a href="avanzado.html" class="boton-ingresar">Ver Recetas</a>
+            </div>
+
+            <!-- Bebidas Saludables -->
+            <div class="tarjeta-nivel bebidas">
+                <h3>🟣 Bebidas Saludables</h3>
+                <p>Las mejores opciones para acompañar tus platos de Al_toque, clasificadas por objetivo.</p>
+                <ul>
+                    <li>✅ Sin azúcares añadidos</li>
+                    <li>✅ Propiedades específicas</li>
+                    <li>✅ Fáciles y rápidas de preparar</li>
+                </ul>
+                <a href="bebidas.html" class="boton-ingresar">Ver Bebidas</a>
+            </div>
+
+            <!-- Snacks Saludables -->
+            <div class="tarjeta-nivel snacks">
+                <h3>🔵 Snacks Saludables</h3>
+                <p>Ideales para llevar el estilo de Al_toque a cualquier momento del día.</p>
+                <ul>
+                    <li>✅ Bajos en calorías</li>
+                    <li>✅ Alto valor nutricional</li>
+                    <li>✅ Fáciles de transportar</li>
+                </ul>
+                <a href="snacks.html" class="boton-ingresar">Ver Snacks</a>
+            </div>
+
+            <!-- Nivel Chef / Platino -->
+            <div class="tarjeta-nivel chef">
+                <h3>🏆 Nivel Chef / Platino</h3>
+                <p>El nivel más alto de Al_toque: técnicas avanzadas y platos de categoría.</p>
+                <ul>
+                    <li>🔪 Explicación detallada de técnicas</li>
+                    <li>🎨 Instrucciones paso a paso de emplatado</li>
+                    <li>✨ Platos sofisticados y saludables</li>
+                </ul>
+                <a href="chef.html" class="boton-ingresar">Ver Recetas</a>
+            </div>
         </div>
-
-        <!-- Nivel Avanzado -->
-        <div class="tarjeta-nivel avanzado">
-            <h3>🔴 Nivel Avanzado</h3>
-            <p>Preparaciones más elaboradas, pensadas para deportistas y objetivos específicos.</p>
-            <ul>
-                <li>✅ Alto valor nutricional</li>
-                <li>✅ Porciones controladas</li>
-                <li>✅ Enfocadas en rendimiento y salud</li>
-            </ul>
-            <a href="avanzado.html" class="boton-ingresar">Ver Recetas</a>
-        </div>
-
-        <!-- Bebidas Saludables -->
-        <div class="tarjeta-nivel bebidas">
-            <h3>🟣 Bebidas Saludables</h3>
-            <p>Clasificadas por objetivo: para deportistas, para bajar de peso y energéticas naturales.</p>
-            <ul>
-                <li>✅ Sin azúcares añadidos</li>
-                <li>✅ Propiedades específicas</li>
-                <li>✅ Fáciles y rápidas de preparar</li>
-            </ul>
-            <a href="bebidas.html" class="boton-ingresar">Ver Bebidas</a>
-        </div>
-
-        <!-- Snacks Saludables -->
-        <div class="tarjeta-nivel snacks">
-            <h3>🔵 Snacks Saludables</h3>
-            <p>Organizados en dulces, salados y mixtos, perfectos para comer entre horas.</p>
-            <ul>
-                <li>✅ Bajos en calorías</li>
-                <li>✅ Alto valor nutricional</li>
-                <li>✅ Fáciles de transportar</li>
-            </ul>
-            <a href="snacks.html" class="boton-ingresar">Ver Snacks</a>
-        </div>
-
-        <!-- Nivel Chef / Platino -->
-        <div class="tarjeta-nivel chef">
-            <h3>🏆 Nivel Chef / Platino</h3>
-            <p>Recetas elaboradas, técnicas avanzadas y emplatado profesional para perfeccionar tus habilidades culinarias.</p>
-            <ul>
-                <li>🔪 Explicación detallada de técnicas</li>
-                <li>🎨 Instrucciones paso a paso de emplatado</li>
-                <li>✨ Platos sofisticados y saludables</li>
-            </ul>
-            <a href="chef.html" class="boton-ingresar">Ver Recetas</a>
-        </div>
-
-    </div>
+    </section>
 
     <!-- Buzón de mensajes -->
-    <div class="seccion-buzon">
-        <h2>📩 Buzón de mensajes</h2>
-        <p>¿Tienes alguna opinión, sugerencia, receta propia o recomendación? ¡Escríbelo aquí! También puedes enviarnos un mensaje directo a los creadores.</p>
+    <section class="seccion-buzon" id="buzon">
+        <h2>📩 Buzón de mensajes de Al_toque</h2>
+        <p>¿Tienes alguna opinión, sugerencia, receta propia o recomendación para mejorar Al_toque? ¡Escríbelo aquí!</p>
 
-        <!-- Formulario con tu enlace activo -->
         <form class="formulario" action="https://formspree.io/f/mdarwoev" method="POST" id="formularioContacto">
             <label for="nombre">Tu nombre o apodo:</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Ej: María, Juan...">
@@ -285,18 +463,18 @@
             <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
 
             <label for="asunto">Asunto:</label>
-            <input type="text" id="asunto" name="asunto" required placeholder="Ej: Opinión, Receta propia, Sugerencia...">
+            <input type="text" id="asunto" name="asunto" required placeholder="Ej: Sugerencia, Mi receta, Saludo...">
 
-            <label for="mensaje">Tu mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required placeholder="Escribe aquí todo lo que quieras compartir..."></textarea>
+            <label for="mensaje">Tu mensaje para Al_toque:</label>
+            <textarea id="mensaje" name="mensaje" required placeholder="Escribe aquí todo lo que quieras compartir con nosotros..."></textarea>
 
-            <button type="submit" class="boton-enviar">✉️ Enviar mensaje a los creadores</button>
+            <button type="submit" class="boton-enviar">✉️ Enviar mensaje</button>
         </form>
 
         <div class="mensaje-exito" id="avisoExito">
             ✅ ¡Mensaje enviado correctamente! Muchas gracias por tu aportación.
         </div>
-    </div>
+    </section>
 
     <script>
         const form = document.getElementById('formularioContacto');
