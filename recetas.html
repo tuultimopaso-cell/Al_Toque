@@ -60,6 +60,7 @@
             display: flex;
             gap: 2.5rem;
             list-style: none;
+            flex-wrap: wrap;
         }
 
         .menu a {
@@ -95,15 +96,15 @@
             position: relative;
         }
 
-        /* ✨ Imagen de fondo profesional */
         .hero::before {
             content: "";
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('https://oaidalleapiprodscus.blob.core.windows.net/private/org-j2dJ7jX7986d868d968d6d68d68d6/user-d8J7d68d6d6d6d6d6d6d6d6d6d6d6d6/img-hero_background_with_logo_1.png?st=2024-07-15T12%3A00%3A00Z&se=2024-07-16T12%3A00%3A00Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=aa91a197-4116-41c2-9610-22e718a5d490&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-07-14T12%3A00%3A00Z&ske=2024-07-15T12%3A00%3A00Z&sks=b&skv=2023-11-03&sig=2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.15;
+            background-image: 
+                url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 24 24" fill="none" opacity="0.06"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z" fill="%232E7D32"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg width="70" height="70" viewBox="0 0 24 24" fill="none" opacity="0.05"><path d="M17.5 12c0 2.49-2.01 4.5-4.5 4.5S8.5 14.49 8.5 12s2.01-4.5 4.5-4.5 4.5 2.01 4.5 4.5zm-9 0c0-2.49 2.01-4.5 4.5-4.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5-4.5-2.01-4.5-4.5z" fill="%23FF9800"/></svg>');
+            background-position: 10% 20%, 80% 70%;
+            background-repeat: no-repeat;
             z-index: 0;
         }
 
@@ -160,35 +161,33 @@
             z-index: 1;
         }
 
-        /* --- Sección de Fundadores --- */
-        .seccion-fundadores {
+        /* --- Sección: ¿Qué encontrarás aquí? --- */
+        .seccion-servicios {
             max-width: 1200px;
             margin: 4rem auto;
             padding: 3rem 2rem;
-            background: linear-gradient(145deg, #FFFFFF, #F8FBF6);
+            background: var(--color-fondo);
             border-radius: 1.5rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        /* Marcas de agua en esta sección también */
-        .seccion-fundadores::before {
+        .seccion-servicios::before {
             content: "";
             position: absolute;
             inset: 0;
             background-image: 
-                url('data:image/svg+xml;utf8,<svg width="80" height="80" viewBox="0 0 24 24" fill="none" opacity="0.04"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z" fill="%2381C784"/></svg>'),
-                url('data:image/svg+xml;utf8,<svg width="75" height="75" viewBox="0 0 24 24" fill="none" opacity="0.05"><path d="M16.5 6c-1.02 0-1.99.25-2.85.68L12 9l-1.65-2.32C9.49 6.25 8.52 6 7.5 6 4.46 6 2 8.46 2 11.5S4.46 17 7.5 17c1.02 0 1.99-.25 2.85-.68L12 14l1.65 2.32c.86.43 1.83.68 2.85.68 3.04 0 5.5-2.46 5.5-5.5S19.54 6 16.5 6z" fill="%23FFB74D"/></svg>');
-            background-position: 90% 10%, 5% 90%;
+                url('data:image/svg+xml;utf8,<svg width="80" height="80" viewBox="0 0 24 24" fill="none" opacity="0.04"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z" fill="%2381C784"/></svg>');
+            background-position: 90% 10%;
             background-repeat: no-repeat;
         }
 
         .titulo-seccion {
             font-size: 2.2rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
             color: var(--color-texto-oscuro);
-            text-align: center;
         }
 
         .subtitulo-seccion {
@@ -198,46 +197,50 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            text-align: center;
         }
 
-        .contenedor-fundadores {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
+        .contenedor-bloques {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
-        .tarjeta-fundador {
-            background: white;
-            padding: 2rem;
+        .bloque {
+            background: var(--color-fondo-suave);
+            padding: 2.2rem 1.8rem;
             border-radius: 1.2rem;
-            width: 280px;
+            border: 1px solid var(--color-borde);
+            transition: all 0.3s ease;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
-            border-top: 4px solid var(--color-principal);
-            transition: transform 0.2s ease;
         }
 
-        .tarjeta-fundador:hover {
-            transform: translateY(-5px);
+        .bloque:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-color: var(--color-principal-claro);
         }
 
-        .tarjeta-fundador h3 {
+        .icono-bloque {
+            font-size: 3rem;
+            color: var(--color-principal);
+            margin-bottom: 1.2rem;
+        }
+
+        .bloque h3 {
             font-size: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--color-texto-oscuro);
-            margin-bottom: 0.5rem;
         }
 
-        .tarjeta-fundador p {
+        .bloque p {
             color: var(--color-texto-medio);
-            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 1rem;
         }
 
-        /* --- Sección de Niveles / Recetas --- */
-        .contenedor-seccion {
+        /* --- Sección Recetas por Niveles --- */
+        .contenedor-niveles {
             max-width: 1200px;
             margin: 4rem auto;
             padding: 0 2rem;
@@ -249,7 +252,6 @@
             gap: 2rem;
         }
 
-        /* ✨ Mejoras en tarjetas de recetas: más color y animación */
         .tarjeta-nivel {
             background: linear-gradient(150deg, #FFFFFF, #FDFEFC);
             border-radius: 1.2rem;
@@ -268,7 +270,6 @@
             width: 80px; height: 80px;
             border-radius: 50%;
             opacity: 0.08;
-            transition: all 0.3s ease;
         }
 
         .tarjeta-nivel:hover {
@@ -295,16 +296,6 @@
             color: var(--color-texto-medio);
         }
 
-        .tarjeta-nivel li {
-            padding: 0.2rem 0;
-            transition: padding-left 0.2s ease;
-        }
-
-        .tarjeta-nivel li:hover {
-            padding-left: 5px;
-            color: var(--color-principal);
-        }
-
         .boton-ingresar {
             display: inline-block;
             padding: 0.75rem 1.5rem;
@@ -318,7 +309,7 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
-        /* Colores personalizados por nivel */
+        /* Colores por nivel */
         .basico { border-color: #2E7D32; }
         .basico::after { background: #2E7D32; }
         .basico h3 { color: #2E7D32; }
@@ -354,6 +345,139 @@
         .chef h3 { color: #8D6E63; }
         .chef .boton-ingresar { background: linear-gradient(135deg, #8D6E63, #A1887F); }
         .chef .boton-ingresar:hover { background: #6D4C41; }
+
+        /* --- Sección Consejos y Trucos --- */
+        .seccion-consejos {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 2.5rem;
+            background: var(--color-fondo);
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--color-principal);
+        }
+
+        .lista-consejos {
+            margin-left: 1.8rem;
+            color: var(--color-texto-medio);
+            font-size: 1.05rem;
+            line-height: 2;
+        }
+
+        .lista-consejos li {
+            margin-bottom: 1.2rem;
+            padding-left: 0.5rem;
+            transition: padding-left 0.2s ease;
+        }
+
+        .lista-consejos li:hover {
+            padding-left: 0.8rem;
+            color: var(--color-principal);
+        }
+
+        /* --- ✅ Sección Videos Instructivos organizada por categorías --- */
+        .seccion-videos {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            background: var(--color-fondo);
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        /* Pestañas de categorías */
+        .pestanas-categorias {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--color-borde);
+            padding-bottom: 1rem;
+        }
+
+        .boton-pestana {
+            padding: 0.7rem 1.4rem;
+            border: none;
+            border-radius: 2rem;
+            background: var(--color-fondo-suave);
+            color: var(--color-texto-medio);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .boton-pestana.activa {
+            background: linear-gradient(135deg, var(--color-principal), var(--color-principal-claro));
+            color: white;
+            box-shadow: 0 2px 6px rgba(46, 125, 50, 0.2);
+        }
+
+        .boton-pestana:hover:not(.activa) {
+            background: var(--color-acento-suave);
+            color: var(--color-principal);
+        }
+
+        /* Contenedor de videos por categoría */
+        .contenedor-categoria {
+            display: none;
+        }
+
+        .contenedor-categoria.mostrar {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+
+        /* Tarjeta de video */
+        .tarjeta-video {
+            background: var(--color-fondo-suave);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        .tarjeta-video:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+
+        .miniatura-video {
+            width: 100%;
+            height: 160px;
+            background: #e9e9e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--color-principal);
+            margin-bottom: 0.8rem;
+        }
+
+        .tarjeta-video h4 {
+            color: var(--color-texto-oscuro);
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            padding: 0 0.5rem;
+        }
+
+        .tarjeta-video a {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            background: var(--color-principal);
+            color: white;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s ease;
+        }
+
+        .tarjeta-video a:hover {
+            background: var(--color-principal-claro);
+        }
 
         /* --- Buzón de mensajes --- */
         .seccion-buzon {
@@ -460,7 +584,6 @@
             }
             .menu {
                 gap: 1rem;
-                flex-wrap: wrap;
                 justify-content: center;
             }
         }
@@ -472,129 +595,265 @@
     <nav>
         <a href="recetas.html" class="logo">Al_<span>toque</span></a>
         <ul class="menu">
-            <li><a href="recetas.html">Inicio</a></li>
-            <li><a href="#niveles">Recetas</a></li>
-            <li><a href="#fundadores">Nosotros</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#recetas">Recetas</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#consejos">Consejos</a></li>
             <li><a href="#buzon">Contacto</a></li>
-            <li><a href="#buzon" class="boton-menu">Enviar receta</a></li>
         </ul>
     </nav>
 
     <!-- Sección principal de bienvenida -->
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="hero-texto">
             <p class="etiqueta">Proyecto Universitario UCV</p>
             <h1>Al_toque</h1>
-            <p>Proyecto universitario enfocado en promover una alimentación saludable, económica y nutritiva para estudiantes universitarios mediante videos, recetas y recomendaciones prácticas.</p>
-            <a href="#niveles" class="boton-principal">Explorar recetas</a>
+            <p>Enfocado en promover una alimentación saludable, económica y nutritiva para estudiantes universitarios mediante recetas, videos y recomendaciones prácticas.</p>
+            <a href="#recetas" class="boton-principal">Ver todo el contenido</a>
         </div>
         <div class="hero-imagen"></div>
     </section>
 
-    <!-- ✅ Sección de Fundadores con mejoras -->
-    <section class="seccion-fundadores" id="fundadores">
-        <h2 class="titulo-seccion">Nuestros Fundadores</h2>
-        <p class="subtitulo-seccion">El equipo detrás de Al_toque, comprometido con acercar la alimentación saludable a todos los hogares.</p>
-        <div class="contenedor-fundadores">
-            <div class="tarjeta-fundador">
-                <h3>Mallma Espinoza Adrian Arturo</h3>
-                <p>Creador & Desarrollador</p>
+    <!-- Sección: ¿Qué encontrarás aquí? -->
+    <section class="seccion-servicios">
+        <h2 class="titulo-seccion">¿Qué encontrarás en Al_toque?</h2>
+        <p class="subtitulo-seccion">Todo lo que necesitas para comer bien, gastar poco y prepararlo sin complicaciones.</p>
+
+        <div class="contenedor-bloques">
+            <div class="bloque">
+                <div class="icono-bloque">🍳</div>
+                <h3>Recetas para ti</h3>
+                <p>Descubre recetas saludables, económicas y fáciles de preparar, adaptadas a tu presupuesto y ritmo de estudiante.</p>
+                <a href="#recetas" class="boton-principal" style="padding: 0.6rem 1.5rem; font-size: 0.95rem;">Ver niveles</a>
             </div>
-            <div class="tarjeta-fundador">
-                <h3>Ramírez Domínguez Sharon Dayana</h3>
-                <p>Especialista en Nutrición</p>
+
+            <div class="bloque">
+                <div class="icono-bloque">🎥</div>
+                <h3>Videos instructivos</h3>
+                <p>Mira videos paso a paso para que aprendas a cocinar como un profesional, sin complicaciones y con explicaciones claras.</p>
+                <a href="#videos" class="boton-principal" style="padding: 0.6rem 1.5rem; font-size: 0.95rem;">Ver videos</a>
             </div>
-            <div class="tarjeta-fundador">
-                <h3>Valderrama Rojas Carlos Ángel</h3>
-                <p>Chef & Cocinero</p>
-            </div>
-            <div class="tarjeta-fundador">
-                <h3>Picon Escobal Jayson Erick</h3>
-                <p>Marketing & Diseño</p>
-            </div>
-            <div class="tarjeta-fundador">
-                <h3>Vega Asencios Anais</h3>
-                <p>Investigación & Datos</p>
+
+            <div class="bloque">
+                <div class="icono-bloque">📋</div>
+                <h3>Consejos prácticos</h3>
+                <p>Obtén recomendaciones diarias para mantener una dieta equilibrada, aprovechar mejor los alimentos y cuidar tu salud.</p>
+                <a href="#consejos" class="boton-principal" style="padding: 0.6rem 1.5rem; font-size: 0.95rem;">Leer consejos</a>
             </div>
         </div>
     </section>
 
-    <!-- ✅ Sección de Niveles / Recetas renovada -->
-    <section class="contenedor-seccion" id="niveles">
-        <h2 class="titulo-seccion">Niveles de preparación</h2>
-        <p class="subtitulo-seccion">Elige el nivel que mejor se adapte a tus conocimientos y necesidades, desde recetas rápidas hasta elaboraciones de chef.</p>
+    <!-- Sección Recetas por Niveles -->
+    <section class="contenedor-niveles" id="recetas">
+        <h2 class="titulo-seccion" style="text-align:center;">Niveles de preparación</h2>
+        <p class="subtitulo-seccion" style="text-align:center;">Elige el nivel que mejor se adapte a tus conocimientos y tiempo disponible.</p>
 
         <div class="contenedor-tarjetas">
             <!-- Nivel Básico -->
             <div class="tarjeta-nivel basico">
                 <h3>🟢 Nivel Básico</h3>
-                <p>Recetas sencillas, rápidas y con pocos ingredientes, ideales para empezar tu camino en Al_toque.</p>
+                <p>Recetas sencillas, rápidas y con pocos ingredientes, ideales para empezar.</p>
                 <ul>
                     <li>✅ Listas en menos de 20 minutos</li>
                     <li>✅ Ingredientes fáciles de conseguir</li>
                     <li>✅ Equilibradas y ligeras</li>
                 </ul>
-                <a href="basico.html" class="boton-ingresar">Ver Recetas</a>
+                <a href="#" class="boton-ingresar">Ver Recetas</a>
             </div>
 
             <!-- Nivel Intermedio -->
             <div class="tarjeta-nivel intermedio">
                 <h3>🟡 Nivel Intermedio</h3>
-                <p>Platos con mayor variedad nutricional, perfectos para disfrutar cada día con Al_toque.</p>
+                <p>Platos con mayor variedad nutricional, perfectos para el día a día.</p>
                 <ul>
                     <li>✅ Más sabores y combinaciones</li>
                     <li>✅ Aproximadamente 30 minutos de preparación</li>
-                    <li>✅ Adecuadas para el día a día</li>
+                    <li>✅ Adecuadas para compartir</li>
                 </ul>
-                <a href="intermedio.html" class="boton-ingresar">Ver Recetas</a>
+                <a href="#" class="boton-ingresar">Ver Recetas</a>
             </div>
 
             <!-- Nivel Avanzado -->
             <div class="tarjeta-nivel avanzado">
                 <h3>🔴 Nivel Avanzado</h3>
-                <p>Preparaciones más elaboradas, pensadas para quienes buscan superarse en Al_toque.</p>
+                <p>Preparaciones más elaboradas, enfocadas en alto valor nutricional.</p>
                 <ul>
-                    <li>✅ Alto valor nutricional</li>
+                    <li>✅ Alto aporte de vitaminas y minerales</li>
                     <li>✅ Porciones controladas</li>
                     <li>✅ Enfocadas en rendimiento y salud</li>
                 </ul>
-                <a href="avanzado.html" class="boton-ingresar">Ver Recetas</a>
+                <a href="#" class="boton-ingresar">Ver Recetas</a>
             </div>
 
             <!-- Bebidas Saludables -->
             <div class="tarjeta-nivel bebidas">
                 <h3>🟣 Bebidas Saludables</h3>
-                <p>Las mejores opciones para acompañar tus platos de Al_toque, clasificadas por objetivo.</p>
+                <p>Opciones para acompañar tus platos, sin azúcares añadidos.</p>
                 <ul>
-                    <li>✅ Sin azúcares añadidos</li>
-                    <li>✅ Propiedades específicas</li>
+                    <li>✅ Sin azúcares refinados</li>
+                    <li>✅ Propiedades específicas por bebida</li>
                     <li>✅ Fáciles y rápidas de preparar</li>
                 </ul>
-                <a href="bebidas.html" class="boton-ingresar">Ver Bebidas</a>
+                <a href="#" class="boton-ingresar">Ver Bebidas</a>
             </div>
 
             <!-- Snacks Saludables -->
             <div class="tarjeta-nivel snacks">
                 <h3>🔵 Snacks Saludables</h3>
-                <p>Ideales para llevar el estilo de Al_toque a cualquier momento del día.</p>
+                <p>Ideales para comer entre horas sin perder el equilibrio.</p>
                 <ul>
                     <li>✅ Bajos en calorías</li>
                     <li>✅ Alto valor nutricional</li>
                     <li>✅ Fáciles de transportar</li>
                 </ul>
-                <a href="snacks.html" class="boton-ingresar">Ver Snacks</a>
+                <a href="#" class="boton-ingresar">Ver Snacks</a>
             </div>
 
             <!-- Nivel Chef / Platino -->
             <div class="tarjeta-nivel chef">
                 <h3>🏆 Nivel Chef / Platino</h3>
-                <p>El nivel más alto de Al_toque: técnicas avanzadas y platos de categoría.</p>
+                <p>El nivel más alto: técnicas avanzadas y platos de categoría.</p>
                 <ul>
                     <li>🔪 Explicación detallada de técnicas</li>
-                    <li>🎨 Instrucciones paso a paso de emplatado</li>
+                    <li>🎨 Instrucciones de emplatado</li>
                     <li>✨ Platos sofisticados y saludables</li>
                 </ul>
-                <a href="chef.html" class="boton-ingresar">Ver Recetas</a>
+                <a href="#" class="boton-ingresar">Ver Recetas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Consejos y Trucos -->
+    <section class="seccion-consejos" id="consejos">
+        <h2 class="titulo-seccion" style="text-align:center;">💡 Consejos y trucos de alimentación</h2>
+        <p class="subtitulo-seccion" style="text-align:center;">Aprende a sacar el máximo provecho a cada alimento y mejorar tus hábitos.</p>
+
+        <ol class="lista-consejos">
+            <li><strong>Cómo utilizar correctamente las verduras para aprovechar sus vitaminas:</strong> Las vitaminas solubles en agua (como la C y del grupo B) se pierden si hierves las verduras en mucha agua. Lo ideal es cocinarlas al vapor, en poco tiempo o aprovechar el agua de cocción para sopas. Las vitaminas liposolubles (A, D, E, K) se absorben mejor si añades una pequeña cantidad de aceite o grasa saludable.</li>
+            <li><strong>Almacenamiento adecuado de frutas y verduras:</strong> No guardes en la misma cajuela del refrigerador frutas como plátanos, manzanas o tomates con verduras verdes: las primeras liberan gas etileno que hace que las verduras se pudran más rápido. Guárdalas en compartimentos separados y no las laves hasta justo antes de usarlas.</li>
+            <li><strong>Aprovecha al máximo las legumbres:</strong> Remojarlas durante 6 a 8 horas antes de cocinarlas reduce los antinutrientes, mejora su digestibilidad y acorta el tiempo de cocción. El agua de remojo siempre se desecha.</li>
+            <li><strong>Control de porciones para estudiantes:</strong> Usa el método del plato saludable: la mitad del plato verduras, un cuarto proteína magra y un cuarto carbohidratos integrales. Es fácil de recordar y no necesitas balanza para medir.</li>
+            <li><strong>Evita pérdida de nutrientes al cocinar:</strong> Corta los alimentos en trozos grandes, no los dejes remojando mucho tiempo y usa la menor cantidad de agua posible. La cocción al vapor o al horno son las técnicas que mejor conservan los nutrientes.</li>
+            <li><strong>Elige grasas saludables:</strong> Prefiere aceite de oliva virgen extra, aguacate, frutos secos o semillas. Úsalos en cantidades moderadas, ya que aportan mucha energía, pero son esenciales para el organismo.</li>
+        </ol>
+    </section>
+
+    <!-- ✅ Sección Videos Instructivos organizada por categorías -->
+    <section class="seccion-videos" id="videos">
+        <h2 class="titulo-seccion" style="text-align:center;">🎥 Videos Instructivos</h2>
+        <p class="subtitulo-seccion" style="text-align:center;">Todos los videos organizados por categorías para que encuentres fácil lo que buscas.</p>
+
+        <!-- Pestañas de navegación -->
+        <div class="pestanas-categorias">
+            <button class="boton-pestana activa" onclick="mostrarCategoria('saludables')">🥗 Saludables</button>
+            <button class="boton-pestana" onclick="mostrarCategoria('snacks')">🥨 Snacks</button>
+            <button class="boton-pestana" onclick="mostrarCategoria('postres')">🍰 Postres</button>
+            <button class="boton-pestana" onclick="mostrarCategoria('bebidas')">🥤 Bebidas</button>
+        </div>
+
+        <!-- Categoría: Saludables -->
+        <div class="contenedor-categoria mostrar" id="categoria-saludables">
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Receta Saludable 1</h4>
+                <a href="videos/saludable1.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Receta Saludable 2</h4>
+                <a href="videos/saludable2.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Receta Saludable 3</h4>
+                <a href="videos/saludable3.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Receta Saludable 4</h4>
+                <a href="videos/saludable4.mp4" target="_blank">Ver video</a>
+            </div>
+        </div>
+
+        <!-- Categoría: Snacks -->
+        <div class="contenedor-categoria" id="categoria-snacks">
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Snack 1</h4>
+                <a href="videos/snacks1.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Snack 2</h4>
+                <a href="videos/snack2.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Snack 3</h4>
+                <a href="videos/snack3.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Snack 4</h4>
+                <a href="videos/snack4.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Snack 5</h4>
+                <a href="videos/snack5.mp4" target="_blank">Ver video</a>
+            </div>
+        </div>
+
+        <!-- Categoría: Postres -->
+        <div class="contenedor-categoria" id="categoria-postres">
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Postre 1</h4>
+                <a href="videos/postre1.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Postre 2</h4>
+                <a href="videos/postre2.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Postre 3</h4>
+                <a href="videos/postre3.mp4" target="_blank">Ver video</a>
+            </div>
+        </div>
+
+        <!-- Categoría: Bebidas -->
+        <div class="contenedor-categoria" id="categoria-bebidas">
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Bebida 1</h4>
+                <a href="videos/bebida1.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Bebida 2</h4>
+                <a href="videos/bebida2.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Bebida 3</h4>
+                <a href="videos/bebidas3.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Bebida 4</h4>
+                <a href="videos/bebida4.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Bebida 5</h4>
+                <a href="videos/bebida5.mp4" target="_blank">Ver video</a>
+            </div>
+            <div class="tarjeta-video">
+                <div class="miniatura-video">▶️</div>
+                <h4>Bebida 6</h4>
+                <a href="videos/bebida6.mp4" target="_blank">Ver video</a>
             </div>
         </div>
     </section>
@@ -602,7 +861,7 @@
     <!-- Buzón de mensajes -->
     <section class="seccion-buzon" id="buzon">
         <h2>📩 Buzón de mensajes de Al_toque</h2>
-        <p>¿Tienes alguna opinión, sugerencia, receta propia o recomendación para mejorar Al_toque? ¡Escríbelo aquí!</p>
+        <p>¿Tienes alguna opinión, sugerencia o receta propia? ¡Escríbelo aquí!</p>
 
         <form class="formulario" action="https://formspree.io/f/mdarwoev" method="POST" id="formularioContacto">
             <label for="nombre">Tu nombre o apodo:</label>
@@ -626,9 +885,32 @@
     </section>
 
     <script>
+        // Desplazamiento suave por la página
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Función para cambiar entre categorías de videos
+        function mostrarCategoria(categoria) {
+            // Quitar clase activa de todas las pestañas
+            document.querySelectorAll('.boton-pestana').forEach(btn => btn.classList.remove('activa'));
+            // Ocultar todas las categorías
+            document.querySelectorAll('.contenedor-categoria').forEach(cat => cat.classList.remove('mostrar'));
+
+            // Activar la pestaña seleccionada
+            event.currentTarget.classList.add('activa');
+            // Mostrar la categoría correspondiente
+            document.getElementById('categoria-' + categoria).classList.add('mostrar');
+        }
+
+        // Envío de formulario
         const form = document.getElementById('formularioContacto');
         const aviso = document.getElementById('avisoExito');
-
         form.addEventListener('submit', function() {
             setTimeout(() => {
                 aviso.style.display = 'block';
