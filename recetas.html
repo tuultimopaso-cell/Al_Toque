@@ -146,7 +146,7 @@
             min-height: 480px;
         }
 
-        /* --- Sección ¿Qué encontrarás? --- */
+        /* --- ¿Qué encontrarás? --- */
         .seccion-servicios {
             max-width: 1200px;
             margin: 4rem auto;
@@ -209,7 +209,7 @@
             line-height: 1.75;
         }
 
-        /* --- Niveles de Recetas --- */
+        /* --- Niveles de recetas --- */
         .contenedor-niveles {
             max-width: 1200px;
             margin: 4rem auto;
@@ -264,6 +264,8 @@
             font-weight: 600;
             transition: var(--transicion);
             box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
         }
 
         /* Colores por nivel */
@@ -326,7 +328,7 @@
             color: var(--color-principal);
         }
 
-        /* --- Sección Videos MEJORADA --- */
+        /* --- Sección Videos --- */
         .seccion-videos {
             max-width: 1200px;
             margin: 4rem auto;
@@ -356,6 +358,9 @@
             font-size: 1rem;
             cursor: pointer;
             transition: var(--transicion);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .boton-pestana.activa {
@@ -398,26 +403,24 @@
             width: 100%;
             height: 180px;
             background: #F0F4F0;
+            border-radius: 1rem 1rem 0 0;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: var(--color-principal);
-            margin-bottom: 1rem;
-            border-radius: 1rem 1rem 0 0;
-            overflow: hidden;
         }
 
         .reproductor-video video {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            background-color: #000;
         }
 
         .tarjeta-video h4 {
             color: var(--color-texto-oscuro);
             font-size: 1.1rem;
-            margin-bottom: 0.8rem;
+            margin: 1rem 0 0.8rem 0;
             padding: 0 0.5rem;
         }
 
@@ -431,6 +434,8 @@
             font-size: 0.95rem;
             font-weight: 500;
             transition: var(--transicion);
+            border: none;
+            cursor: pointer;
         }
 
         .boton-ver:hover {
@@ -660,17 +665,25 @@
                     <li>✅ Energía sostenida</li>
                     <li>✅ Fáciles de transportar</li>
                 </ul>
-                <a href="#" class="boton-ingresar">Ver snacks</a>
+                <a href="snacks.html" class="boton-ingresar">Ver snacks</a>
             </div>
+            <!-- ✅ Nivel Platino / Chef con espacio para más recetas -->
             <div class="tarjeta-nivel chef">
-                <h3>🏆 Nivel Chef</h3>
-                <p>Platos con técnicas profesionales, presentación cuidada y gran valor nutricional.</p>
+                <h3>🏆 Nivel Platino / Chef</h3>
+                <p>Platos con técnicas profesionales, presentación cuidada y gran valor nutricional. Aquí tienes todas las recetas disponibles:</p>
                 <ul>
-                    <li>✅ Técnicas de cocina explicadas</li>
-                    <li>✅ Platos para compartir</li>
-                    <li>✅ Sabor y salud en cada bocado</li>
+                    <li>✅ Receta 1: Nombre de tu primera preparación</li>
+                    <li>✅ Receta 2: Nombre de tu segunda preparación</li>
+                    <li>✅ Receta 3: Nombre de tu tercera preparación</li>
+                    <li>✅ Receta 4: Nombre de tu cuarta preparación</li>
+                    <li>✅ Receta 5: Nombre de tu quinta preparación</li>
+                    <li>✅ Receta 6: Nombre de tu sexta preparación</li>
+                    <li>✅ Receta 7: Nombre de tu séptima preparación</li>
+                    <li>✅ Receta 8: Nombre de tu octava preparación</li>
+                    <li>✅ Receta 9: Nombre de tu novena preparación</li>
+                    <li>✅ Receta 10: Nombre de tu décima preparación</li>
                 </ul>
-                <a href="Chef.html" class="boton-ingresar">Ver recetas</a>
+                <a href="Chef.html" class="boton-ingresar">Ver todas las recetas</a>
             </div>
         </div>
     </section>
@@ -690,7 +703,7 @@
         </ol>
     </section>
 
-    <!-- ✅ Sección Videos con rutas CORRECTAS -->
+    <!-- ✅ Sección Videos con rutas y soporte mejorado -->
     <section class="seccion-videos" id="videos">
         <h2 class="titulo-seccion" style="text-align:center;">🎥 Videos Instructivos</h2>
         <p class="subtitulo-seccion" style="text-align:center;">Todos los videos organizados para que encuentres lo que buscas fácilmente.</p>
@@ -706,28 +719,36 @@
         <div class="contenedor-categoria mostrar" id="categoria-saludables">
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="saludable1.mp4" preload="metadata" controls></video>
+                    <video src="saludable1.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Receta Saludable 1</h4>
                 <a href="saludable1.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="saludable2.mp4" preload="metadata" controls></video>
+                    <video src="saludable2.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Receta Saludable 2</h4>
                 <a href="saludable2.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="saludable3.mp4" preload="metadata" controls></video>
+                    <video src="saludable3.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Receta Saludable 3</h4>
                 <a href="saludable3.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="saludable4.mp4" preload="metadata" controls></video>
+                    <video src="saludable4.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Receta Saludable 4</h4>
                 <a href="saludable4.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
@@ -738,35 +759,45 @@
         <div class="contenedor-categoria" id="categoria-snacks">
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="snacks1.mp4" preload="metadata" controls></video>
+                    <video src="snacks1.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Snack 1</h4>
                 <a href="snacks1.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="snacks2.mp4" preload="metadata" controls></video>
+                    <video src="snacks2.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Snack 2</h4>
                 <a href="snacks2.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="snacks3.mp4" preload="metadata" controls></video>
+                    <video src="snacks3.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Snack 3</h4>
                 <a href="snacks3.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="snacks4.mp4" preload="metadata" controls></video>
+                    <video src="snacks4.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Snack 4</h4>
                 <a href="snacks4.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="snacks5.mp4" preload="metadata" controls></video>
+                    <video src="snacks5.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Snack 5</h4>
                 <a href="snacks5.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
@@ -777,21 +808,27 @@
         <div class="contenedor-categoria" id="categoria-postres">
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="postre1.mp4" preload="metadata" controls></video>
+                    <video src="postre1.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Postre 1</h4>
                 <a href="postre1.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="postre2.mp4" preload="metadata" controls></video>
+                    <video src="postre2.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Postre 2</h4>
                 <a href="postre2.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="postre3.mp4" preload="metadata" controls></video>
+                    <video src="postre3.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Postre 3</h4>
                 <a href="postre3.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
@@ -802,42 +839,54 @@
         <div class="contenedor-categoria" id="categoria-bebidas">
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="bebidas1.mp4" preload="metadata" controls></video>
+                    <video src="bebidas1.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Bebida 1</h4>
                 <a href="bebidas1.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="bebidas2.mp4" preload="metadata" controls></video>
+                    <video src="bebidas2.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Bebida 2</h4>
                 <a href="bebidas2.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="bebidas3.mp4" preload="metadata" controls></video>
+                    <video src="bebidas3.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Bebida 3</h4>
                 <a href="bebidas3.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="bebidas4.mp4" preload="metadata" controls></video>
+                    <video src="bebidas4.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Bebida 4</h4>
                 <a href="bebidas4.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="bebidas5.mp4" preload="metadata" controls></video>
+                    <video src="bebidas5.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Bebida 5</h4>
                 <a href="bebidas5.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
                 <div class="reproductor-video">
-                    <video src="bebidas6.mp4" preload="metadata" controls></video>
+                    <video src="bebidas6.mp4" preload="metadata" controls muted playsinline>
+                        Tu navegador no soporta reproducción de video.
+                    </video>
                 </div>
                 <h4>Bebida 6</h4>
                 <a href="bebidas6.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
