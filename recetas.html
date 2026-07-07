@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al_toque - Recetas Saludables</title>
+    <title>Al_toque - Alimentación Saludable</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
 
         :root {
             --color-principal: #2E7D32;
             --color-principal-claro: #43A047;
-            --color-texto-oscuro: #212121;
-            --color-texto-medio: #555555;
-            --color-texto-claro: #757575;
+            --color-principal-oscuro: #1B5E20;
+            --color-texto-oscuro: #1A1A1A;
+            --color-texto-medio: #444444;
+            --color-texto-claro: #777777;
             --color-fondo: #FFFFFF;
-            --color-fondo-suave: #F9FBF8;
-            --color-borde: #E8F0E8;
-            --color-acento: #FF9800;
-            --color-acento-suave: #FFE0B2;
+            --color-fondo-suave: #F8FBF8;
+            --color-borde: #E6F0E6;
+            --color-sombra: rgba(0, 0, 0, 0.08);
+            --transicion: all 0.3s ease;
         }
 
         body {
@@ -31,7 +32,7 @@
             line-height: 1.7;
         }
 
-        /* --- Barra de navegación --- */
+        /* --- Navegación --- */
         nav {
             background: var(--color-fondo);
             padding: 1.2rem 2rem;
@@ -40,12 +41,15 @@
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px var(--color-sombra);
             border-radius: 0 0 1rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 700;
             color: var(--color-texto-oscuro);
             text-decoration: none;
@@ -58,7 +62,7 @@
 
         .menu {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
             flex-wrap: wrap;
         }
@@ -67,55 +71,37 @@
             text-decoration: none;
             color: var(--color-texto-medio);
             font-weight: 500;
-            transition: color 0.2s;
+            padding: 0.4rem 0.8rem;
+            border-radius: 2rem;
+            transition: var(--transicion);
         }
 
         .menu a:hover {
-            color: var(--color-principal);
-        }
-
-        .boton-menu {
+            color: var(--color-fondo);
             background: var(--color-principal);
-            color: white !important;
-            padding: 0.6rem 1.2rem;
-            border-radius: 2rem;
         }
 
-        /* --- Sección principal / Carátula --- */
+        /* --- Sección Principal --- */
         .hero {
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 2.5rem auto;
             background: var(--color-fondo);
-            border-radius: 1.5rem;
+            border-radius: 1.8rem;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px var(--color-sombra);
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
+            grid-template-columns: 1fr 1.1fr;
             gap: 2rem;
             align-items: center;
             position: relative;
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: 
-                url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 24 24" fill="none" opacity="0.06"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z" fill="%232E7D32"/></svg>'),
-                url('data:image/svg+xml;utf8,<svg width="70" height="70" viewBox="0 0 24 24" fill="none" opacity="0.05"><path d="M17.5 12c0 2.49-2.01 4.5-4.5 4.5S8.5 14.49 8.5 12s2.01-4.5 4.5-4.5 4.5 2.01 4.5 4.5zm-9 0c0-2.49 2.01-4.5 4.5-4.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5-4.5-2.01-4.5-4.5z" fill="%23FF9800"/></svg>');
-            background-position: 10% 20%, 80% 70%;
-            background-repeat: no-repeat;
-            z-index: 0;
-        }
-
         .hero-texto {
-            padding: 3rem 2.5rem;
-            position: relative;
-            z-index: 1;
+            padding: 3rem;
         }
 
         .etiqueta {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--color-principal);
@@ -124,14 +110,14 @@
         }
 
         .hero-texto h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
             color: var(--color-texto-oscuro);
         }
 
         .hero-texto p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--color-texto-medio);
             margin-bottom: 2rem;
         }
@@ -139,107 +125,91 @@
         .boton-principal {
             background: linear-gradient(135deg, var(--color-principal), var(--color-principal-claro));
             color: white;
-            padding: 0.9rem 2rem;
-            border-radius: 2rem;
+            padding: 1rem 2.2rem;
+            border-radius: 2.5rem;
             text-decoration: none;
             font-weight: 600;
             display: inline-block;
-            transition: transform 0.2s ease;
-            box-shadow: 0 3px 8px rgba(46, 125, 50, 0.2);
+            transition: var(--transicion);
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.25);
         }
 
         .boton-principal:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(46, 125, 50, 0.3);
         }
 
         .hero-imagen {
             width: 100%;
             height: 100%;
             background: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center / cover no-repeat;
-            min-height: 450px;
-            position: relative;
-            z-index: 1;
+            min-height: 480px;
         }
 
-        /* --- Sección: ¿Qué encontrarás aquí? --- */
+        /* --- Sección ¿Qué encontrarás? --- */
         .seccion-servicios {
             max-width: 1200px;
             margin: 4rem auto;
-            padding: 3rem 2rem;
+            padding: 3.5rem 2rem;
             background: var(--color-fondo);
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-radius: 1.8rem;
+            box-shadow: 0 5px 20px var(--color-sombra);
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .seccion-servicios::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: 
-                url('data:image/svg+xml;utf8,<svg width="80" height="80" viewBox="0 0 24 24" fill="none" opacity="0.04"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z" fill="%2381C784"/></svg>');
-            background-position: 90% 10%;
-            background-repeat: no-repeat;
         }
 
         .titulo-seccion {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             margin-bottom: 1rem;
             color: var(--color-texto-oscuro);
         }
 
         .subtitulo-seccion {
             color: var(--color-texto-medio);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 3rem;
-            max-width: 700px;
+            max-width: 750px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .contenedor-bloques {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.2rem;
         }
 
         .bloque {
             background: var(--color-fondo-suave);
-            padding: 2.2rem 1.8rem;
-            border-radius: 1.2rem;
+            padding: 2.5rem 2rem;
+            border-radius: 1.5rem;
             border: 1px solid var(--color-borde);
-            transition: all 0.3s ease;
-            text-align: center;
+            transition: var(--transicion);
         }
 
         .bloque:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px var(--color-sombra);
             border-color: var(--color-principal-claro);
         }
 
         .icono-bloque {
-            font-size: 3rem;
+            font-size: 3.2rem;
             color: var(--color-principal);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.3rem;
         }
 
         .bloque h3 {
-            font-size: 1.5rem;
+            font-size: 1.55rem;
             margin-bottom: 1rem;
             color: var(--color-texto-oscuro);
         }
 
         .bloque p {
             color: var(--color-texto-medio);
-            line-height: 1.7;
-            margin-bottom: 1rem;
+            line-height: 1.75;
         }
 
-        /* --- Sección Recetas por Niveles --- */
+        /* --- Niveles de Recetas --- */
         .contenedor-niveles {
             max-width: 1200px;
             margin: 4rem auto;
@@ -248,37 +218,26 @@
 
         .contenedor-tarjetas {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.2rem;
         }
 
         .tarjeta-nivel {
-            background: linear-gradient(150deg, #FFFFFF, #FDFEFC);
-            border-radius: 1.2rem;
-            padding: 2rem;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            background: var(--color-fondo);
+            border-radius: 1.5rem;
+            padding: 2.2rem;
+            box-shadow: 0 4px 15px var(--color-sombra);
             border-left: 5px solid transparent;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .tarjeta-nivel::after {
-            content: "";
-            position: absolute;
-            top: 0; right: 0;
-            width: 80px; height: 80px;
-            border-radius: 50%;
-            opacity: 0.08;
+            transition: var(--transicion);
         }
 
         .tarjeta-nivel:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 10px 22px rgba(0,0,0,0.1);
+            transform: translateY(-6px);
+            box-shadow: 0 8px 22px var(--color-sombra);
         }
 
         .tarjeta-nivel h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -291,222 +250,222 @@
         }
 
         .tarjeta-nivel ul {
-            margin-left: 1.5rem;
+            margin-left: 1.6rem;
             margin-bottom: 1.8rem;
             color: var(--color-texto-medio);
         }
 
         .boton-ingresar {
             display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 2rem;
+            padding: 0.8rem 1.6rem;
+            border-radius: 2.5rem;
             color: white;
             text-decoration: none;
             font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: var(--transicion);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
         }
 
         /* Colores por nivel */
         .basico { border-color: #2E7D32; }
-        .basico::after { background: #2E7D32; }
         .basico h3 { color: #2E7D32; }
         .basico .boton-ingresar { background: linear-gradient(135deg, #2E7D32, #43A047); }
-        .basico .boton-ingresar:hover { background: #276729; }
+        .basico .boton-ingresar:hover { background: #1B5E20; }
 
         .intermedio { border-color: #F57C00; }
-        .intermedio::after { background: #F57C00; }
         .intermedio h3 { color: #F57C00; }
         .intermedio .boton-ingresar { background: linear-gradient(135deg, #F57C00, #FB8C00); }
-        .intermedio .boton-ingresar:hover { background: #E67100; }
+        .intermedio .boton-ingresar:hover { background: #E65100; }
 
         .avanzado { border-color: #D32F2F; }
-        .avanzado::after { background: #D32F2F; }
         .avanzado h3 { color: #D32F2F; }
         .avanzado .boton-ingresar { background: linear-gradient(135deg, #D32F2F, #E53935); }
         .avanzado .boton-ingresar:hover { background: #B71C1C; }
 
         .bebidas { border-color: #7B1FA2; }
-        .bebidas::after { background: #7B1FA2; }
         .bebidas h3 { color: #7B1FA2; }
         .bebidas .boton-ingresar { background: linear-gradient(135deg, #7B1FA2, #8E24AA); }
-        .bebidas .boton-ingresar:hover { background: #6A1B9A; }
+        .bebidas .boton-ingresar:hover { background: #4A148C; }
 
         .snacks { border-color: #1976D2; }
-        .snacks::after { background: #1976D2; }
         .snacks h3 { color: #1976D2; }
         .snacks .boton-ingresar { background: linear-gradient(135deg, #1976D2, #1E88E5); }
-        .snacks .boton-ingresar:hover { background: #1565C0; }
+        .snacks .boton-ingresar:hover { background: #0D47A1; }
 
         .chef { border-color: #8D6E63; }
-        .chef::after { background: #8D6E63; }
         .chef h3 { color: #8D6E63; }
         .chef .boton-ingresar { background: linear-gradient(135deg, #8D6E63, #A1887F); }
-        .chef .boton-ingresar:hover { background: #6D4C41; }
+        .chef .boton-ingresar:hover { background: #5D4037; }
 
-        /* --- Sección Consejos y Trucos --- */
+        /* --- Consejos --- */
         .seccion-consejos {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 4rem auto;
-            padding: 2.5rem;
+            padding: 3rem;
             background: var(--color-fondo);
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-            border-top: 4px solid var(--color-principal);
+            border-radius: 1.8rem;
+            box-shadow: 0 5px 20px var(--color-sombra);
+            border-top: 5px solid var(--color-principal);
         }
 
         .lista-consejos {
-            margin-left: 1.8rem;
+            margin-left: 2rem;
             color: var(--color-texto-medio);
-            font-size: 1.05rem;
+            font-size: 1.08rem;
             line-height: 2;
         }
 
         .lista-consejos li {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.3rem;
             padding-left: 0.5rem;
-            transition: padding-left 0.2s ease;
+            transition: var(--transicion);
         }
 
         .lista-consejos li:hover {
-            padding-left: 0.8rem;
+            padding-left: 0.9rem;
             color: var(--color-principal);
         }
 
-        /* --- ✅ Sección Videos Instructivos organizada por categorías --- */
+        /* --- Sección Videos MEJORADA --- */
         .seccion-videos {
             max-width: 1200px;
             margin: 4rem auto;
-            padding: 3rem 2rem;
+            padding: 3.5rem 2rem;
             background: var(--color-fondo);
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-radius: 1.8rem;
+            box-shadow: 0 5px 20px var(--color-sombra);
         }
 
-        /* Pestañas de categorías */
         .pestanas-categorias {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 1.2rem;
             border-bottom: 1px solid var(--color-borde);
-            padding-bottom: 1rem;
         }
 
         .boton-pestana {
-            padding: 0.7rem 1.4rem;
+            padding: 0.85rem 1.6rem;
             border: none;
-            border-radius: 2rem;
+            border-radius: 2.5rem;
             background: var(--color-fondo-suave);
             color: var(--color-texto-medio);
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 1rem;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: var(--transicion);
         }
 
         .boton-pestana.activa {
             background: linear-gradient(135deg, var(--color-principal), var(--color-principal-claro));
             color: white;
-            box-shadow: 0 2px 6px rgba(46, 125, 50, 0.2);
+            box-shadow: 0 3px 10px rgba(46, 125, 50, 0.25);
         }
 
         .boton-pestana:hover:not(.activa) {
-            background: var(--color-acento-suave);
+            background: #E8F5E9;
             color: var(--color-principal);
         }
 
-        /* Contenedor de videos por categoría */
         .contenedor-categoria {
             display: none;
         }
 
         .contenedor-categoria.mostrar {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 1.8rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
         }
 
-        /* Tarjeta de video */
         .tarjeta-video {
             background: var(--color-fondo-suave);
-            border-radius: 1rem;
+            border-radius: 1.5rem;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
+            box-shadow: 0 3px 12px var(--color-sombra);
+            transition: var(--transicion);
+            padding-bottom: 1.2rem;
             text-align: center;
-            padding-bottom: 1rem;
         }
 
         .tarjeta-video:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            transform: translateY(-7px);
+            box-shadow: 0 8px 20px var(--color-sombra);
         }
 
-        .miniatura-video {
+        .reproductor-video {
             width: 100%;
-            height: 160px;
-            background: #e9e9e9;
+            height: 180px;
+            background: #F0F4F0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: var(--color-principal);
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 1rem 1rem 0 0;
+            overflow: hidden;
+        }
+
+        .reproductor-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .tarjeta-video h4 {
             color: var(--color-texto-oscuro);
-            font-size: 1.05rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
             padding: 0 0.5rem;
         }
 
-        .tarjeta-video a {
+        .boton-ver {
             display: inline-block;
-            padding: 0.5rem 1.2rem;
+            padding: 0.65rem 1.4rem;
             background: var(--color-principal);
             color: white;
-            border-radius: 2rem;
+            border-radius: 2.5rem;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: background 0.2s ease;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transicion);
         }
 
-        .tarjeta-video a:hover {
-            background: var(--color-principal-claro);
+        .boton-ver:hover {
+            background: var(--color-principal-oscuro);
         }
 
-        /* --- Buzón de mensajes --- */
+        /* --- Contacto --- */
         .seccion-buzon {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto 5rem auto;
-            background: linear-gradient(150deg, #FFFFFF, #FDFEFC);
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-            border-top: 4px solid var(--color-principal);
+            background: var(--color-fondo);
+            padding: 3rem;
+            border-radius: 1.8rem;
+            box-shadow: 0 5px 20px var(--color-sombra);
+            border-top: 5px solid var(--color-principal);
         }
 
         .seccion-buzon h2 {
             text-align: center;
             color: var(--color-texto-oscuro);
             margin-bottom: 1.2rem;
-            font-size: 1.7rem;
+            font-size: 1.8rem;
         }
 
         .seccion-buzon p {
             text-align: center;
             color: var(--color-texto-medio);
             margin-bottom: 2rem;
+            font-size: 1.05rem;
         }
 
         .formulario {
             display: flex;
             flex-direction: column;
-            gap: 1.3rem;
+            gap: 1.4rem;
         }
 
         .formulario label {
@@ -516,13 +475,12 @@
 
         .formulario input,
         .formulario textarea {
-            padding: 1rem;
+            padding: 1.1rem;
             border: 1px solid var(--color-borde);
-            border-radius: 0.8rem;
+            border-radius: 1rem;
             font-size: 1rem;
-            width: 100%;
             background: var(--color-fondo-suave);
-            transition: border-color 0.2s ease;
+            transition: var(--transicion);
         }
 
         .formulario input:focus,
@@ -534,57 +492,64 @@
 
         .formulario textarea {
             resize: vertical;
-            min-height: 150px;
+            min-height: 160px;
         }
 
         .boton-enviar {
             background: linear-gradient(135deg, var(--color-principal), var(--color-principal-claro));
             color: white;
-            padding: 1rem;
+            padding: 1.1rem;
             border: none;
-            border-radius: 2rem;
+            border-radius: 2.5rem;
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s ease;
-            box-shadow: 0 3px 8px rgba(46, 125, 50, 0.2);
+            transition: var(--transicion);
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.25);
         }
 
         .boton-enviar:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            background: var(--color-principal-oscuro);
         }
 
         .mensaje-exito {
             display: none;
-            margin-top: 1rem;
-            padding: 1rem;
+            margin-top: 1.2rem;
+            padding: 1.2rem;
             background-color: #E8F5E9;
             color: #1B5E20;
-            border-radius: 0.8rem;
+            border-radius: 1rem;
             text-align: center;
             font-weight: 500;
+            font-size: 1.05rem;
         }
 
         /* --- Responsive --- */
-        @media (max-width: 900px) {
+        @media (max-width: 920px) {
             .hero {
                 grid-template-columns: 1fr;
             }
             .hero-imagen {
-                min-height: 300px;
+                min-height: 320px;
                 order: 1;
             }
             .hero-texto {
                 order: 2;
                 padding: 2rem;
+                text-align: center;
             }
             nav {
                 flex-direction: column;
                 gap: 1rem;
+                padding: 1rem;
             }
             .menu {
-                gap: 1rem;
+                gap: 0.5rem;
                 justify-content: center;
+            }
+            .titulo-seccion {
+                font-size: 2rem;
             }
         }
     </style>
@@ -603,147 +568,133 @@
         </ul>
     </nav>
 
-    <!-- Sección principal de bienvenida -->
+    <!-- Sección principal -->
     <section class="hero" id="inicio">
         <div class="hero-texto">
             <p class="etiqueta">Proyecto Universitario UCV</p>
             <h1>Al_toque</h1>
-            <p>Enfocado en promover una alimentación saludable, económica y nutritiva para estudiantes universitarios mediante recetas, videos y recomendaciones prácticas.</p>
+            <p>Promovemos una alimentación saludable, económica y nutritiva para estudiantes, con recetas fáciles, videos paso a paso y consejos prácticos.</p>
             <a href="#recetas" class="boton-principal">Ver todo el contenido</a>
         </div>
         <div class="hero-imagen"></div>
     </section>
 
-    <!-- Sección: ¿Qué encontrarás aquí? -->
+    <!-- ¿Qué encontrarás? -->
     <section class="seccion-servicios">
         <h2 class="titulo-seccion">¿Qué encontrarás en Al_toque?</h2>
-        <p class="subtitulo-seccion">Todo lo que necesitas para comer bien, gastar poco y prepararlo sin complicaciones.</p>
+        <p class="subtitulo-seccion">Todo lo necesario para comer bien, sin gastar de más y sin complicaciones.</p>
 
         <div class="contenedor-bloques">
             <div class="bloque">
                 <div class="icono-bloque">🍳</div>
                 <h3>Recetas para ti</h3>
-                <p>Descubre recetas saludables, económicas y fáciles de preparar, adaptadas a tu presupuesto y ritmo de estudiante.</p>
-                <a href="#recetas" class="boton-principal" style="padding: 0.6rem 1.5rem; font-size: 0.95rem;">Ver niveles</a>
+                <p>Platos saludables, económicos y adaptados al tiempo y presupuesto de cualquier estudiante universitario.</p>
+                <a href="#recetas" class="boton-principal" style="padding: 0.65rem 1.5rem; font-size: 0.95rem;">Ver niveles</a>
             </div>
-
             <div class="bloque">
                 <div class="icono-bloque">🎥</div>
                 <h3>Videos instructivos</h3>
-                <p>Mira videos paso a paso para que aprendas a cocinar como un profesional, sin complicaciones y con explicaciones claras.</p>
-                <a href="#videos" class="boton-principal" style="padding: 0.6rem 1.5rem; font-size: 0.95rem;">Ver videos</a>
+                <p>Preparaciones paso a paso, organizadas por categorías para que sigas cada receta de forma sencilla.</p>
+                <a href="#videos" class="boton-principal" style="padding: 0.65rem 1.5rem; font-size: 0.95rem;">Ver videos</a>
             </div>
-
             <div class="bloque">
                 <div class="icono-bloque">📋</div>
                 <h3>Consejos prácticos</h3>
-                <p>Obtén recomendaciones diarias para mantener una dieta equilibrada, aprovechar mejor los alimentos y cuidar tu salud.</p>
-                <a href="#consejos" class="boton-principal" style="padding: 0.6rem 1.5rem; font-size: 0.95rem;">Leer consejos</a>
+                <p>Trucos de cocina y nutrición para aprovechar mejor los alimentos, conservarlos y mejorar tu dieta diaria.</p>
+                <a href="#consejos" class="boton-principal" style="padding: 0.65rem 1.5rem; font-size: 0.95rem;">Leer consejos</a>
             </div>
         </div>
     </section>
 
-    <!-- Sección Recetas por Niveles -->
+    <!-- Niveles de recetas -->
     <section class="contenedor-niveles" id="recetas">
         <h2 class="titulo-seccion" style="text-align:center;">Niveles de preparación</h2>
-        <p class="subtitulo-seccion" style="text-align:center;">Elige el nivel que mejor se adapte a tus conocimientos y tiempo disponible.</p>
+        <p class="subtitulo-seccion" style="text-align:center;">Elige según tu experiencia y tiempo disponible.</p>
 
         <div class="contenedor-tarjetas">
-            <!-- Nivel Básico -->
             <div class="tarjeta-nivel basico">
                 <h3>🟢 Nivel Básico</h3>
-                <p>Recetas sencillas, rápidas y con pocos ingredientes, ideales para empezar.</p>
+                <p>Recetas rápidas, con pocos ingredientes y listas en menos de 20 minutos.</p>
                 <ul>
-                    <li>✅ Listas en menos de 20 minutos</li>
                     <li>✅ Ingredientes fáciles de conseguir</li>
+                    <li>✅ Preparación muy sencilla</li>
                     <li>✅ Equilibradas y ligeras</li>
                 </ul>
-                <a href="#" class="boton-ingresar">Ver Recetas</a>
+                <a href="facil.html" class="boton-ingresar">Ver recetas</a>
             </div>
-
-            <!-- Nivel Intermedio -->
             <div class="tarjeta-nivel intermedio">
                 <h3>🟡 Nivel Intermedio</h3>
-                <p>Platos con mayor variedad nutricional, perfectos para el día a día.</p>
+                <p>Platos más completos, con mayor variedad de sabores y nutrientes.</p>
                 <ul>
-                    <li>✅ Más sabores y combinaciones</li>
-                    <li>✅ Aproximadamente 30 minutos de preparación</li>
-                    <li>✅ Adecuadas para compartir</li>
+                    <li>✅ Tiempo aproximado: 25-35 min</li>
+                    <li>✅ Ideales para el día a día</li>
+                    <li>✅ Porciones generosas</li>
                 </ul>
-                <a href="#" class="boton-ingresar">Ver Recetas</a>
+                <a href="intermedio.html" class="boton-ingresar">Ver recetas</a>
             </div>
-
-            <!-- Nivel Avanzado -->
             <div class="tarjeta-nivel avanzado">
                 <h3>🔴 Nivel Avanzado</h3>
-                <p>Preparaciones más elaboradas, enfocadas en alto valor nutricional.</p>
+                <p>Preparaciones más elaboradas, con alto valor nutricional y técnicas mejoradas.</p>
                 <ul>
                     <li>✅ Alto aporte de vitaminas y minerales</li>
-                    <li>✅ Porciones controladas</li>
-                    <li>✅ Enfocadas en rendimiento y salud</li>
+                    <li>✅ Equilibrio nutricional completo</li>
+                    <li>✅ Ideal para cuidar la salud</li>
                 </ul>
-                <a href="#" class="boton-ingresar">Ver Recetas</a>
+                <a href="avanzado.html" class="boton-ingresar">Ver recetas</a>
             </div>
-
-            <!-- Bebidas Saludables -->
             <div class="tarjeta-nivel bebidas">
                 <h3>🟣 Bebidas Saludables</h3>
-                <p>Opciones para acompañar tus platos, sin azúcares añadidos.</p>
+                <p>Jugos, infusiones y bebidas sin azúcares añadidos para acompañar tus comidas.</p>
                 <ul>
                     <li>✅ Sin azúcares refinados</li>
-                    <li>✅ Propiedades específicas por bebida</li>
-                    <li>✅ Fáciles y rápidas de preparar</li>
+                    <li>✅ Propiedades naturales</li>
+                    <li>✅ Rápidas de preparar</li>
                 </ul>
-                <a href="#" class="boton-ingresar">Ver Bebidas</a>
+                <a href="bebidas.html" class="boton-ingresar">Ver bebidas</a>
             </div>
-
-            <!-- Snacks Saludables -->
             <div class="tarjeta-nivel snacks">
                 <h3>🔵 Snacks Saludables</h3>
-                <p>Ideales para comer entre horas sin perder el equilibrio.</p>
+                <p>Opciones ligeras para comer entre horas sin perder el equilibrio de tu dieta.</p>
                 <ul>
                     <li>✅ Bajos en calorías</li>
-                    <li>✅ Alto valor nutricional</li>
+                    <li>✅ Energía sostenida</li>
                     <li>✅ Fáciles de transportar</li>
                 </ul>
-                <a href="#" class="boton-ingresar">Ver Snacks</a>
+                <a href="#" class="boton-ingresar">Ver snacks</a>
             </div>
-
-            <!-- Nivel Chef / Platino -->
             <div class="tarjeta-nivel chef">
-                <h3>🏆 Nivel Chef / Platino</h3>
-                <p>El nivel más alto: técnicas avanzadas y platos de categoría.</p>
+                <h3>🏆 Nivel Chef</h3>
+                <p>Platos con técnicas profesionales, presentación cuidada y gran valor nutricional.</p>
                 <ul>
-                    <li>🔪 Explicación detallada de técnicas</li>
-                    <li>🎨 Instrucciones de emplatado</li>
-                    <li>✨ Platos sofisticados y saludables</li>
+                    <li>✅ Técnicas de cocina explicadas</li>
+                    <li>✅ Platos para compartir</li>
+                    <li>✅ Sabor y salud en cada bocado</li>
                 </ul>
-                <a href="#" class="boton-ingresar">Ver Recetas</a>
+                <a href="Chef.html" class="boton-ingresar">Ver recetas</a>
             </div>
         </div>
     </section>
 
-    <!-- Sección Consejos y Trucos -->
+    <!-- Consejos -->
     <section class="seccion-consejos" id="consejos">
-        <h2 class="titulo-seccion" style="text-align:center;">💡 Consejos y trucos de alimentación</h2>
-        <p class="subtitulo-seccion" style="text-align:center;">Aprende a sacar el máximo provecho a cada alimento y mejorar tus hábitos.</p>
+        <h2 class="titulo-seccion" style="text-align:center;">💡 Consejos y trucos útiles</h2>
+        <p class="subtitulo-seccion" style="text-align:center;">Aprende a aprovechar al máximo cada alimento y mejorar tus hábitos.</p>
 
         <ol class="lista-consejos">
-            <li><strong>Cómo utilizar correctamente las verduras para aprovechar sus vitaminas:</strong> Las vitaminas solubles en agua (como la C y del grupo B) se pierden si hierves las verduras en mucha agua. Lo ideal es cocinarlas al vapor, en poco tiempo o aprovechar el agua de cocción para sopas. Las vitaminas liposolubles (A, D, E, K) se absorben mejor si añades una pequeña cantidad de aceite o grasa saludable.</li>
-            <li><strong>Almacenamiento adecuado de frutas y verduras:</strong> No guardes en la misma cajuela del refrigerador frutas como plátanos, manzanas o tomates con verduras verdes: las primeras liberan gas etileno que hace que las verduras se pudran más rápido. Guárdalas en compartimentos separados y no las laves hasta justo antes de usarlas.</li>
-            <li><strong>Aprovecha al máximo las legumbres:</strong> Remojarlas durante 6 a 8 horas antes de cocinarlas reduce los antinutrientes, mejora su digestibilidad y acorta el tiempo de cocción. El agua de remojo siempre se desecha.</li>
-            <li><strong>Control de porciones para estudiantes:</strong> Usa el método del plato saludable: la mitad del plato verduras, un cuarto proteína magra y un cuarto carbohidratos integrales. Es fácil de recordar y no necesitas balanza para medir.</li>
-            <li><strong>Evita pérdida de nutrientes al cocinar:</strong> Corta los alimentos en trozos grandes, no los dejes remojando mucho tiempo y usa la menor cantidad de agua posible. La cocción al vapor o al horno son las técnicas que mejor conservan los nutrientes.</li>
-            <li><strong>Elige grasas saludables:</strong> Prefiere aceite de oliva virgen extra, aguacate, frutos secos o semillas. Úsalos en cantidades moderadas, ya que aportan mucha energía, pero son esenciales para el organismo.</li>
+            <li><strong>Cómo conservar vitaminas en verduras:</strong> Las vitaminas solubles en agua se pierden si hierves las verduras en mucha agua. Mejor cocínalas al vapor, en poco tiempo o usa el agua de cocción para sopas. Las vitaminas A, D, E y K se absorben mejor con un poco de aceite vegetal.</li>
+            <li><strong>Almacenamiento correcto:</strong> No guardes manzanas, plátanos o tomates junto a verduras verdes: liberan gas que acelera su descomposición. Guárdalas en compartimentos separados y lávalas justo antes de usarlas.</li>
+            <li><strong>Legumbres más fáciles de digerir:</strong> Remójalas entre 6 y 8 horas antes de cocinarlas, desecha esa agua y usa agua limpia para cocinarlas. Esto reduce los gases y mejora su absorción.</li>
+            <li><strong>Medición sencilla de porciones:</strong> Usa el método del plato: mitad verduras, un cuarto proteína magra y un cuarto carbohidratos integrales. Sin necesidad de balanza.</li>
+            <li><strong>Evita desperdicio:</strong> Usa tallos, hojas y cáscaras limpias para caldos, sopas o cremas. Aportan sabor y nutrientes adicionales.</li>
+            <li><strong>Grasas saludables:</strong> Prefiere aceite de oliva, aguacate, frutos secos o semillas. Úsalas en cantidades moderadas, son esenciales para tu cuerpo.</li>
         </ol>
     </section>
 
-    <!-- ✅ Sección Videos Instructivos organizada por categorías -->
+    <!-- ✅ Sección Videos con rutas CORRECTAS -->
     <section class="seccion-videos" id="videos">
         <h2 class="titulo-seccion" style="text-align:center;">🎥 Videos Instructivos</h2>
-        <p class="subtitulo-seccion" style="text-align:center;">Todos los videos organizados por categorías para que encuentres fácil lo que buscas.</p>
+        <p class="subtitulo-seccion" style="text-align:center;">Todos los videos organizados para que encuentres lo que buscas fácilmente.</p>
 
-        <!-- Pestañas de navegación -->
         <div class="pestanas-categorias">
             <button class="boton-pestana activa" onclick="mostrarCategoria('saludables')">🥗 Saludables</button>
             <button class="boton-pestana" onclick="mostrarCategoria('snacks')">🥨 Snacks</button>
@@ -751,141 +702,177 @@
             <button class="boton-pestana" onclick="mostrarCategoria('bebidas')">🥤 Bebidas</button>
         </div>
 
-        <!-- Categoría: Saludables -->
+        <!-- Saludables -->
         <div class="contenedor-categoria mostrar" id="categoria-saludables">
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="saludable1.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Receta Saludable 1</h4>
-                <a href="videos/saludable1.mp4" target="_blank">Ver video</a>
+                <a href="saludable1.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="saludable2.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Receta Saludable 2</h4>
-                <a href="videos/saludable2.mp4" target="_blank">Ver video</a>
+                <a href="saludable2.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="saludable3.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Receta Saludable 3</h4>
-                <a href="videos/saludable3.mp4" target="_blank">Ver video</a>
+                <a href="saludable3.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="saludable4.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Receta Saludable 4</h4>
-                <a href="videos/saludable4.mp4" target="_blank">Ver video</a>
+                <a href="saludable4.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
         </div>
 
-        <!-- Categoría: Snacks -->
+        <!-- Snacks -->
         <div class="contenedor-categoria" id="categoria-snacks">
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="snacks1.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Snack 1</h4>
-                <a href="videos/snacks1.mp4" target="_blank">Ver video</a>
+                <a href="snacks1.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="snacks2.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Snack 2</h4>
-                <a href="videos/snack2.mp4" target="_blank">Ver video</a>
+                <a href="snacks2.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="snacks3.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Snack 3</h4>
-                <a href="videos/snack3.mp4" target="_blank">Ver video</a>
+                <a href="snacks3.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="snacks4.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Snack 4</h4>
-                <a href="videos/snack4.mp4" target="_blank">Ver video</a>
+                <a href="snacks4.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="snacks5.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Snack 5</h4>
-                <a href="videos/snack5.mp4" target="_blank">Ver video</a>
+                <a href="snacks5.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
         </div>
 
-        <!-- Categoría: Postres -->
+        <!-- Postres -->
         <div class="contenedor-categoria" id="categoria-postres">
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="postre1.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Postre 1</h4>
-                <a href="videos/postre1.mp4" target="_blank">Ver video</a>
+                <a href="postre1.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="postre2.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Postre 2</h4>
-                <a href="videos/postre2.mp4" target="_blank">Ver video</a>
+                <a href="postre2.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="postre3.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Postre 3</h4>
-                <a href="videos/postre3.mp4" target="_blank">Ver video</a>
+                <a href="postre3.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
         </div>
 
-        <!-- Categoría: Bebidas -->
+        <!-- Bebidas -->
         <div class="contenedor-categoria" id="categoria-bebidas">
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="bebidas1.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Bebida 1</h4>
-                <a href="videos/bebida1.mp4" target="_blank">Ver video</a>
+                <a href="bebidas1.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="bebidas2.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Bebida 2</h4>
-                <a href="videos/bebida2.mp4" target="_blank">Ver video</a>
+                <a href="bebidas2.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="bebidas3.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Bebida 3</h4>
-                <a href="videos/bebidas3.mp4" target="_blank">Ver video</a>
+                <a href="bebidas3.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="bebidas4.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Bebida 4</h4>
-                <a href="videos/bebida4.mp4" target="_blank">Ver video</a>
+                <a href="bebidas4.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="bebidas5.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Bebida 5</h4>
-                <a href="videos/bebida5.mp4" target="_blank">Ver video</a>
+                <a href="bebidas5.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
             <div class="tarjeta-video">
-                <div class="miniatura-video">▶️</div>
+                <div class="reproductor-video">
+                    <video src="bebidas6.mp4" preload="metadata" controls></video>
+                </div>
                 <h4>Bebida 6</h4>
-                <a href="videos/bebida6.mp4" target="_blank">Ver video</a>
+                <a href="bebidas6.mp4" target="_blank" class="boton-ver">Abrir en pantalla completa</a>
             </div>
         </div>
     </section>
 
-    <!-- Buzón de mensajes -->
+    <!-- Contacto -->
     <section class="seccion-buzon" id="buzon">
-        <h2>📩 Buzón de mensajes de Al_toque</h2>
-        <p>¿Tienes alguna opinión, sugerencia o receta propia? ¡Escríbelo aquí!</p>
+        <h2>📩 Buzón de sugerencias</h2>
+        <p>¿Tienes alguna receta, duda o recomendación? ¡Escríbenos!</p>
 
         <form class="formulario" action="https://formspree.io/f/mdarwoev" method="POST" id="formularioContacto">
             <label for="nombre">Tu nombre o apodo:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Ej: María, Juan...">
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan, María...">
 
-            <label for="correo">Tu correo de contacto (opcional):</label>
+            <label for="correo">Correo de contacto (opcional):</label>
             <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
 
             <label for="asunto">Asunto:</label>
-            <input type="text" id="asunto" name="asunto" required placeholder="Ej: Sugerencia, Mi receta, Saludo...">
+            <input type="text" id="asunto" name="asunto" required placeholder="Ej: Sugerencia, Receta propia...">
 
-            <label for="mensaje">Tu mensaje para Al_toque:</label>
-            <textarea id="mensaje" name="mensaje" required placeholder="Escribe aquí todo lo que quieras compartir con nosotros..."></textarea>
+            <label for="mensaje">Tu mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required placeholder="Escribe aquí todo lo que quieras compartir..."></textarea>
 
             <button type="submit" class="boton-enviar">✉️ Enviar mensaje</button>
         </form>
 
         <div class="mensaje-exito" id="avisoExito">
-            ✅ ¡Mensaje enviado correctamente! Muchas gracias por tu aportación.
+            ✅ ¡Mensaje enviado con éxito! Muchas gracias por colaborar.
         </div>
     </section>
 
     <script>
-        // Desplazamiento suave por la página
+        // Desplazamiento suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -895,16 +882,11 @@
             });
         });
 
-        // Función para cambiar entre categorías de videos
+        // Cambiar categorías de videos
         function mostrarCategoria(categoria) {
-            // Quitar clase activa de todas las pestañas
             document.querySelectorAll('.boton-pestana').forEach(btn => btn.classList.remove('activa'));
-            // Ocultar todas las categorías
             document.querySelectorAll('.contenedor-categoria').forEach(cat => cat.classList.remove('mostrar'));
-
-            // Activar la pestaña seleccionada
             event.currentTarget.classList.add('activa');
-            // Mostrar la categoría correspondiente
             document.getElementById('categoria-' + categoria).classList.add('mostrar');
         }
 
